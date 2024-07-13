@@ -30,19 +30,19 @@
         {
             this.mainHeader = new System.Windows.Forms.Label();
             this.headerParts = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.partsListBox = new System.Windows.Forms.ListBox();
+            this.partsSearchButton = new System.Windows.Forms.Button();
+            this.partsTextBox = new System.Windows.Forms.TextBox();
+            this.partsAddButton = new System.Windows.Forms.Button();
+            this.partsModifyButton = new System.Windows.Forms.Button();
+            this.partsDeleteButton = new System.Windows.Forms.Button();
+            this.productsDeleteButton = new System.Windows.Forms.Button();
+            this.productsModifyButton = new System.Windows.Forms.Button();
+            this.productsAddButton = new System.Windows.Forms.Button();
+            this.productsTextBox = new System.Windows.Forms.TextBox();
+            this.productsSearchButton = new System.Windows.Forms.Button();
+            this.productsListBox = new System.Windows.Forms.ListBox();
+            this.headerProducts = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // mainHeader
@@ -65,136 +65,136 @@
             this.headerParts.TabIndex = 2;
             this.headerParts.Text = "Parts";
             // 
-            // listBox1
+            // partsListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(18, 101);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(551, 225);
-            this.listBox1.TabIndex = 3;
+            this.partsListBox.FormattingEnabled = true;
+            this.partsListBox.Location = new System.Drawing.Point(18, 101);
+            this.partsListBox.Name = "partsListBox";
+            this.partsListBox.Size = new System.Drawing.Size(551, 225);
+            this.partsListBox.TabIndex = 3;
             // 
-            // button1
+            // partsSearchButton
             // 
-            this.button1.Location = new System.Drawing.Point(345, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.partsSearchButton.Location = new System.Drawing.Point(345, 72);
+            this.partsSearchButton.Name = "partsSearchButton";
+            this.partsSearchButton.Size = new System.Drawing.Size(75, 23);
+            this.partsSearchButton.TabIndex = 4;
+            this.partsSearchButton.Text = "Search";
+            this.partsSearchButton.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // partsTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(426, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 20);
-            this.textBox1.TabIndex = 5;
+            this.partsTextBox.Location = new System.Drawing.Point(426, 72);
+            this.partsTextBox.Name = "partsTextBox";
+            this.partsTextBox.Size = new System.Drawing.Size(143, 20);
+            this.partsTextBox.TabIndex = 5;
             // 
-            // button2
+            // partsAddButton
             // 
-            this.button2.Location = new System.Drawing.Point(308, 345);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.partsAddButton.Location = new System.Drawing.Point(308, 345);
+            this.partsAddButton.Name = "partsAddButton";
+            this.partsAddButton.Size = new System.Drawing.Size(75, 23);
+            this.partsAddButton.TabIndex = 6;
+            this.partsAddButton.Text = "Add";
+            this.partsAddButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // partsModifyButton
             // 
-            this.button3.Location = new System.Drawing.Point(399, 345);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.partsModifyButton.Location = new System.Drawing.Point(399, 345);
+            this.partsModifyButton.Name = "partsModifyButton";
+            this.partsModifyButton.Size = new System.Drawing.Size(75, 23);
+            this.partsModifyButton.TabIndex = 7;
+            this.partsModifyButton.Text = "Modify";
+            this.partsModifyButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // partsDeleteButton
             // 
-            this.button4.Location = new System.Drawing.Point(494, 345);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.partsDeleteButton.Location = new System.Drawing.Point(494, 345);
+            this.partsDeleteButton.Name = "partsDeleteButton";
+            this.partsDeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.partsDeleteButton.TabIndex = 8;
+            this.partsDeleteButton.Text = "Delete";
+            this.partsDeleteButton.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // productsDeleteButton
             // 
-            this.button5.Location = new System.Drawing.Point(1103, 345);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.productsDeleteButton.Location = new System.Drawing.Point(1103, 345);
+            this.productsDeleteButton.Name = "productsDeleteButton";
+            this.productsDeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.productsDeleteButton.TabIndex = 15;
+            this.productsDeleteButton.Text = "Delete";
+            this.productsDeleteButton.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // productsModifyButton
             // 
-            this.button6.Location = new System.Drawing.Point(1008, 345);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 14;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.productsModifyButton.Location = new System.Drawing.Point(1008, 345);
+            this.productsModifyButton.Name = "productsModifyButton";
+            this.productsModifyButton.Size = new System.Drawing.Size(75, 23);
+            this.productsModifyButton.TabIndex = 14;
+            this.productsModifyButton.Text = "Modify";
+            this.productsModifyButton.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // productsAddButton
             // 
-            this.button7.Location = new System.Drawing.Point(917, 345);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 13;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.productsAddButton.Location = new System.Drawing.Point(917, 345);
+            this.productsAddButton.Name = "productsAddButton";
+            this.productsAddButton.Size = new System.Drawing.Size(75, 23);
+            this.productsAddButton.TabIndex = 13;
+            this.productsAddButton.Text = "Add";
+            this.productsAddButton.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // productsTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(1035, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 20);
-            this.textBox2.TabIndex = 12;
+            this.productsTextBox.Location = new System.Drawing.Point(1035, 72);
+            this.productsTextBox.Name = "productsTextBox";
+            this.productsTextBox.Size = new System.Drawing.Size(143, 20);
+            this.productsTextBox.TabIndex = 12;
             // 
-            // button8
+            // productsSearchButton
             // 
-            this.button8.Location = new System.Drawing.Point(954, 72);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.productsSearchButton.Location = new System.Drawing.Point(954, 72);
+            this.productsSearchButton.Name = "productsSearchButton";
+            this.productsSearchButton.Size = new System.Drawing.Size(75, 23);
+            this.productsSearchButton.TabIndex = 11;
+            this.productsSearchButton.Text = "Search";
+            this.productsSearchButton.UseVisualStyleBackColor = true;
             // 
-            // listBox2
+            // productsListBox
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(627, 101);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(551, 225);
-            this.listBox2.TabIndex = 10;
+            this.productsListBox.FormattingEnabled = true;
+            this.productsListBox.Location = new System.Drawing.Point(627, 101);
+            this.productsListBox.Name = "productsListBox";
+            this.productsListBox.Size = new System.Drawing.Size(551, 225);
+            this.productsListBox.TabIndex = 10;
             // 
-            // label1
+            // headerProducts
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(622, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 25);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Parts";
+            this.headerProducts.AutoSize = true;
+            this.headerProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerProducts.Location = new System.Drawing.Point(622, 68);
+            this.headerProducts.Name = "headerProducts";
+            this.headerProducts.Size = new System.Drawing.Size(97, 25);
+            this.headerProducts.TabIndex = 9;
+            this.headerProducts.Text = "Products";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1225, 418);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.productsDeleteButton);
+            this.Controls.Add(this.productsModifyButton);
+            this.Controls.Add(this.productsAddButton);
+            this.Controls.Add(this.productsTextBox);
+            this.Controls.Add(this.productsSearchButton);
+            this.Controls.Add(this.productsListBox);
+            this.Controls.Add(this.headerProducts);
+            this.Controls.Add(this.partsDeleteButton);
+            this.Controls.Add(this.partsModifyButton);
+            this.Controls.Add(this.partsAddButton);
+            this.Controls.Add(this.partsTextBox);
+            this.Controls.Add(this.partsSearchButton);
+            this.Controls.Add(this.partsListBox);
             this.Controls.Add(this.headerParts);
             this.Controls.Add(this.mainHeader);
             this.Name = "Form1";
@@ -208,19 +208,19 @@
 
         private System.Windows.Forms.Label mainHeader;
         private System.Windows.Forms.Label headerParts;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox partsListBox;
+        private System.Windows.Forms.Button partsSearchButton;
+        private System.Windows.Forms.TextBox partsTextBox;
+        private System.Windows.Forms.Button partsAddButton;
+        private System.Windows.Forms.Button partsModifyButton;
+        private System.Windows.Forms.Button partsDeleteButton;
+        private System.Windows.Forms.Button productsDeleteButton;
+        private System.Windows.Forms.Button productsModifyButton;
+        private System.Windows.Forms.Button productsAddButton;
+        private System.Windows.Forms.TextBox productsTextBox;
+        private System.Windows.Forms.Button productsSearchButton;
+        private System.Windows.Forms.ListBox productsListBox;
+        private System.Windows.Forms.Label headerProducts;
     }
 }
 

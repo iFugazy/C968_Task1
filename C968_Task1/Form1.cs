@@ -16,10 +16,5 @@ namespace C968_Task1
         {
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
