@@ -177,7 +177,6 @@
             // 
             // partIdCol
             // 
-            this.partIdCol.DisplayIndex = 1;
             this.partIdCol.Text = "Part ID";
             this.partIdCol.Width = 100;
             // 
