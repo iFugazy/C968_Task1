@@ -1,6 +1,6 @@
 ﻿namespace C968_Task1
 {
-    partial class Form1
+    partial class mainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -55,6 +55,7 @@
             this.productPriceCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.productMinCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.productMaxCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mainHeader
@@ -101,6 +102,7 @@
             this.partsAddButton.TabIndex = 6;
             this.partsAddButton.Text = "Add";
             this.partsAddButton.UseVisualStyleBackColor = true;
+            this.partsAddButton.Click += new System.EventHandler(this.partsAddButton_Click);
             // 
             // partsModifyButton
             // 
@@ -194,7 +196,7 @@
             this.partMaxCol});
             this.partsListView.HideSelection = false;
             this.partsListView.Location = new System.Drawing.Point(18, 104);
-            this.partsListView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.partsListView.Margin = new System.Windows.Forms.Padding(2);
             this.partsListView.Name = "partsListView";
             this.partsListView.Size = new System.Drawing.Size(551, 233);
             this.partsListView.TabIndex = 16;
@@ -269,12 +271,22 @@
             this.productMaxCol.Text = "Max.";
             this.productMaxCol.Width = 75;
             // 
-            // Form1
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(1103, 383);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(75, 23);
+            this.exitButton.TabIndex = 18;
+            this.exitButton.Text = "Exit";
+            this.exitButton.UseVisualStyleBackColor = true;
+            // 
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1225, 418);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.productsListView);
             this.Controls.Add(this.partsListView);
             this.Controls.Add(this.productsDeleteButton);
@@ -290,8 +302,9 @@
             this.Controls.Add(this.partsSearchButton);
             this.Controls.Add(this.headerParts);
             this.Controls.Add(this.mainHeader);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Name = "mainForm";
+            this.Text = "Inventory Management System";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,6 +339,7 @@
         private System.Windows.Forms.ColumnHeader productPriceCol;
         private System.Windows.Forms.ColumnHeader productMinCol;
         private System.Windows.Forms.ColumnHeader productMaxCol;
+        private System.Windows.Forms.Button exitButton;
     }
 
     

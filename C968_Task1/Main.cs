@@ -11,12 +11,20 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace C968_Task1
 {
-    public partial class Form1 : Form
+    public partial class mainForm : Form
     {
-        public Form1()
+        public mainForm()
         {
             InitializeComponent();
         }
+
+        private void partsAddButton_Click(object sender, EventArgs e)
+        {
+           this.Hide();
+           addPartsForm addPartForm = new addPartsForm();
+           addPartForm.ShowDialog();
+        }
+
 
     }
 }
