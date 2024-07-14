@@ -11,12 +11,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace C968_Task1
 {
-    public partial class addPartsForm : Form
+    public partial class addPartsForm : mainForm
     {
+
         public addPartsForm()
         {
             InitializeComponent();
-
 
         }
 
@@ -30,6 +30,13 @@ namespace C968_Task1
             {
                 addPartMachineIDLabel.Text = "Company Name";
             }
+        }
+
+        private void addPartsSaveButton_Click(object sender, EventArgs e)
+        {
+
+
+
         }
     }
 }

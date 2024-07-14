@@ -31,20 +31,20 @@
             this.headerAddParts = new System.Windows.Forms.Label();
             this.addPartsInHouseButton = new System.Windows.Forms.RadioButton();
             this.addPartsOutsourcedButton = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.addPartsIDTextbox = new System.Windows.Forms.TextBox();
             this.addPartIDLabel = new System.Windows.Forms.Label();
             this.addPartNameLabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.addPartsNameTextbox = new System.Windows.Forms.TextBox();
             this.addPartInventoryLabel = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.addPartsInventoryTextbox = new System.Windows.Forms.TextBox();
             this.addPartPriceCostLabel = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.addPartsPriceTextBox = new System.Windows.Forms.TextBox();
             this.addPartMaxLabel = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.addPartsMaxTextBox = new System.Windows.Forms.TextBox();
             this.addPartMinLabel = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.addPartsMinTextBox = new System.Windows.Forms.TextBox();
             this.addPartMachineIDLabel = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.addPartsMachineIDTextBox = new System.Windows.Forms.TextBox();
             this.addPartsSaveButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -82,12 +82,12 @@
             this.addPartsOutsourcedButton.Text = "Outsourced";
             this.addPartsOutsourcedButton.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // addPartsIDTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(186, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 20);
-            this.textBox1.TabIndex = 5;
+            this.addPartsIDTextbox.Location = new System.Drawing.Point(186, 50);
+            this.addPartsIDTextbox.Name = "addPartsIDTextbox";
+            this.addPartsIDTextbox.Size = new System.Drawing.Size(145, 20);
+            this.addPartsIDTextbox.TabIndex = 5;
             // 
             // addPartIDLabel
             // 
@@ -107,12 +107,13 @@
             this.addPartNameLabel.TabIndex = 8;
             this.addPartNameLabel.Text = "Name";
             // 
-            // textBox2
+            // addPartsNameTextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(186, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 20);
-            this.textBox2.TabIndex = 7;
+            this.addPartsNameTextbox.Location = new System.Drawing.Point(186, 94);
+            this.addPartsNameTextbox.Name = "addPartsNameTextbox";
+            this.addPartsNameTextbox.Size = new System.Drawing.Size(145, 20);
+            this.addPartsNameTextbox.TabIndex = 7;
+            this.addPartsNameTextbox.Text = " ";
             // 
             // addPartInventoryLabel
             // 
@@ -124,12 +125,12 @@
             this.addPartInventoryLabel.TabIndex = 10;
             this.addPartInventoryLabel.Text = "Inventory";
             // 
-            // textBox3
+            // addPartsInventoryTextbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(186, 144);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(145, 20);
-            this.textBox3.TabIndex = 9;
+            this.addPartsInventoryTextbox.Location = new System.Drawing.Point(186, 144);
+            this.addPartsInventoryTextbox.Name = "addPartsInventoryTextbox";
+            this.addPartsInventoryTextbox.Size = new System.Drawing.Size(145, 20);
+            this.addPartsInventoryTextbox.TabIndex = 9;
             // 
             // addPartPriceCostLabel
             // 
@@ -140,12 +141,12 @@
             this.addPartPriceCostLabel.TabIndex = 12;
             this.addPartPriceCostLabel.Text = "Price / Cost";
             // 
-            // textBox4
+            // addPartsPriceTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(186, 196);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(145, 20);
-            this.textBox4.TabIndex = 11;
+            this.addPartsPriceTextBox.Location = new System.Drawing.Point(186, 196);
+            this.addPartsPriceTextBox.Name = "addPartsPriceTextBox";
+            this.addPartsPriceTextBox.Size = new System.Drawing.Size(145, 20);
+            this.addPartsPriceTextBox.TabIndex = 11;
             // 
             // addPartMaxLabel
             // 
@@ -156,12 +157,12 @@
             this.addPartMaxLabel.TabIndex = 14;
             this.addPartMaxLabel.Text = "Max";
             // 
-            // textBox5
+            // addPartsMaxTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(186, 249);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(61, 20);
-            this.textBox5.TabIndex = 13;
+            this.addPartsMaxTextBox.Location = new System.Drawing.Point(186, 249);
+            this.addPartsMaxTextBox.Name = "addPartsMaxTextBox";
+            this.addPartsMaxTextBox.Size = new System.Drawing.Size(61, 20);
+            this.addPartsMaxTextBox.TabIndex = 13;
             // 
             // addPartMinLabel
             // 
@@ -172,12 +173,12 @@
             this.addPartMinLabel.TabIndex = 16;
             this.addPartMinLabel.Text = "Min";
             // 
-            // textBox6
+            // addPartsMinTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(304, 249);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(61, 20);
-            this.textBox6.TabIndex = 15;
+            this.addPartsMinTextBox.Location = new System.Drawing.Point(304, 249);
+            this.addPartsMinTextBox.Name = "addPartsMinTextBox";
+            this.addPartsMinTextBox.Size = new System.Drawing.Size(61, 20);
+            this.addPartsMinTextBox.TabIndex = 15;
             // 
             // addPartMachineIDLabel
             // 
@@ -191,12 +192,12 @@
             this.addPartMachineIDLabel.Text = "Machine ID";
             this.addPartMachineIDLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // textBox7
+            // addPartsMachineIDTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(186, 299);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(145, 20);
-            this.textBox7.TabIndex = 17;
+            this.addPartsMachineIDTextBox.Location = new System.Drawing.Point(186, 299);
+            this.addPartsMachineIDTextBox.Name = "addPartsMachineIDTextBox";
+            this.addPartsMachineIDTextBox.Size = new System.Drawing.Size(145, 20);
+            this.addPartsMachineIDTextBox.TabIndex = 17;
             // 
             // addPartsSaveButton
             // 
@@ -206,6 +207,7 @@
             this.addPartsSaveButton.TabIndex = 19;
             this.addPartsSaveButton.Text = "Save";
             this.addPartsSaveButton.UseVisualStyleBackColor = true;
+            this.addPartsSaveButton.Click += new System.EventHandler(this.addPartsSaveButton_Click);
             // 
             // button2
             // 
@@ -225,19 +227,19 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.addPartsSaveButton);
             this.Controls.Add(this.addPartMachineIDLabel);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.addPartsMachineIDTextBox);
             this.Controls.Add(this.addPartMinLabel);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.addPartsMinTextBox);
             this.Controls.Add(this.addPartMaxLabel);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.addPartsMaxTextBox);
             this.Controls.Add(this.addPartPriceCostLabel);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.addPartsPriceTextBox);
             this.Controls.Add(this.addPartInventoryLabel);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.addPartsInventoryTextbox);
             this.Controls.Add(this.addPartNameLabel);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.addPartsNameTextbox);
             this.Controls.Add(this.addPartIDLabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.addPartsIDTextbox);
             this.Controls.Add(this.addPartsOutsourcedButton);
             this.Controls.Add(this.addPartsInHouseButton);
             this.Controls.Add(this.headerAddParts);
@@ -252,22 +254,22 @@
         private System.Windows.Forms.Label headerAddParts;
         private System.Windows.Forms.RadioButton addPartsInHouseButton;
         private System.Windows.Forms.RadioButton addPartsOutsourcedButton;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label addPartIDLabel;
         private System.Windows.Forms.Label addPartNameLabel;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label addPartInventoryLabel;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label addPartPriceCostLabel;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label addPartMaxLabel;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label addPartMinLabel;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label addPartMachineIDLabel;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button addPartsSaveButton;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.TextBox addPartsNameTextbox;
+        public System.Windows.Forms.TextBox addPartsInventoryTextbox;
+        public System.Windows.Forms.TextBox addPartsPriceTextBox;
+        public System.Windows.Forms.TextBox addPartsMaxTextBox;
+        public System.Windows.Forms.TextBox addPartsMinTextBox;
+        public System.Windows.Forms.TextBox addPartsMachineIDTextBox;
+        public System.Windows.Forms.TextBox addPartsIDTextbox;
     }
 
     
