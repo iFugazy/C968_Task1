@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace C968_Task1
 {
@@ -16,5 +17,6 @@ namespace C968_Task1
         {
             InitializeComponent();
         }
+
     }
 }
