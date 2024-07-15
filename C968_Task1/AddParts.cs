@@ -16,5 +16,15 @@ namespace C968_Task1
         {
             InitializeComponent();
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            addPartsMachineIDLabel.Text = "Machine ID";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            addPartsMachineIDLabel.Text = "Company Name";
+        }
     }
 }
