@@ -13,10 +13,14 @@ namespace C968_Task1
 {
     public partial class mainForm : Form
     {
+        addPartsForm addPartsFrom;
         public mainForm()
         {
             InitializeComponent();
+           
+
         }
+
 
         private void partsAddButton_Click(object sender, EventArgs e)
         {
@@ -24,7 +28,6 @@ namespace C968_Task1
            addPartsForm addPartForm = new addPartsForm();
            addPartForm.ShowDialog();
         }
-
 
     }
 }

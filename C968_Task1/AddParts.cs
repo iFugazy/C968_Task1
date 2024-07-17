@@ -15,6 +15,7 @@ namespace C968_Task1
         public addPartsForm()
         {
             InitializeComponent();
+ 
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -25,6 +26,14 @@ namespace C968_Task1
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             addPartsMachineIDLabel.Text = "Company Name";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainForm mainForm = new mainForm();
+            mainForm.ShowDialog();
+            
         }
     }
 }
