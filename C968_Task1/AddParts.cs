@@ -27,7 +27,18 @@ namespace C968_Task1
         {
             addPartsMachineIDLabel.Text = "Company Name";
         }
+        // Declaring Variables being used
 
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainForm mainForm = new mainForm();
+            mainForm.ShowDialog();
+        }
+
+        // list to store input
+        List<string> addPartList = new List< string >();
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();

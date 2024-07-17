@@ -41,30 +41,33 @@
             this.productsTextBox = new System.Windows.Forms.TextBox();
             this.productsSearchButton = new System.Windows.Forms.Button();
             this.headerProducts = new System.Windows.Forms.Label();
-            this.partIdCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.partNameCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.partsListView = new System.Windows.Forms.ListView();
-            this.partInventoryCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.partPriceCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.partMinCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.partMaxCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.productsListView = new System.Windows.Forms.ListView();
-            this.productIdCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.productNameCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.productInvCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.productPriceCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.productMinCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.productMaxCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.exitButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // mainHeader
             // 
             this.mainHeader.AutoSize = true;
             this.mainHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mainHeader.Location = new System.Drawing.Point(12, 9);
+            this.mainHeader.Location = new System.Drawing.Point(24, 17);
+            this.mainHeader.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.mainHeader.Name = "mainHeader";
-            this.mainHeader.Size = new System.Drawing.Size(389, 31);
+            this.mainHeader.Size = new System.Drawing.Size(772, 63);
             this.mainHeader.TabIndex = 0;
             this.mainHeader.Text = "Inventory Management System";
             // 
@@ -72,33 +75,37 @@
             // 
             this.headerParts.AutoSize = true;
             this.headerParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerParts.Location = new System.Drawing.Point(13, 68);
+            this.headerParts.Location = new System.Drawing.Point(26, 131);
+            this.headerParts.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.headerParts.Name = "headerParts";
-            this.headerParts.Size = new System.Drawing.Size(62, 25);
+            this.headerParts.Size = new System.Drawing.Size(118, 48);
             this.headerParts.TabIndex = 2;
             this.headerParts.Text = "Parts";
             // 
             // partsSearchButton
             // 
-            this.partsSearchButton.Location = new System.Drawing.Point(345, 72);
+            this.partsSearchButton.Location = new System.Drawing.Point(690, 138);
+            this.partsSearchButton.Margin = new System.Windows.Forms.Padding(6);
             this.partsSearchButton.Name = "partsSearchButton";
-            this.partsSearchButton.Size = new System.Drawing.Size(75, 23);
+            this.partsSearchButton.Size = new System.Drawing.Size(150, 44);
             this.partsSearchButton.TabIndex = 4;
             this.partsSearchButton.Text = "Search";
             this.partsSearchButton.UseVisualStyleBackColor = true;
             // 
             // partsTextBox
             // 
-            this.partsTextBox.Location = new System.Drawing.Point(426, 72);
+            this.partsTextBox.Location = new System.Drawing.Point(852, 138);
+            this.partsTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.partsTextBox.Name = "partsTextBox";
-            this.partsTextBox.Size = new System.Drawing.Size(143, 20);
+            this.partsTextBox.Size = new System.Drawing.Size(282, 31);
             this.partsTextBox.TabIndex = 5;
             // 
             // partsAddButton
             // 
-            this.partsAddButton.Location = new System.Drawing.Point(308, 345);
+            this.partsAddButton.Location = new System.Drawing.Point(616, 663);
+            this.partsAddButton.Margin = new System.Windows.Forms.Padding(6);
             this.partsAddButton.Name = "partsAddButton";
-            this.partsAddButton.Size = new System.Drawing.Size(75, 23);
+            this.partsAddButton.Size = new System.Drawing.Size(150, 44);
             this.partsAddButton.TabIndex = 6;
             this.partsAddButton.Text = "Add";
             this.partsAddButton.UseVisualStyleBackColor = true;
@@ -106,61 +113,68 @@
             // 
             // partsModifyButton
             // 
-            this.partsModifyButton.Location = new System.Drawing.Point(399, 345);
+            this.partsModifyButton.Location = new System.Drawing.Point(798, 663);
+            this.partsModifyButton.Margin = new System.Windows.Forms.Padding(6);
             this.partsModifyButton.Name = "partsModifyButton";
-            this.partsModifyButton.Size = new System.Drawing.Size(75, 23);
+            this.partsModifyButton.Size = new System.Drawing.Size(150, 44);
             this.partsModifyButton.TabIndex = 7;
             this.partsModifyButton.Text = "Modify";
             this.partsModifyButton.UseVisualStyleBackColor = true;
             // 
             // partsDeleteButton
             // 
-            this.partsDeleteButton.Location = new System.Drawing.Point(494, 345);
+            this.partsDeleteButton.Location = new System.Drawing.Point(988, 663);
+            this.partsDeleteButton.Margin = new System.Windows.Forms.Padding(6);
             this.partsDeleteButton.Name = "partsDeleteButton";
-            this.partsDeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.partsDeleteButton.Size = new System.Drawing.Size(150, 44);
             this.partsDeleteButton.TabIndex = 8;
             this.partsDeleteButton.Text = "Delete";
             this.partsDeleteButton.UseVisualStyleBackColor = true;
             // 
             // productsDeleteButton
             // 
-            this.productsDeleteButton.Location = new System.Drawing.Point(1103, 345);
+            this.productsDeleteButton.Location = new System.Drawing.Point(2206, 663);
+            this.productsDeleteButton.Margin = new System.Windows.Forms.Padding(6);
             this.productsDeleteButton.Name = "productsDeleteButton";
-            this.productsDeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.productsDeleteButton.Size = new System.Drawing.Size(150, 44);
             this.productsDeleteButton.TabIndex = 15;
             this.productsDeleteButton.Text = "Delete";
             this.productsDeleteButton.UseVisualStyleBackColor = true;
             // 
             // productsModifyButton
             // 
-            this.productsModifyButton.Location = new System.Drawing.Point(1008, 345);
+            this.productsModifyButton.Location = new System.Drawing.Point(2016, 663);
+            this.productsModifyButton.Margin = new System.Windows.Forms.Padding(6);
             this.productsModifyButton.Name = "productsModifyButton";
-            this.productsModifyButton.Size = new System.Drawing.Size(75, 23);
+            this.productsModifyButton.Size = new System.Drawing.Size(150, 44);
             this.productsModifyButton.TabIndex = 14;
             this.productsModifyButton.Text = "Modify";
             this.productsModifyButton.UseVisualStyleBackColor = true;
             // 
             // productsAddButton
             // 
-            this.productsAddButton.Location = new System.Drawing.Point(917, 345);
+            this.productsAddButton.Location = new System.Drawing.Point(1834, 663);
+            this.productsAddButton.Margin = new System.Windows.Forms.Padding(6);
             this.productsAddButton.Name = "productsAddButton";
-            this.productsAddButton.Size = new System.Drawing.Size(75, 23);
+            this.productsAddButton.Size = new System.Drawing.Size(150, 44);
             this.productsAddButton.TabIndex = 13;
             this.productsAddButton.Text = "Add";
             this.productsAddButton.UseVisualStyleBackColor = true;
             // 
             // productsTextBox
             // 
-            this.productsTextBox.Location = new System.Drawing.Point(1035, 72);
+            this.productsTextBox.Location = new System.Drawing.Point(2070, 138);
+            this.productsTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.productsTextBox.Name = "productsTextBox";
-            this.productsTextBox.Size = new System.Drawing.Size(143, 20);
+            this.productsTextBox.Size = new System.Drawing.Size(282, 31);
             this.productsTextBox.TabIndex = 12;
             // 
             // productsSearchButton
             // 
-            this.productsSearchButton.Location = new System.Drawing.Point(954, 72);
+            this.productsSearchButton.Location = new System.Drawing.Point(1908, 138);
+            this.productsSearchButton.Margin = new System.Windows.Forms.Padding(6);
             this.productsSearchButton.Name = "productsSearchButton";
-            this.productsSearchButton.Size = new System.Drawing.Size(75, 23);
+            this.productsSearchButton.Size = new System.Drawing.Size(150, 44);
             this.productsSearchButton.TabIndex = 11;
             this.productsSearchButton.Text = "Search";
             this.productsSearchButton.UseVisualStyleBackColor = true;
@@ -169,126 +183,158 @@
             // 
             this.headerProducts.AutoSize = true;
             this.headerProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerProducts.Location = new System.Drawing.Point(622, 68);
+            this.headerProducts.Location = new System.Drawing.Point(1244, 131);
+            this.headerProducts.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.headerProducts.Name = "headerProducts";
-            this.headerProducts.Size = new System.Drawing.Size(97, 25);
+            this.headerProducts.Size = new System.Drawing.Size(185, 48);
             this.headerProducts.TabIndex = 9;
             this.headerProducts.Text = "Products";
             // 
-            // partIdCol
-            // 
-            this.partIdCol.Text = "Part ID";
-            this.partIdCol.Width = 100;
-            // 
-            // partNameCol
-            // 
-            this.partNameCol.Text = "Name";
-            this.partNameCol.Width = 100;
-            // 
-            // partsListView
-            // 
-            this.partsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.partIdCol,
-            this.partNameCol,
-            this.partInventoryCol,
-            this.partPriceCol,
-            this.partMinCol,
-            this.partMaxCol});
-            this.partsListView.HideSelection = false;
-            this.partsListView.Location = new System.Drawing.Point(18, 104);
-            this.partsListView.Margin = new System.Windows.Forms.Padding(2);
-            this.partsListView.Name = "partsListView";
-            this.partsListView.Size = new System.Drawing.Size(551, 233);
-            this.partsListView.TabIndex = 16;
-            this.partsListView.UseCompatibleStateImageBehavior = false;
-            this.partsListView.View = System.Windows.Forms.View.Details;
-            // 
-            // partInventoryCol
-            // 
-            this.partInventoryCol.Text = "Inventory";
-            this.partInventoryCol.Width = 100;
-            // 
-            // partPriceCol
-            // 
-            this.partPriceCol.Text = "Price";
-            this.partPriceCol.Width = 100;
-            // 
-            // partMinCol
-            // 
-            this.partMinCol.Text = "Min.";
-            this.partMinCol.Width = 75;
-            // 
-            // partMaxCol
-            // 
-            this.partMaxCol.Text = "Max.";
-            this.partMaxCol.Width = 75;
-            // 
-            // productsListView
-            // 
-            this.productsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.productIdCol,
-            this.productNameCol,
-            this.productInvCol,
-            this.productPriceCol,
-            this.productMinCol,
-            this.productMaxCol});
-            this.productsListView.HideSelection = false;
-            this.productsListView.Location = new System.Drawing.Point(627, 104);
-            this.productsListView.Margin = new System.Windows.Forms.Padding(2);
-            this.productsListView.Name = "productsListView";
-            this.productsListView.Size = new System.Drawing.Size(551, 233);
-            this.productsListView.TabIndex = 17;
-            this.productsListView.UseCompatibleStateImageBehavior = false;
-            this.productsListView.View = System.Windows.Forms.View.Details;
-            // 
-            // productIdCol
-            // 
-            this.productIdCol.Text = "Product ID";
-            this.productIdCol.Width = 100;
-            // 
-            // productNameCol
-            // 
-            this.productNameCol.Text = "Name";
-            this.productNameCol.Width = 100;
-            // 
-            // productInvCol
-            // 
-            this.productInvCol.Text = "Inventory";
-            this.productInvCol.Width = 100;
-            // 
-            // productPriceCol
-            // 
-            this.productPriceCol.Text = "Price";
-            this.productPriceCol.Width = 100;
-            // 
-            // productMinCol
-            // 
-            this.productMinCol.Text = "Min.";
-            this.productMinCol.Width = 75;
-            // 
-            // productMaxCol
-            // 
-            this.productMaxCol.Text = "Max.";
-            this.productMaxCol.Width = 75;
-            // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(1103, 383);
+            this.exitButton.Location = new System.Drawing.Point(2206, 737);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(6);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(75, 23);
+            this.exitButton.Size = new System.Drawing.Size(150, 44);
             this.exitButton.TabIndex = 18;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeight = 25;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dataGridView1.Location = new System.Drawing.Point(35, 191);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.RowTemplate.Height = 33;
+            this.dataGridView1.Size = new System.Drawing.Size(1099, 453);
+            this.dataGridView1.TabIndex = 19;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.HeaderText = "Part ID";
+            this.Column1.MinimumWidth = 10;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 75;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.MinimumWidth = 10;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 175;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Inventory";
+            this.Column3.MinimumWidth = 10;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 75;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Price";
+            this.Column4.MinimumWidth = 10;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 75;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Min";
+            this.Column5.MinimumWidth = 10;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 75;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Max";
+            this.Column6.MinimumWidth = 10;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 75;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView2.ColumnHeadersHeight = 25;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridView2.Location = new System.Drawing.Point(1257, 191);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 82;
+            this.dataGridView2.RowTemplate.Height = 33;
+            this.dataGridView2.Size = new System.Drawing.Size(1099, 453);
+            this.dataGridView2.TabIndex = 20;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Part ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 175;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Inventory";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Min";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Max";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 75;
+            // 
             // mainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1225, 418);
+            this.ClientSize = new System.Drawing.Size(2450, 804);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.productsListView);
-            this.Controls.Add(this.partsListView);
             this.Controls.Add(this.productsDeleteButton);
             this.Controls.Add(this.productsModifyButton);
             this.Controls.Add(this.productsAddButton);
@@ -303,8 +349,11 @@
             this.Controls.Add(this.headerParts);
             this.Controls.Add(this.mainHeader);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "mainForm";
             this.Text = "Inventory Management System";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,21 +374,21 @@
         private System.Windows.Forms.TextBox productsTextBox;
         private System.Windows.Forms.Button productsSearchButton;
         private System.Windows.Forms.Label headerProducts;
-        private System.Windows.Forms.ColumnHeader partIdCol;
-        private System.Windows.Forms.ColumnHeader partNameCol;
-        private System.Windows.Forms.ListView partsListView;
-        private System.Windows.Forms.ColumnHeader partInventoryCol;
-        private System.Windows.Forms.ColumnHeader partPriceCol;
-        private System.Windows.Forms.ColumnHeader partMinCol;
-        private System.Windows.Forms.ColumnHeader partMaxCol;
-        private System.Windows.Forms.ListView productsListView;
-        private System.Windows.Forms.ColumnHeader productIdCol;
-        private System.Windows.Forms.ColumnHeader productNameCol;
-        private System.Windows.Forms.ColumnHeader productInvCol;
-        private System.Windows.Forms.ColumnHeader productPriceCol;
-        private System.Windows.Forms.ColumnHeader productMinCol;
-        private System.Windows.Forms.ColumnHeader productMaxCol;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 
     
