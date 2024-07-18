@@ -12,9 +12,11 @@ namespace C968_Task1
 {
     public partial class addPartsForm : Form
     {
-        public addPartsForm()
+        private BindingSource bindingSource;
+        public addPartsForm(BindingSource sourceName)
         {
             InitializeComponent();
+            this.bindingSource = sourceName;
  
         }
 
@@ -33,18 +35,22 @@ namespace C968_Task1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainForm mainForm = new mainForm();
+            mainForm mainForm = new mainForm();  
             mainForm.ShowDialog();
         }
 
-        // list to store input
-        List<string> addPartList = new List< string >();
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            mainForm mainForm = new mainForm();
-            mainForm.ShowDialog();
-            
+
+            DataRowView dataRow = (DataRowView)this.bindingSource.AddNew();
+            dataRow[1] = this.textBox1.Text;
+            dataRow[2] = this.textBox2.Text;
+            dataRow[3] = this.textBox3.Text;
+            dataRow[4] = this.textBox4.Text;
+            dataRow.EndEdit();
+
+
         }
+
     }
 }

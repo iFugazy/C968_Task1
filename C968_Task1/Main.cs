@@ -23,10 +23,21 @@ namespace C968_Task1
 
         private void partsAddButton_Click(object sender, EventArgs e)
         {
-           this.Hide();
-           addPartsForm addPartForm = new addPartsForm();
+           addPartsForm addPartForm = new addPartsForm(this.dataSet1BindingSource);
            addPartForm.ShowDialog();
+
+            this.Validate();
+            this.dataSet1BindingSource.EndEdit();
         }
-        
+
+        private void partsDeleteButton_Click(object sender, EventArgs e)
+        {
+            this.dataTable1BindingSource.RemoveCurrent();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
