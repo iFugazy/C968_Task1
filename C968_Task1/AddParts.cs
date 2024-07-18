@@ -12,11 +12,12 @@ namespace C968_Task1
 {
     public partial class addPartsForm : Form
     {
-        private BindingSource bindingSource;
-        public addPartsForm(BindingSource sourceName)
+        mainForm MainForm;
+        public addPartsForm(mainForm mF)
         {
             InitializeComponent();
-            this.bindingSource = sourceName;
+            this.MainForm = mF;
+            
  
         }
 
@@ -35,20 +36,12 @@ namespace C968_Task1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainForm mainForm = new mainForm();  
-            mainForm.ShowDialog();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            DataRowView dataRow = (DataRowView)this.bindingSource.AddNew();
-            dataRow[1] = this.textBox1.Text;
-            dataRow[2] = this.textBox2.Text;
-            dataRow[3] = this.textBox3.Text;
-            dataRow[4] = this.textBox4.Text;
-            dataRow.EndEdit();
-
+             MainForm.dataGridView1.Rows.Add(textBox1.Text, textBox2.Text);
 
         }
 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.mainHeader = new System.Windows.Forms.Label();
             this.headerParts = new System.Windows.Forms.Label();
             this.partsSearchButton = new System.Windows.Forms.Button();
@@ -43,22 +42,11 @@
             this.productsSearchButton = new System.Windows.Forms.Button();
             this.headerProducts = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
-            this.dataSet1 = new C968_Task1.DataSet1();
-            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet11 = new C968_Task1.DataSet1();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTable1DataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1DataGridView)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainHeader
@@ -189,78 +177,32 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // dataSet1
+            // dataGridView1
             // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView1.Location = new System.Drawing.Point(18, 96);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(551, 243);
+            this.dataGridView1.TabIndex = 19;
             // 
-            // dataSet1BindingSource
+            // Column1
             // 
-            this.dataSet1BindingSource.DataSource = this.dataSet1;
-            this.dataSet1BindingSource.Position = 0;
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
             // 
-            // dataSet11
+            // Column2
             // 
-            this.dataSet11.DataSetName = "DataSet1";
-            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
             // 
-            // dataTable1BindingSource
+            // Column3
             // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.dataSet1;
-            // 
-            // dataTable1DataGridView
-            // 
-            this.dataTable1DataGridView.AutoGenerateColumns = false;
-            this.dataTable1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTable1DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dataTable1DataGridView.DataSource = this.dataTable1BindingSource;
-            this.dataTable1DataGridView.Location = new System.Drawing.Point(18, 101);
-            this.dataTable1DataGridView.Name = "dataTable1DataGridView";
-            this.dataTable1DataGridView.Size = new System.Drawing.Size(551, 234);
-            this.dataTable1DataGridView.TabIndex = 18;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Part ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Part ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Inventory";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Inventory";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Price";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Price";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Min";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Min";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Max";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Max";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
             // 
             // mainForm
             // 
@@ -268,7 +210,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1225, 467);
-            this.Controls.Add(this.dataTable1DataGridView);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.productsDeleteButton);
             this.Controls.Add(this.productsModifyButton);
@@ -287,11 +229,7 @@
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory Management System";
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,17 +251,10 @@
         private System.Windows.Forms.Button productsSearchButton;
         private System.Windows.Forms.Label headerProducts;
         private System.Windows.Forms.Button exitButton;
-        private DataSet1 dataSet1;
-        private System.Windows.Forms.BindingSource dataSet1BindingSource;
-        private DataSet1 dataSet11;
-        private System.Windows.Forms.BindingSource dataTable1BindingSource;
-        private System.Windows.Forms.DataGridView dataTable1DataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 
     

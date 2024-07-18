@@ -13,6 +13,7 @@ namespace C968_Task1
 {
     public partial class mainForm : Form
     {
+      
         public mainForm()
         {
             InitializeComponent();
@@ -23,16 +24,15 @@ namespace C968_Task1
 
         private void partsAddButton_Click(object sender, EventArgs e)
         {
-           addPartsForm addPartForm = new addPartsForm(this.dataSet1BindingSource);
+           addPartsForm addPartForm = new addPartsForm(this);
            addPartForm.ShowDialog();
 
-            this.Validate();
-            this.dataSet1BindingSource.EndEdit();
+
         }
 
         private void partsDeleteButton_Click(object sender, EventArgs e)
         {
-            this.dataTable1BindingSource.RemoveCurrent();
+          
         }
 
         private void exitButton_Click(object sender, EventArgs e)
