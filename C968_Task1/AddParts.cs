@@ -42,6 +42,7 @@ namespace C968_Task1
         private void button1_Click(object sender, EventArgs e)
         {
              MainForm.dataGridView1.Rows.Add(textBox1.Text, textBox2.Text);
+             
 
         }
 
