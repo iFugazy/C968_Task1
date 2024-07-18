@@ -47,17 +47,25 @@ namespace C968_Task1
 
         private void partsModifyButton_Click(object sender, EventArgs e)
         {
-            addPartsForm _addPartsForm = new addPartsForm(this);
-            
-            _addPartsForm.textBox1.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            _addPartsForm.textBox2.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            _addPartsForm.textBox3.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            _addPartsForm.textBox4.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            _addPartsForm.textBox5.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            _addPartsForm.textBox6.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            _addPartsForm.textBox7.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            ModifyParts modifyParts = new ModifyParts(this);
 
-            _addPartsForm.ShowDialog();
+           
+
+            modifyParts.textBox1.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            modifyParts.textBox2.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            modifyParts.textBox3.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            modifyParts.textBox4.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            modifyParts.textBox5.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            modifyParts.textBox6.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+
+            modifyParts.ShowDialog(this);
+
+            
+
+
+
+
+
         }
     }
 }
