@@ -30,18 +30,18 @@
         {
             this.headerParts = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.partIDTb = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.partNameTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.partInvTB = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.partPriceTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.partMaxTB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.partMinTB = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.addPartsMachineIDLabel = new System.Windows.Forms.Label();
@@ -68,12 +68,12 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "ID";
             // 
-            // textBox1
+            // partIDTb
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 20);
-            this.textBox1.TabIndex = 5;
+            this.partIDTb.Location = new System.Drawing.Point(157, 56);
+            this.partIDTb.Name = "partIDTb";
+            this.partIDTb.Size = new System.Drawing.Size(184, 20);
+            this.partIDTb.TabIndex = 5;
             // 
             // radioButton1
             // 
@@ -99,12 +99,12 @@
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // textBox2
+            // partNameTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(157, 98);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(184, 20);
-            this.textBox2.TabIndex = 9;
+            this.partNameTB.Location = new System.Drawing.Point(157, 98);
+            this.partNameTB.Name = "partNameTB";
+            this.partNameTB.Size = new System.Drawing.Size(184, 20);
+            this.partNameTB.TabIndex = 9;
             // 
             // label2
             // 
@@ -115,12 +115,12 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Name";
             // 
-            // textBox3
+            // partInvTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(157, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 20);
-            this.textBox3.TabIndex = 11;
+            this.partInvTB.Location = new System.Drawing.Point(157, 141);
+            this.partInvTB.Name = "partInvTB";
+            this.partInvTB.Size = new System.Drawing.Size(184, 20);
+            this.partInvTB.TabIndex = 11;
             // 
             // label3
             // 
@@ -131,12 +131,12 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Inventory";
             // 
-            // textBox4
+            // partPriceTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(157, 185);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(184, 20);
-            this.textBox4.TabIndex = 13;
+            this.partPriceTB.Location = new System.Drawing.Point(157, 185);
+            this.partPriceTB.Name = "partPriceTB";
+            this.partPriceTB.Size = new System.Drawing.Size(184, 20);
+            this.partPriceTB.TabIndex = 13;
             // 
             // label4
             // 
@@ -147,12 +147,12 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Price / Cost";
             // 
-            // textBox5
+            // partMaxTB
             // 
-            this.textBox5.Location = new System.Drawing.Point(156, 231);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(64, 20);
-            this.textBox5.TabIndex = 15;
+            this.partMaxTB.Location = new System.Drawing.Point(156, 231);
+            this.partMaxTB.Name = "partMaxTB";
+            this.partMaxTB.Size = new System.Drawing.Size(64, 20);
+            this.partMaxTB.TabIndex = 15;
             // 
             // label5
             // 
@@ -163,12 +163,12 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Max";
             // 
-            // textBox6
+            // partMinTB
             // 
-            this.textBox6.Location = new System.Drawing.Point(277, 231);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(64, 20);
-            this.textBox6.TabIndex = 17;
+            this.partMinTB.Location = new System.Drawing.Point(277, 231);
+            this.partMinTB.Name = "partMinTB";
+            this.partMinTB.Size = new System.Drawing.Size(64, 20);
+            this.partMinTB.TabIndex = 17;
             // 
             // label6
             // 
@@ -230,25 +230,24 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.addPartsMachineIDLabel);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.partMinTB);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.partMaxTB);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.partPriceTB);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.partInvTB);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.partNameTB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.partIDTb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.headerParts);
             this.Name = "addPartsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddParts";
-            this.Load += new System.EventHandler(this.addPartsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,12 +266,12 @@
         private System.Windows.Forms.Label addPartsMachineIDLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox4;
-        public System.Windows.Forms.TextBox textBox5;
-        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox partIDTb;
+        public System.Windows.Forms.TextBox partNameTB;
+        public System.Windows.Forms.TextBox partInvTB;
+        public System.Windows.Forms.TextBox partPriceTB;
+        public System.Windows.Forms.TextBox partMaxTB;
         public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox partMinTB;
     }
 }

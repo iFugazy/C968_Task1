@@ -259,6 +259,7 @@
             this.Controls.Add(this.headerParts);
             this.Name = "ModifyParts";
             this.Text = ".";
+            this.Load += new System.EventHandler(this.ModifyParts_Load);
             this.Click += new System.EventHandler(this.button2_Click);
             this.ResumeLayout(false);
             this.PerformLayout();

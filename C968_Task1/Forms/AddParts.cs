@@ -1,4 +1,5 @@
-﻿using System;
+﻿using C968_Task1.Calculations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,14 @@ namespace C968_Task1
     public partial class addPartsForm : Form
     {
         mainForm MainForm;
-       
+        public int PartID { get; set; }
+        public string PartName { get; set; }
+        public int PartInv { get; set; }
+        public double PartPrice { get; set; }
+        public int PartMin { get; set; }
+        public int PartMax { get; set; }
+
+
         public addPartsForm(mainForm mF)
         {
             InitializeComponent();
@@ -44,35 +52,32 @@ namespace C968_Task1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            float.TryParse(partPriceTB.Text, out float FloatPartPrice);
             try
             {
-                table.Rows.Add(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text);
-                MainForm.dataGridView1.DataSource = table;
+
+                PartID = int.Parse(partIDTb.Text);
+                PartName = partNameTB.Text;
+                PartInv = int.Parse(partInvTB.Text);
+                PartPrice = FloatPartPrice;
+                PartMin = int.Parse(partMinTB.Text);
+                PartMax = int.Parse(partMaxTB.Text);
+
+                DialogResult = DialogResult.OK;
+
+
+
+
+
+
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Please enter valid values", "Incorrect Values Found");
             }
-           
-
-
-            
-
-
-             
 
         }
 
-        private void addPartsForm_Load(object sender, EventArgs e)
-        {
-            table.Columns.Add("Part ID", typeof(int));
-            table.Columns.Add("Name", typeof(string));
-            table.Columns.Add("Inventory", typeof(int));
-            table.Columns.Add("Price", typeof(float));
-            table.Columns.Add("Min", typeof(int));
-            table.Columns.Add("Max", typeof(int));
-
-            MainForm.dataGridView1.DataSource = table;
-        }
     }
 }
