@@ -13,12 +13,14 @@ namespace C968_Task1
     public partial class addPartsForm : Form
     {
         mainForm MainForm;
+       
         public addPartsForm(mainForm mF)
         {
             InitializeComponent();
             this.MainForm = mF;
-            
- 
+
+
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -31,6 +33,7 @@ namespace C968_Task1
             addPartsMachineIDLabel.Text = "Company Name";
         }
         // Declaring Variables being used
+        DataTable table = new DataTable();
 
 
         private void button2_Click(object sender, EventArgs e)
@@ -41,10 +44,35 @@ namespace C968_Task1
 
         private void button1_Click(object sender, EventArgs e)
         {
-             MainForm.dataGridView1.Rows.Add(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text,textBox5.Text,textBox6.Text,textBox7.Text);
+            try
+            {
+                table.Rows.Add(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text);
+                MainForm.dataGridView1.DataSource = table;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter valid values", "Incorrect Values Found");
+            }
+           
+
+
+            
+
+
              
 
         }
 
+        private void addPartsForm_Load(object sender, EventArgs e)
+        {
+            table.Columns.Add("Part ID", typeof(int));
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("Inventory", typeof(int));
+            table.Columns.Add("Price", typeof(float));
+            table.Columns.Add("Min", typeof(int));
+            table.Columns.Add("Max", typeof(int));
+
+            MainForm.dataGridView1.DataSource = table;
+        }
     }
 }

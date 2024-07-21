@@ -248,6 +248,7 @@
             this.Name = "addPartsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddParts";
+            this.Load += new System.EventHandler(this.addPartsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

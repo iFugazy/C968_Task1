@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,8 +20,8 @@ namespace C968_Task1
             InitializeComponent();
             this.mainForm = mainForm;
 
-
             
+
 
         }
 
@@ -36,19 +37,14 @@ namespace C968_Task1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            mainForm mainForm = new mainForm();
+            mainForm.dataGridView1.Update();
+            mainForm.dataGridView1.Refresh();
 
-            mainForm.dataGridView1.CurrentRow.Cells[0].Value = this.textBox1.Text;
-            mainForm.dataGridView1.CurrentRow.Cells[1].Value = this.textBox2.Text;
-            mainForm.dataGridView1.CurrentRow.Cells[2].Value = this.textBox3.Text;
-            mainForm.dataGridView1.CurrentRow.Cells[3].Value = this.textBox4.Text;
-            mainForm.dataGridView1.CurrentRow.Cells[4].Value = this.textBox5.Text;
-            mainForm.dataGridView1.CurrentRow.Cells[5].Value = this.textBox6.Text;
         }
     }
 }

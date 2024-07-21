@@ -25,19 +25,13 @@ namespace C968_Task1
 
         private void partsAddButton_Click(object sender, EventArgs e)
         {
-            addPartsForm addPartForm = new addPartsForm(this);
-            addPartForm.ShowDialog();
-
-
+            addPartsForm addParts = new addPartsForm(this);
+            addParts.ShowDialog();
         }
 
         private void partsDeleteButton_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
-            {
-                if (oneCell.Selected)
-                    dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
-            }
+
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -47,25 +41,20 @@ namespace C968_Task1
 
         private void partsModifyButton_Click(object sender, EventArgs e)
         {
-            ModifyParts modifyParts = new ModifyParts(this);
 
-           
+        }
 
-            modifyParts.textBox1.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            modifyParts.textBox2.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            modifyParts.textBox3.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            modifyParts.textBox4.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            modifyParts.textBox5.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            modifyParts.textBox6.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("Part ID", typeof(int));
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("Inventory", typeof(int));
+            table.Columns.Add("Price", typeof(float));
+            table.Columns.Add("Min", typeof(int));
+            table.Columns.Add("Max", typeof(int));
 
-            modifyParts.ShowDialog(this);
-
-            
-
-
-
-
-
+            dataGridView1.DataSource = table;
         }
     }
 }
