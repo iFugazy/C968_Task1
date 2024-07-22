@@ -14,6 +14,7 @@ namespace C968_Task1
     public partial class addPartsForm : Form
     {
         mainForm MainForm;
+        DataTable table = new DataTable();
         public int PartID { get; set; }
         public string PartName { get; set; }
         public int PartInv { get; set; }
@@ -22,10 +23,10 @@ namespace C968_Task1
         public int PartMax { get; set; }
 
 
-        public addPartsForm(mainForm mF)
+        public addPartsForm(mainForm mainForm)
         {
             InitializeComponent();
-            this.MainForm = mF;
+            this.MainForm = mainForm;
 
 
 
@@ -39,15 +40,11 @@ namespace C968_Task1
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             addPartsMachineIDLabel.Text = "Company Name";
-        }
-        // Declaring Variables being used
-        DataTable table = new DataTable();
-
+        }     
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-           
+            this.Hide();     
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,7 +52,6 @@ namespace C968_Task1
             float.TryParse(partPriceTB.Text, out float FloatPartPrice);
             try
             {
-
                 PartID = int.Parse(partIDTb.Text);
                 PartName = partNameTB.Text;
                 PartInv = int.Parse(partInvTB.Text);
@@ -65,19 +61,11 @@ namespace C968_Task1
 
                 DialogResult = DialogResult.OK;
 
-
-
-
-
-
-
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Please enter valid values", "Incorrect Values Found");
             }
-
         }
-
     }
 }

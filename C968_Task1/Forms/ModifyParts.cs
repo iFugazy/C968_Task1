@@ -31,9 +31,6 @@ namespace C968_Task1
 
             this.mainForm = mainForm;
 
-            
-
-
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -67,7 +64,7 @@ namespace C968_Task1
 
                 DialogResult = DialogResult.OK;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Please enter valid values", "Incorrect Values Found");
             }
@@ -77,8 +74,8 @@ namespace C968_Task1
         {
             
 
-            int index = mainForm.dataGridView1.SelectedRows[0].Index; 
-            DataGridViewRow selectedRow = mainForm.dataGridView1.Rows[index];
+            int index = mainForm.partsDataGridView.SelectedRows[0].Index; 
+            DataGridViewRow selectedRow = mainForm.partsDataGridView.Rows[index];
             textBox1.Text = selectedRow.Cells[0].Value.ToString();
             textBox2.Text = selectedRow.Cells[1].Value.ToString();
             textBox3.Text = selectedRow.Cells[2].Value.ToString();

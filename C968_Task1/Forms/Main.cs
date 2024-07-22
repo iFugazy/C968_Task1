@@ -44,8 +44,8 @@ namespace C968_Task1
 
         private void partsDeleteButton_Click(object sender, EventArgs e)
         {
-            int selectedIndex = dataGridView1.SelectedRows[0].Index;
-            dataGridView1.Rows.RemoveAt(selectedIndex);
+            int selectedIndex = partsDataGridView.SelectedRows[0].Index;
+            partsDataGridView.Rows.RemoveAt(selectedIndex);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -55,9 +55,9 @@ namespace C968_Task1
 
         private void partsModifyButton_Click(object sender, EventArgs e)
         {
-            int selectedIndex = dataGridView1.SelectedRows[0].Index;
+            int selectedIndex = partsDataGridView.SelectedRows[0].Index;
             ModifyParts modifyParts = new ModifyParts(this);
-            DataGridViewRow row = dataGridView1.Rows[selectedIndex];
+            DataGridViewRow row = partsDataGridView.Rows[selectedIndex];
             
             
             if (modifyParts.ShowDialog() == DialogResult.OK)
@@ -96,7 +96,12 @@ namespace C968_Task1
             dataTable.Rows.Add(4, "Lol", 1.2, 4.42, 1, 2);
 
 
-            dataGridView1.DataSource = dataTable;
+            partsDataGridView.DataSource = dataTable;
+        }
+
+        private void partsSearchButton_Click(object sender, EventArgs e)
+        {
+     
         }
     }
 }
