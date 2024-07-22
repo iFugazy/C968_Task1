@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculations\Converter.cs" />
     <Compile Include="Forms\AddParts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +70,11 @@
     <Compile Include="Forms\ModifyParts.Designer.cs">
       <DependentUpon>ModifyParts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Inhouse.cs" />
+    <Compile Include="Models\Inventory.cs" />
+    <Compile Include="Models\Outsourced.cs" />
+    <Compile Include="Models\Part.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AddParts.resx">

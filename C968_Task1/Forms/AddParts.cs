@@ -55,7 +55,7 @@ namespace C968_Task1
                 PartID = int.Parse(partIDTb.Text);
                 PartName = partNameTB.Text;
                 PartInv = int.Parse(partInvTB.Text);
-                PartPrice = FloatPartPrice;
+                PartPrice = (float)FloatPartPrice;
                 PartMin = int.Parse(partMinTB.Text);
                 PartMax = int.Parse(partMaxTB.Text);
 

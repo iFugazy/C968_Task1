@@ -29,10 +29,10 @@ namespace C968_Task1
             addPartsForm addParts = new addPartsForm(this);
             if (addParts.ShowDialog() == DialogResult.OK)
             {
-                int partID = addParts.PartID + 1;
+                int partID = addParts.PartID;
                 string partName = addParts.PartName;
                 int partInventory = addParts.PartInv;
-                double partPrice = addParts.PartPrice;
+                double partPrice = (double)addParts.PartPrice;
                 int partMin = addParts.PartMin;
                 int partMax = addParts.PartMax;
 
