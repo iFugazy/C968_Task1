@@ -29,7 +29,7 @@ namespace C968_Task1
             addPartsForm addParts = new addPartsForm(this);
             if (addParts.ShowDialog() == DialogResult.OK)
             {
-                int partID = addParts.PartID;
+                int partID = addParts.PartID + 1;
                 string partName = addParts.PartName;
                 int partInventory = addParts.PartInv;
                 double partPrice = addParts.PartPrice;
@@ -38,6 +38,8 @@ namespace C968_Task1
 
                 dataTable.Rows.Add(partID, partName, partInventory, partPrice, partMin, partMax);
             }
+
+
         }
 
         private void partsDeleteButton_Click(object sender, EventArgs e)
