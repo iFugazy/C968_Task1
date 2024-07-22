@@ -1,4 +1,5 @@
-﻿using System;
+﻿using C968_Task1.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,15 +17,14 @@ namespace C968_Task1
     public partial class ModifyParts : Form
     {
         mainForm mainForm;
-        DataTable DataTable = new DataTable();
-        int selectedIndex;
 
-        public int PartID { get; set; }
-        public string PartName { get; set; }
-        public int PartInv { get; set; }
-        public float PartPrice { get; set; }
-        public int PartMin { get; set; }
-        public int PartMax { get; set; }
+        public int PartID { get; internal set; }
+        public string PartName { get; internal set; }
+        public decimal PartPrice { get; internal set; }
+        public int PartMin { get; internal set; }
+        public int PartMax { get; internal set; }
+        public int PartInv { get; internal set; }
+
         public ModifyParts(mainForm mainForm)
         {
             InitializeComponent();
@@ -50,15 +50,34 @@ namespace C968_Task1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*int minStock;
+            int maxStock;
+            int invInStock;
+            decimal price;*/
+
             try
             {
                 PartID = int.Parse(textBox1.Text);
                 PartName = textBox2.Text;
                 PartInv = int.Parse(textBox3.Text);
-                PartPrice = float.Parse(textBox4.Text);
+                PartPrice = decimal.Parse(textBox4.Text);
                 PartMin = int.Parse(textBox5.Text);
                 PartMax = int.Parse(textBox6.Text);
 
+                int index = mainForm.partsDataGridView.SelectedRows[0].Index;
+                DataGridViewRow row = mainForm.partsDataGridView.Rows[index];
+                row.Cells[0].Value = PartID;
+                row.Cells[1].Value = PartName;
+                row.Cells[2].Value = PartInv;
+                row.Cells[3].Value = PartPrice;
+                row.Cells[4].Value = PartMax;
+                row.Cells[5].Value = PartMin;
+
+
+
+
+                /*Inhouse inhouse = new Inhouse(PartID, PartName, invInStock, price, minStock, maxStock);
+                Inventory.updatePart(PartID, inhouse);*/
 
 
 
@@ -72,17 +91,14 @@ namespace C968_Task1
 
         private void ModifyParts_Load(object sender, EventArgs e)
         {
-            
-
             int index = mainForm.partsDataGridView.SelectedRows[0].Index; 
             DataGridViewRow selectedRow = mainForm.partsDataGridView.Rows[index];
             textBox1.Text = selectedRow.Cells[0].Value.ToString();
             textBox2.Text = selectedRow.Cells[1].Value.ToString();
-            textBox3.Text = selectedRow.Cells[2].Value.ToString();
-            textBox4.Text = selectedRow.Cells[3].Value.ToString();
+            textBox3.Text = selectedRow.Cells[3].Value.ToString();
+            textBox4.Text = selectedRow.Cells[2].Value.ToString();
             textBox5.Text = selectedRow.Cells[4].Value.ToString();
             textBox6.Text = selectedRow.Cells[5].Value.ToString();
-
         }
     }
 }
