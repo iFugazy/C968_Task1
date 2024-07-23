@@ -60,10 +60,10 @@ namespace C968_Task1
             {
                 int partID = modifyParts.PartID;
                 string partName = modifyParts.PartName;
+                int partInventory = modifyParts.PartInv;
                 decimal partPrice = modifyParts.PartPrice;
                 int partMin = modifyParts.PartMin;
                 int partMax = modifyParts.PartMax;
-                int partInventory= modifyParts.PartInv;
 
 
 

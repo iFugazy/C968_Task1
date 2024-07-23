@@ -32,7 +32,17 @@ namespace C968_Task1
             this.mainForm = mainForm;
 
         }
+        public ModifyParts(Inhouse part)
+        {
+            InitializeComponent();
+            textBox1.Text = part.PartID.ToString();
+            textBox2.Text = part.Name.ToString();
+            textBox3.Text = part.InStock.ToString();
+            textBox4.Text = part.Price.ToString();
+            textBox5.Text = part.Min.ToString();
+            textBox6.Text = part.Max.ToString();
 
+        }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             addPartsMachineIDLabel.Text = "Machine ID";
@@ -50,34 +60,21 @@ namespace C968_Task1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*int minStock;
+            int minStock;
             int maxStock;
             int invInStock;
-            decimal price;*/
+            decimal price;
 
             try
             {
-                PartID = int.Parse(textBox1.Text);
-                PartName = textBox2.Text;
-                PartInv = int.Parse(textBox3.Text);
-                PartPrice = decimal.Parse(textBox4.Text);
-                PartMin = int.Parse(textBox5.Text);
-                PartMax = int.Parse(textBox6.Text);
-
-                int index = mainForm.partsDataGridView.SelectedRows[0].Index;
-                DataGridViewRow row = mainForm.partsDataGridView.Rows[index];
-                row.Cells[0].Value = PartID;
-                row.Cells[1].Value = PartName;
-                row.Cells[2].Value = PartInv;
-                row.Cells[3].Value = PartPrice;
-                row.Cells[4].Value = PartMax;
-                row.Cells[5].Value = PartMin;
+                minStock = int.Parse(textBox5.Text);
+                maxStock = int.Parse(textBox6.Text);
+                invInStock = int.Parse(textBox3.Text);
+                price = decimal.Parse(textBox4.Text);
 
 
 
-
-                /*Inhouse inhouse = new Inhouse(PartID, PartName, invInStock, price, minStock, maxStock);
-                Inventory.updatePart(PartID, inhouse);*/
+                
 
 
 
@@ -87,6 +84,16 @@ namespace C968_Task1
             {
                 MessageBox.Show("Please enter valid values", "Incorrect Values Found");
             }
+
+            int ID = int.Parse(textBox1.Text);
+            string name = textBox2.Text;
+            price = decimal.Parse(textBox4.Text);
+            minStock = int.Parse(textBox5.Text);
+            maxStock = int.Parse(textBox6.Text);
+            invInStock = int.Parse(textBox3.Text);
+
+            Inhouse inhouse = new Inhouse(ID, name, invInStock, price, minStock, maxStock);
+            Inventory.updatePart(ID, inhouse);
         }
 
         private void ModifyParts_Load(object sender, EventArgs e)
