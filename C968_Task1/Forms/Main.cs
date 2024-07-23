@@ -46,7 +46,6 @@ namespace C968_Task1
             }          
         }
 
-
         /// <summary>
         /// This event handler listens for the exit button to be clicked and then closes the application.
         /// </summary>
@@ -123,14 +122,14 @@ namespace C968_Task1
             bool valueResult = false;
             foreach (DataGridViewRow row in partsDataGridView.Rows)
             {               
-                    if (row.Cells[0].Value != null && row.Cells[0].Value.ToString().Equals(searchValue))
+                    if (row.Cells[0].Value != null && row.Cells[0].Value.ToString().Contains(searchValue))
                     {
                         int rowIndex = row.Index;
                         partsDataGridView.Rows[rowIndex].Selected = true;
                         valueResult = true;
                         break;
                     }
-                    else if (row.Cells[1].Value != null && row.Cells[1].Value.ToString().Equals(searchValue))
+                    else if (row.Cells[1].Value != null && row.Cells[1].Value.ToString().Contains(searchValue))
                     {
                         int rowIndex = row.Index;
                         partsDataGridView.Rows[rowIndex].Selected = true;
@@ -147,13 +146,8 @@ namespace C968_Task1
                 else
                 {
                     MessageBox.Show($"{partsTextBox.Text} is not a value in the list ", "Search Failed");
-                }
-                
-            }
-            
-
+                }                
+            }           
         }
-
-
     }
 }

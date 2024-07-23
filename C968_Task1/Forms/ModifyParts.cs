@@ -25,7 +25,6 @@ namespace C968_Task1
         public int PartMax { get; internal set; }
         public int PartInv { get; internal set; }
 
-
         public ModifyParts(mainForm mainForm)
         {
             InitializeComponent();
