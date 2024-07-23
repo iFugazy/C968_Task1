@@ -24,7 +24,12 @@ namespace C968_Task1
         public int PartMin { get; set; }
         public int PartMax { get; set; }
 
-
+        /// <summary>
+        /// This constructor takes the partID from the binding list and adds one to it so that the user doesn't
+        /// have to worry about making sure the partID feild is incrementing correctly. This also allows the user
+        /// to see this within the partID textbox
+        /// </summary>
+        /// <param name="mainForm"></param>      
         public addPartsForm(mainForm mainForm)
         {
             InitializeComponent();
@@ -36,50 +41,67 @@ namespace C968_Task1
 
 
         }
-
+        /// <summary>
+        /// This event handler checks to see if the radio button was changed and changes the text from "Company Name" to
+        /// "Machine ID".
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             addPartsMachineIDLabel.Text = "Machine ID";
         }
 
+        /// <summary>
+        /// This event handler checks to see if the radio button was changed and changes the text from "Machine ID" to
+        /// "Company Name".
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             addPartsMachineIDLabel.Text = "Company Name";
         }     
 
+        /// <summary>
+        /// This event handler closes this form and reverts the information back to the information available before clicking
+        /// this dialog.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();     
+            this.Close();     
         }
 
+
+        /// <summary>
+        /// This event handler takes the information that has been placed within the form's textboxes and places them within 
+        /// variables. These variables are then used within the "inhouse" variable which is a instantiaded variable of the Inhouse
+        /// class. This is then added to the binding list using the addPart class from the Inventory class.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void partsSaveButton_Click(object sender, EventArgs e)
-        {
-            Inhouse inhouse1 = new Inhouse();
-            
+        {            
             try
             {
                 int partCount = Inventory.AllParts.Count + 1;
-
-
                 PartName = partNameTB.Text;
                 PartInv = int.Parse(partInvTB.Text);
                 PartPrice = decimal.Parse(partPriceTB.Text);
                 PartMin = int.Parse(partMinTB.Text);
-                PartMax = int.Parse(partMaxTB.Text);
+                PartMax = int.Parse(partMaxTB.Text);                
 
-                
-
-                    Inhouse inhouse = new Inhouse(partCount, PartName, PartInv, PartPrice, PartMin, PartMax);
+                Inhouse inhouse = new Inhouse(partCount, PartName, PartInv, PartPrice, PartMin, PartMax);
                 Inventory.addPart(inhouse);
 
                 DialogResult = DialogResult.OK;
-
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("Please enter valid values", "Incorrect Values Found");
             }
-
         }
     }
 }

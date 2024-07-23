@@ -20,10 +20,12 @@ namespace C968_Task1
             InitializeComponent();
             
         }
-        
+
         /// <summary>
         /// This event handler listens for the add button to be clicked and then opens the addParts form.
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void partsAddButton_Click(object sender, EventArgs e)
         {
             addPartsForm addParts = new addPartsForm(this);
@@ -34,6 +36,8 @@ namespace C968_Task1
         /// This event handler listens for the delete button to be clicked and then takes the selected row of data and removes it based off its 
         /// index within the datagridview.
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void partsDeleteButton_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow datarow in partsDataGridView.SelectedRows)
@@ -46,6 +50,8 @@ namespace C968_Task1
         /// <summary>
         /// This event handler listens for the exit button to be clicked and then closes the application.
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -56,6 +62,8 @@ namespace C968_Task1
         /// is clicked, the partID text box is compared to the datagridview row that is selected. The selected row is then removed and replaced with 
         /// the data that was added within the form.
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void partsModifyButton_Click(object sender, EventArgs e)
         {
             try
@@ -87,9 +95,11 @@ namespace C968_Task1
         /// This event handler listens for the form to be loaded an then loads the data from the bindinglist within the Inventory class into the datagrid 
         /// view for the parts and the products. This also loads the data from the example in the GUI and places it into the datagridview.
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void mainForm_Load_1(object sender, EventArgs e)
         {
-            Inventory.ExampleItems();
+            Inventory.GUIExampleItems();
 
             var table = new BindingSource();
             table.DataSource = Inventory.AllParts;
@@ -101,6 +111,8 @@ namespace C968_Task1
         /// and comparing it to the value in the first cell of of all the rows and the 2nd sell of all the rows. It then checks to see
         /// if the value is null or if it is equal to the textbox and then highlghts the row in the datagridview.
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void partsSearchButton_Click(object sender, EventArgs e)
         {
             partsDataGridView.ClearSelection();

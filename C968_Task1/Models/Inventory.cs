@@ -14,29 +14,36 @@ namespace C968_Task1.Models
         public static BindingList<Part> AllParts = new BindingList<Part>();
         public static BindingList<Product> Products = new BindingList<Product>();
         
-        // Start of the product inventory methods
         public static void addProduct() { }
         public static bool removeProduct() { return false; }
         public static Product lookUpProduct() {  return null; }
         public static void updateProduct(int number, Product product) { }
 
-        // Start of Part inventory Methods
-
-        // Uses the all parts list and adds the part that is placed within the methods parameter.
+        /// <summary>
+        /// Uses the all parts list and adds the part that is placed within the methods parameter.
+        /// </summary>
+        /// <param name="part"></param>
         public static void addPart(Part part) 
         {
             AllParts.Add(part);
         }
 
-        // Uses the Remove method to remove the part that is passed through the method's parameter.
+        /// <summary>
+        /// Uses the Remove method to remove the part that is passed through the method's parameter.
+        /// </summary>
+        /// <param name="part"></param>
+        /// <returns></returns>
         public static bool deletePart(Part part) 
         { 
-
             AllParts.Remove(part);
             return true;
         }
 
-        // looks up the part that is based off the partID parameter in the parent class and returns the part.
+        /// <summary>
+        /// looks up the part that is based off the partID parameter in the parent class and returns the part.
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public static Part lookupPart(int number) 
         {
             foreach (Part part in AllParts)
@@ -50,21 +57,23 @@ namespace C968_Task1.Models
             return emptyPart;
         }
 
-        // Takes the part ID from the method and places it into the lookup part methof which will then removed that part and add the new part.
-        public static void updatePart(int partID, Part part) 
-        {
-            mainForm main = new mainForm();
-       
-            Part part1 = lookupPart(partID);
-
+        /// <summary>
+        /// Takes the part ID from the method and places it into the lookup part methof which will then removed that part and add the new part.
+        /// </summary>
+        /// <param name="PartID"></param>
+        /// <param name="part"></param>
+        public static void updatePart(int PartID, Part part) 
+        {    
+            Part partID = lookupPart(PartID);
             
-            deletePart(part1);
-
+            deletePart(partID);
             AllParts.Add(part);
-
         }
 
-        public static void ExampleItems()
+        /// <summary>
+        /// This method is adds exampled data from the GUI to the part datagridview.
+        /// </summary>
+        public static void GUIExampleItems()
         {
             Part exampleInHouse = new Inhouse(1, "Darren", 1, 1.22m, 1, 1);
             Part exampleInHouse2 = new Inhouse(2, "Cody", 1, 1.22m, 1, 1);
