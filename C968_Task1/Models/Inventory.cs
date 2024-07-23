@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace C968_Task1.Models
 {
@@ -30,6 +31,7 @@ namespace C968_Task1.Models
         // Uses the Remove method to remove the part that is passed through the method's parameter.
         public static bool deletePart(Part part) 
         { 
+
             AllParts.Remove(part);
             return true;
         }
@@ -51,9 +53,13 @@ namespace C968_Task1.Models
         // Takes the part ID from the method and places it into the lookup part methof which will then removed that part and add the new part.
         public static void updatePart(int partID, Part part) 
         {
-            partID = part.PartID;
+            mainForm main = new mainForm();
+       
+            Part part1 = lookupPart(partID);
+
             
-            deletePart(lookupPart(partID));
+            deletePart(part1);
+
             AllParts.Add(part);
 
         }
@@ -61,7 +67,11 @@ namespace C968_Task1.Models
         public static void ExampleItems()
         {
             Part exampleInHouse = new Inhouse(1, "Darren", 1, 1.22m, 1, 1);
+            Part exampleInHouse2 = new Inhouse(2, "Cody", 1, 1.22m, 1, 1);
+            Part exampleInHouse3 = new Inhouse(3, "Zach", 1, 1.22m, 1, 1);
             AllParts.Add(exampleInHouse);
+            AllParts.Add(exampleInHouse2);
+            AllParts.Add(exampleInHouse3);
         }
     }
 

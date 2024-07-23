@@ -198,6 +198,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(154, 56);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(184, 20);
             this.textBox1.TabIndex = 24;
             // 
@@ -259,7 +260,6 @@
             this.Controls.Add(this.headerParts);
             this.Name = "ModifyParts";
             this.Text = "Part";
-            this.Load += new System.EventHandler(this.ModifyParts_Load);
             this.Click += new System.EventHandler(this.button2_Click);
             this.ResumeLayout(false);
             this.PerformLayout();

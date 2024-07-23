@@ -96,7 +96,7 @@ namespace C968_Task1
             Inventory.updatePart(ID, inhouse);
         }
 
-        private void ModifyParts_Load(object sender, EventArgs e)
+/*        private void ModifyParts_Load(object sender, EventArgs e)
         {
             int index = mainForm.partsDataGridView.SelectedRows[0].Index; 
             DataGridViewRow selectedRow = mainForm.partsDataGridView.Rows[index];
@@ -106,6 +106,6 @@ namespace C968_Task1
             textBox4.Text = selectedRow.Cells[2].Value.ToString();
             textBox5.Text = selectedRow.Cells[4].Value.ToString();
             textBox6.Text = selectedRow.Cells[5].Value.ToString();
-        }
+        }*/
     }
 }

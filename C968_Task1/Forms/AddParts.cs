@@ -54,16 +54,22 @@ namespace C968_Task1
 
         private void partsSaveButton_Click(object sender, EventArgs e)
         {
+            Inhouse inhouse1 = new Inhouse();
+            
             try
             {
                 int partCount = Inventory.AllParts.Count + 1;
+
+
                 PartName = partNameTB.Text;
                 PartInv = int.Parse(partInvTB.Text);
                 PartPrice = decimal.Parse(partPriceTB.Text);
                 PartMin = int.Parse(partMinTB.Text);
                 PartMax = int.Parse(partMaxTB.Text);
 
-                Inhouse inhouse = new Inhouse(partCount, PartName, PartInv, PartPrice, PartMin, PartMax);
+                
+
+                    Inhouse inhouse = new Inhouse(partCount, PartName, PartInv, PartPrice, PartMin, PartMax);
                 Inventory.addPart(inhouse);
 
                 DialogResult = DialogResult.OK;
@@ -73,6 +79,7 @@ namespace C968_Task1
             {
                 MessageBox.Show("Please enter valid values", "Incorrect Values Found");
             }
+
         }
     }
 }
