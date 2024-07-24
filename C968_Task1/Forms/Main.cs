@@ -40,10 +40,15 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void partsDeleteButton_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow datarow in partsDataGridView.SelectedRows)
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Delete Row", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
             {
-                partsDataGridView.Rows.RemoveAt(datarow.Index);
-            }          
+                foreach (DataGridViewRow datarow in partsDataGridView.SelectedRows)
+                {
+                    partsDataGridView.Rows.RemoveAt(datarow.Index);
+                }
+            }
+            else { }            
         }
 
         /// <summary>
@@ -65,7 +70,6 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void partsModifyButton_Click(object sender, EventArgs e)
         {
-
             if (partsDataGridView.CurrentRow.DataBoundItem.GetType() == typeof(C968_Task1.Models.Inhouse))
             {
                 Inhouse inhouse = (Inhouse)partsDataGridView.CurrentRow.DataBoundItem;
@@ -76,30 +80,6 @@ namespace C968_Task1
                 Outsourced outsourced = (Outsourced)partsDataGridView.CurrentRow.DataBoundItem;
                 new ModifyParts(outsourced).ShowDialog();
             }
-
-            /*try
-            {
-                int selectedIndex = partsDataGridView.SelectedRows[0].Index;
-                Inhouse inhouse = (Inhouse)partsDataGridView.CurrentRow.DataBoundItem;
-                ModifyParts modifyParts = new ModifyParts(inhouse);
-
-                if (modifyParts.ShowDialog() == DialogResult.OK)
-                {
-                    if (modifyParts.textBox1.Text == partsDataGridView.CurrentRow.Cells[selectedIndex].Value.ToString())
-                    {
-                        foreach (DataGridViewRow datarow in partsDataGridView.SelectedRows)
-                        {
-                            partsDataGridView.Rows.RemoveAt(datarow.Index);
-                        }
-                    }
-                    else { }
-                }
-            }
-            catch 
-            {
-                MessageBox.Show("Please select row to modify", "No Row Selected");
-            }*/
-
         }
 
         /// <summary>
