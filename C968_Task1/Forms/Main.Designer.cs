@@ -141,6 +141,7 @@
             this.productsAddButton.TabIndex = 13;
             this.productsAddButton.Text = "Add";
             this.productsAddButton.UseVisualStyleBackColor = true;
+            this.productsAddButton.Click += new System.EventHandler(this.productsAddButton_Click);
             // 
             // productsTextBox
             // 

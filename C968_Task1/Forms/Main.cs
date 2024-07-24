@@ -1,4 +1,5 @@
-﻿using C968_Task1.Models;
+﻿using C968_Task1.Forms;
+using C968_Task1.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -140,6 +141,12 @@ namespace C968_Task1
                     MessageBox.Show($"{partsTextBox.Text} is not a value in the list ", "Search Failed");
                 }                
             }           
+        }
+
+        private void productsAddButton_Click(object sender, EventArgs e)
+        {
+            addProductsForm addProducts = new addProductsForm(this);
+            addProducts.ShowDialog();
         }
     }
 }
