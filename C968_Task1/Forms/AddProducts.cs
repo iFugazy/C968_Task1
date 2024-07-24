@@ -38,15 +38,66 @@ namespace C968_Task1.Forms
         {
             if (topDataGridView.SelectedRows.Count == 1)
             {
-                Part addParts = (Part)topDataGridView.CurrentRow.DataBoundItem;
+                Part addParts = (Part)topDataGridView.SelectedRows[0].DataBoundItem;
                 addedParts.Add(addParts);
             }
-            else
+            else if (topDataGridView.SelectedRows.Count > 1)
             {
                 foreach (DataGridViewRow row in topDataGridView.SelectedRows)
                 {
                     Part addParts = (Part)topDataGridView.SelectedRows[row.Index].DataBoundItem;
                     addedParts.Add(addParts);
+                }
+            }
+        }
+
+        private void prodCancelBTN_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void prodDeleteBTN_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow datarow in bottomDataGridView.SelectedRows)
+            {
+                bottomDataGridView.Rows.RemoveAt(datarow.Index);
+            }
+        }
+
+        private void prodSearchBTN_Click(object sender, EventArgs e)
+        {
+            topDataGridView.ClearSelection();
+            string searchValue = addProdTB.Text;
+            topDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+
+            bool valueResult = false;
+            foreach (DataGridViewRow row in topDataGridView.Rows)
+            {
+                if (row.Cells[0].Value.ToString().ToLower() != null && row.Cells[0].Value.ToString().ToLower().Contains(searchValue.ToLower()))
+                {
+                    int rowIndex = row.Index;
+                    topDataGridView.Rows[rowIndex].Selected = true;
+                    valueResult = true;
+                    break;
+                }
+                else if (row.Cells[1].Value.ToString().ToLower() != null && row.Cells[1].Value.ToString().ToLower().Contains(searchValue.ToLower()))
+                {
+                    int rowIndex = row.Index;
+                    topDataGridView.Rows[rowIndex].Selected = true;
+                    valueResult = true;
+                    break;
+                }
+            }
+            if (!valueResult)
+            {
+                if (addProdTB.Text == "")
+                {
+                    MessageBox.Show("TextBox is blank", "Search Failed");
+                }
+                else
+                {
+                    MessageBox.Show($"{addProdTB.Text} is not a value in the list ", "Search Failed");
                 }
             }
         }

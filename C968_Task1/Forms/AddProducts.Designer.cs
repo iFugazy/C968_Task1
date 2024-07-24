@@ -64,6 +64,7 @@
             this.prodCancelBTN.TabIndex = 40;
             this.prodCancelBTN.Text = "Cancel";
             this.prodCancelBTN.UseVisualStyleBackColor = true;
+            this.prodCancelBTN.Click += new System.EventHandler(this.prodCancelBTN_Click);
             // 
             // prodSaveBTN
             // 
@@ -86,10 +87,10 @@
             // 
             // addProdTB
             // 
-            this.addProdTB.Location = new System.Drawing.Point(709, 34);
+            this.addProdTB.Location = new System.Drawing.Point(695, 36);
             this.addProdTB.Name = "addProdTB";
-            this.addProdTB.Size = new System.Drawing.Size(171, 20);
-            this.addProdTB.TabIndex = 41;
+            this.addProdTB.Size = new System.Drawing.Size(185, 20);
+            this.addProdTB.TabIndex = 61;
             // 
             // prodSearchBTN
             // 
@@ -99,6 +100,7 @@
             this.prodSearchBTN.TabIndex = 42;
             this.prodSearchBTN.Text = "Search";
             this.prodSearchBTN.UseVisualStyleBackColor = true;
+            this.prodSearchBTN.Click += new System.EventHandler(this.prodSearchBTN_Click);
             // 
             // topDataGridView
             // 
@@ -140,6 +142,7 @@
             this.prodDeleteBTN.TabIndex = 48;
             this.prodDeleteBTN.Text = "Delete";
             this.prodDeleteBTN.UseVisualStyleBackColor = true;
+            this.prodDeleteBTN.Click += new System.EventHandler(this.prodDeleteBTN_Click);
             // 
             // prodBottomLabel
             // 
