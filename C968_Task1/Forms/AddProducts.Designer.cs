@@ -33,12 +33,12 @@
             this.headerProd = new System.Windows.Forms.Label();
             this.addProdTB = new System.Windows.Forms.TextBox();
             this.prodSearchBTN = new System.Windows.Forms.Button();
-            this.prodPartsDataGridView = new System.Windows.Forms.DataGridView();
+            this.topDataGridView = new System.Windows.Forms.DataGridView();
             this.prodTopLabel = new System.Windows.Forms.Label();
             this.prodAddBTN = new System.Windows.Forms.Button();
             this.prodDeleteBTN = new System.Windows.Forms.Button();
             this.prodBottomLabel = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.bottomDataGridView = new System.Windows.Forms.DataGridView();
             this.prodIDLabel = new System.Windows.Forms.Label();
             this.prodNameLabel = new System.Windows.Forms.Label();
             this.prodInvLabel = new System.Windows.Forms.Label();
@@ -51,8 +51,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.prodPartsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // prodCancelBTN
@@ -100,13 +100,18 @@
             this.prodSearchBTN.Text = "Search";
             this.prodSearchBTN.UseVisualStyleBackColor = true;
             // 
-            // prodPartsDataGridView
+            // topDataGridView
             // 
-            this.prodPartsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.prodPartsDataGridView.Location = new System.Drawing.Point(447, 86);
-            this.prodPartsDataGridView.Name = "prodPartsDataGridView";
-            this.prodPartsDataGridView.Size = new System.Drawing.Size(433, 194);
-            this.prodPartsDataGridView.TabIndex = 43;
+            this.topDataGridView.AllowUserToAddRows = false;
+            this.topDataGridView.AllowUserToDeleteRows = false;
+            this.topDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.topDataGridView.Location = new System.Drawing.Point(447, 86);
+            this.topDataGridView.Name = "topDataGridView";
+            this.topDataGridView.ReadOnly = true;
+            this.topDataGridView.RowHeadersVisible = false;
+            this.topDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.topDataGridView.Size = new System.Drawing.Size(433, 194);
+            this.topDataGridView.TabIndex = 43;
             // 
             // prodTopLabel
             // 
@@ -125,6 +130,7 @@
             this.prodAddBTN.TabIndex = 45;
             this.prodAddBTN.Text = "Add";
             this.prodAddBTN.UseVisualStyleBackColor = true;
+            this.prodAddBTN.Click += new System.EventHandler(this.prodAddBTN_Click);
             // 
             // prodDeleteBTN
             // 
@@ -144,13 +150,18 @@
             this.prodBottomLabel.TabIndex = 47;
             this.prodBottomLabel.Text = "Parts Associated with this Product";
             // 
-            // dataGridView2
+            // bottomDataGridView
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(447, 349);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(433, 194);
-            this.dataGridView2.TabIndex = 46;
+            this.bottomDataGridView.AllowUserToAddRows = false;
+            this.bottomDataGridView.AllowUserToDeleteRows = false;
+            this.bottomDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bottomDataGridView.Location = new System.Drawing.Point(447, 349);
+            this.bottomDataGridView.Name = "bottomDataGridView";
+            this.bottomDataGridView.ReadOnly = true;
+            this.bottomDataGridView.RowHeadersVisible = false;
+            this.bottomDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bottomDataGridView.Size = new System.Drawing.Size(433, 194);
+            this.bottomDataGridView.TabIndex = 46;
             // 
             // prodIDLabel
             // 
@@ -267,10 +278,10 @@
             this.Controls.Add(this.prodIDLabel);
             this.Controls.Add(this.prodDeleteBTN);
             this.Controls.Add(this.prodBottomLabel);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.bottomDataGridView);
             this.Controls.Add(this.prodAddBTN);
             this.Controls.Add(this.prodTopLabel);
-            this.Controls.Add(this.prodPartsDataGridView);
+            this.Controls.Add(this.topDataGridView);
             this.Controls.Add(this.prodSearchBTN);
             this.Controls.Add(this.addProdTB);
             this.Controls.Add(this.prodCancelBTN);
@@ -280,8 +291,8 @@
             this.Name = "addProductsForm";
             this.Text = "AddProducts";
             this.Load += new System.EventHandler(this.AddProducts_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.prodPartsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,12 +305,12 @@
         private System.Windows.Forms.Label headerProd;
         private System.Windows.Forms.TextBox addProdTB;
         private System.Windows.Forms.Button prodSearchBTN;
-        private System.Windows.Forms.DataGridView prodPartsDataGridView;
+        private System.Windows.Forms.DataGridView topDataGridView;
         private System.Windows.Forms.Label prodTopLabel;
         private System.Windows.Forms.Button prodAddBTN;
         private System.Windows.Forms.Button prodDeleteBTN;
         private System.Windows.Forms.Label prodBottomLabel;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView bottomDataGridView;
         private System.Windows.Forms.Label prodIDLabel;
         private System.Windows.Forms.Label prodNameLabel;
         private System.Windows.Forms.Label prodInvLabel;
