@@ -28,219 +28,259 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.partsCancelButton = new System.Windows.Forms.Button();
-            this.partsSaveButton = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.addPartsMachineIDLabel = new System.Windows.Forms.Label();
-            this.partMinTB = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.partMaxTB = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.partPriceTB = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.partInvTB = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.partNameTB = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.partIDTb = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.headerParts = new System.Windows.Forms.Label();
+            this.prodCancelBTN = new System.Windows.Forms.Button();
+            this.prodSaveBTN = new System.Windows.Forms.Button();
+            this.headerProd = new System.Windows.Forms.Label();
+            this.addProdTB = new System.Windows.Forms.TextBox();
+            this.prodSearchBTN = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.prodTopLabel = new System.Windows.Forms.Label();
+            this.prodAddBTN = new System.Windows.Forms.Button();
+            this.prodDeleteBTN = new System.Windows.Forms.Button();
+            this.prodBottomLabel = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.prodIDLabel = new System.Windows.Forms.Label();
+            this.prodNameLabel = new System.Windows.Forms.Label();
+            this.prodInvLabel = new System.Windows.Forms.Label();
+            this.prodPriceLabel = new System.Windows.Forms.Label();
+            this.prodMaxLabel = new System.Windows.Forms.Label();
+            this.prodMinLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // partsCancelButton
+            // prodCancelBTN
             // 
-            this.partsCancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.partsCancelButton.Location = new System.Drawing.Point(356, 323);
-            this.partsCancelButton.Name = "partsCancelButton";
-            this.partsCancelButton.Size = new System.Drawing.Size(75, 23);
-            this.partsCancelButton.TabIndex = 40;
-            this.partsCancelButton.Text = "Cancel";
-            this.partsCancelButton.UseVisualStyleBackColor = true;
+            this.prodCancelBTN.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.prodCancelBTN.Location = new System.Drawing.Point(805, 603);
+            this.prodCancelBTN.Name = "prodCancelBTN";
+            this.prodCancelBTN.Size = new System.Drawing.Size(75, 23);
+            this.prodCancelBTN.TabIndex = 40;
+            this.prodCancelBTN.Text = "Cancel";
+            this.prodCancelBTN.UseVisualStyleBackColor = true;
             // 
-            // partsSaveButton
+            // prodSaveBTN
             // 
-            this.partsSaveButton.Location = new System.Drawing.Point(266, 323);
-            this.partsSaveButton.Name = "partsSaveButton";
-            this.partsSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.partsSaveButton.TabIndex = 39;
-            this.partsSaveButton.Text = "Save";
-            this.partsSaveButton.UseVisualStyleBackColor = true;
+            this.prodSaveBTN.Location = new System.Drawing.Point(715, 603);
+            this.prodSaveBTN.Name = "prodSaveBTN";
+            this.prodSaveBTN.Size = new System.Drawing.Size(75, 23);
+            this.prodSaveBTN.TabIndex = 39;
+            this.prodSaveBTN.Text = "Save";
+            this.prodSaveBTN.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // headerProd
             // 
-            this.textBox7.Location = new System.Drawing.Point(156, 276);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(184, 20);
-            this.textBox7.TabIndex = 38;
+            this.headerProd.AutoSize = true;
+            this.headerProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerProd.Location = new System.Drawing.Point(12, 9);
+            this.headerProd.Name = "headerProd";
+            this.headerProd.Size = new System.Drawing.Size(141, 25);
+            this.headerProd.TabIndex = 22;
+            this.headerProd.Text = "Add Products";
             // 
-            // addPartsMachineIDLabel
+            // addProdTB
             // 
-            this.addPartsMachineIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.addPartsMachineIDLabel.Location = new System.Drawing.Point(89, 279);
-            this.addPartsMachineIDLabel.Name = "addPartsMachineIDLabel";
-            this.addPartsMachineIDLabel.Size = new System.Drawing.Size(62, 13);
-            this.addPartsMachineIDLabel.TabIndex = 37;
-            this.addPartsMachineIDLabel.Text = "Machine ID";
-            this.addPartsMachineIDLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.addProdTB.Location = new System.Drawing.Point(709, 34);
+            this.addProdTB.Name = "addProdTB";
+            this.addProdTB.Size = new System.Drawing.Size(171, 20);
+            this.addProdTB.TabIndex = 41;
             // 
-            // partMinTB
+            // prodSearchBTN
             // 
-            this.partMinTB.Location = new System.Drawing.Point(277, 231);
-            this.partMinTB.Name = "partMinTB";
-            this.partMinTB.Size = new System.Drawing.Size(64, 20);
-            this.partMinTB.TabIndex = 36;
+            this.prodSearchBTN.Location = new System.Drawing.Point(614, 34);
+            this.prodSearchBTN.Name = "prodSearchBTN";
+            this.prodSearchBTN.Size = new System.Drawing.Size(75, 23);
+            this.prodSearchBTN.TabIndex = 42;
+            this.prodSearchBTN.Text = "Search";
+            this.prodSearchBTN.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // dataGridView1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(247, 235);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 13);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Min";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(447, 86);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(433, 194);
+            this.dataGridView1.TabIndex = 43;
             // 
-            // partMaxTB
+            // prodTopLabel
             // 
-            this.partMaxTB.Location = new System.Drawing.Point(156, 231);
-            this.partMaxTB.Name = "partMaxTB";
-            this.partMaxTB.Size = new System.Drawing.Size(64, 20);
-            this.partMaxTB.TabIndex = 34;
+            this.prodTopLabel.AutoSize = true;
+            this.prodTopLabel.Location = new System.Drawing.Point(444, 61);
+            this.prodTopLabel.Name = "prodTopLabel";
+            this.prodTopLabel.Size = new System.Drawing.Size(96, 13);
+            this.prodTopLabel.TabIndex = 44;
+            this.prodTopLabel.Text = "All Candidate Parts";
             // 
-            // label5
+            // prodAddBTN
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(123, 234);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 13);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Max";
+            this.prodAddBTN.Location = new System.Drawing.Point(805, 296);
+            this.prodAddBTN.Name = "prodAddBTN";
+            this.prodAddBTN.Size = new System.Drawing.Size(75, 23);
+            this.prodAddBTN.TabIndex = 45;
+            this.prodAddBTN.Text = "Add";
+            this.prodAddBTN.UseVisualStyleBackColor = true;
             // 
-            // partPriceTB
+            // prodDeleteBTN
             // 
-            this.partPriceTB.Location = new System.Drawing.Point(157, 185);
-            this.partPriceTB.Name = "partPriceTB";
-            this.partPriceTB.Size = new System.Drawing.Size(184, 20);
-            this.partPriceTB.TabIndex = 32;
+            this.prodDeleteBTN.Location = new System.Drawing.Point(805, 558);
+            this.prodDeleteBTN.Name = "prodDeleteBTN";
+            this.prodDeleteBTN.Size = new System.Drawing.Size(75, 23);
+            this.prodDeleteBTN.TabIndex = 48;
+            this.prodDeleteBTN.Text = "Delete";
+            this.prodDeleteBTN.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // prodBottomLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(88, 188);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Price / Cost";
+            this.prodBottomLabel.AutoSize = true;
+            this.prodBottomLabel.Location = new System.Drawing.Point(444, 324);
+            this.prodBottomLabel.Name = "prodBottomLabel";
+            this.prodBottomLabel.Size = new System.Drawing.Size(167, 13);
+            this.prodBottomLabel.TabIndex = 47;
+            this.prodBottomLabel.Text = "Parts Associated with this Product";
             // 
-            // partInvTB
+            // dataGridView2
             // 
-            this.partInvTB.Location = new System.Drawing.Point(157, 141);
-            this.partInvTB.Name = "partInvTB";
-            this.partInvTB.Size = new System.Drawing.Size(184, 20);
-            this.partInvTB.TabIndex = 30;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(447, 349);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(433, 194);
+            this.dataGridView2.TabIndex = 46;
             // 
-            // label3
+            // prodIDLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(100, 144);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Inventory";
+            this.prodIDLabel.AutoSize = true;
+            this.prodIDLabel.Location = new System.Drawing.Point(95, 89);
+            this.prodIDLabel.Name = "prodIDLabel";
+            this.prodIDLabel.Size = new System.Drawing.Size(18, 13);
+            this.prodIDLabel.TabIndex = 49;
+            this.prodIDLabel.Text = "ID";
             // 
-            // partNameTB
+            // prodNameLabel
             // 
-            this.partNameTB.Location = new System.Drawing.Point(157, 98);
-            this.partNameTB.Name = "partNameTB";
-            this.partNameTB.Size = new System.Drawing.Size(184, 20);
-            this.partNameTB.TabIndex = 28;
+            this.prodNameLabel.AutoSize = true;
+            this.prodNameLabel.Location = new System.Drawing.Point(78, 133);
+            this.prodNameLabel.Name = "prodNameLabel";
+            this.prodNameLabel.Size = new System.Drawing.Size(35, 13);
+            this.prodNameLabel.TabIndex = 50;
+            this.prodNameLabel.Text = "Name";
             // 
-            // label2
+            // prodInvLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(115, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Name";
+            this.prodInvLabel.AutoSize = true;
+            this.prodInvLabel.Location = new System.Drawing.Point(65, 177);
+            this.prodInvLabel.Name = "prodInvLabel";
+            this.prodInvLabel.Size = new System.Drawing.Size(51, 13);
+            this.prodInvLabel.TabIndex = 51;
+            this.prodInvLabel.Text = "Inventory";
             // 
-            // radioButton2
+            // prodPriceLabel
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(274, 12);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(80, 17);
-            this.radioButton2.TabIndex = 26;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Outsourced";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.prodPriceLabel.AutoSize = true;
+            this.prodPriceLabel.Location = new System.Drawing.Point(85, 219);
+            this.prodPriceLabel.Name = "prodPriceLabel";
+            this.prodPriceLabel.Size = new System.Drawing.Size(31, 13);
+            this.prodPriceLabel.TabIndex = 52;
+            this.prodPriceLabel.Text = "Price";
             // 
-            // radioButton1
+            // prodMaxLabel
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(157, 12);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(68, 17);
-            this.radioButton1.TabIndex = 25;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "In-House";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.prodMaxLabel.AutoSize = true;
+            this.prodMaxLabel.Location = new System.Drawing.Point(89, 260);
+            this.prodMaxLabel.Name = "prodMaxLabel";
+            this.prodMaxLabel.Size = new System.Drawing.Size(27, 13);
+            this.prodMaxLabel.TabIndex = 53;
+            this.prodMaxLabel.Text = "Max";
             // 
-            // partIDTb
+            // prodMinLabel
             // 
-            this.partIDTb.Location = new System.Drawing.Point(157, 56);
-            this.partIDTb.Name = "partIDTb";
-            this.partIDTb.Size = new System.Drawing.Size(184, 20);
-            this.partIDTb.TabIndex = 24;
+            this.prodMinLabel.AutoSize = true;
+            this.prodMinLabel.Location = new System.Drawing.Point(89, 305);
+            this.prodMinLabel.Name = "prodMinLabel";
+            this.prodMinLabel.Size = new System.Drawing.Size(24, 13);
+            this.prodMinLabel.TabIndex = 54;
+            this.prodMinLabel.Text = "Min";
             // 
-            // label1
+            // textBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(132, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "ID";
+            this.textBox1.Location = new System.Drawing.Point(122, 86);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(171, 20);
+            this.textBox1.TabIndex = 55;
             // 
-            // headerParts
+            // textBox2
             // 
-            this.headerParts.AutoSize = true;
-            this.headerParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerParts.Location = new System.Drawing.Point(12, 9);
-            this.headerParts.Name = "headerParts";
-            this.headerParts.Size = new System.Drawing.Size(141, 25);
-            this.headerParts.TabIndex = 22;
-            this.headerParts.Text = "Add Products";
+            this.textBox2.Location = new System.Drawing.Point(122, 130);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(171, 20);
+            this.textBox2.TabIndex = 56;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(122, 174);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(171, 20);
+            this.textBox3.TabIndex = 57;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(122, 216);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(171, 20);
+            this.textBox4.TabIndex = 58;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(122, 257);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(171, 20);
+            this.textBox5.TabIndex = 59;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(122, 302);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(171, 20);
+            this.textBox6.TabIndex = 60;
             // 
             // AddProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 370);
-            this.Controls.Add(this.partsCancelButton);
-            this.Controls.Add(this.partsSaveButton);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.addPartsMachineIDLabel);
-            this.Controls.Add(this.partMinTB);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.partMaxTB);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.partPriceTB);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.partInvTB);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.partNameTB);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.partIDTb);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.headerParts);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(911, 638);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.prodMinLabel);
+            this.Controls.Add(this.prodMaxLabel);
+            this.Controls.Add(this.prodPriceLabel);
+            this.Controls.Add(this.prodInvLabel);
+            this.Controls.Add(this.prodNameLabel);
+            this.Controls.Add(this.prodIDLabel);
+            this.Controls.Add(this.prodDeleteBTN);
+            this.Controls.Add(this.prodBottomLabel);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.prodAddBTN);
+            this.Controls.Add(this.prodTopLabel);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.prodSearchBTN);
+            this.Controls.Add(this.addProdTB);
+            this.Controls.Add(this.prodCancelBTN);
+            this.Controls.Add(this.prodSaveBTN);
+            this.Controls.Add(this.headerProd);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddProducts";
             this.Text = "AddProducts";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,24 +288,28 @@
 
         #endregion
 
-        private System.Windows.Forms.Button partsCancelButton;
-        private System.Windows.Forms.Button partsSaveButton;
-        public System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label addPartsMachineIDLabel;
-        public System.Windows.Forms.TextBox partMinTB;
-        private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox partMaxTB;
-        private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox partPriceTB;
-        private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox partInvTB;
-        private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox partNameTB;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        public System.Windows.Forms.TextBox partIDTb;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label headerParts;
+        private System.Windows.Forms.Button prodCancelBTN;
+        private System.Windows.Forms.Button prodSaveBTN;
+        private System.Windows.Forms.Label headerProd;
+        private System.Windows.Forms.TextBox addProdTB;
+        private System.Windows.Forms.Button prodSearchBTN;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label prodTopLabel;
+        private System.Windows.Forms.Button prodAddBTN;
+        private System.Windows.Forms.Button prodDeleteBTN;
+        private System.Windows.Forms.Label prodBottomLabel;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label prodIDLabel;
+        private System.Windows.Forms.Label prodNameLabel;
+        private System.Windows.Forms.Label prodInvLabel;
+        private System.Windows.Forms.Label prodPriceLabel;
+        private System.Windows.Forms.Label prodMaxLabel;
+        private System.Windows.Forms.Label prodMinLabel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
