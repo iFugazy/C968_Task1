@@ -52,6 +52,7 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            textBox7.Text = null;
             addPartsMachineIDLabel.Text = "Machine ID";
         }
 
@@ -63,6 +64,7 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
+            textBox7.Text = null;
             addPartsMachineIDLabel.Text = "Company Name";
         }     
 
