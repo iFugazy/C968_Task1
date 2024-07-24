@@ -42,9 +42,8 @@ namespace C968_Task1
             int PartNum = Inventory.AllParts.Count + 1;
             partIDTb.Text = PartNum.ToString();
 
-
-
         }
+
         /// <summary>
         /// This event handler checks to see if the radio button was changed and changes the text from "Company Name" to
         /// "Machine ID".
@@ -121,6 +120,73 @@ namespace C968_Task1
             catch
             {
                 MessageBox.Show("Please enter valid values", "Incorrect Values Found");
+            }
+        }
+
+        /// <summary>
+        /// This event handler only allows the user to insert Digits within the Part Name textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void partNameTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsLetter(e.KeyChar);
+        }
+
+        /// <summary>
+        /// This event handler only allows the user to insert Digits within the Inventory textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void partInvTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
+        }
+
+        /// <summary>
+        /// This event handler only allows the user to insert Digits within the Price textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void partPriceTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
+        }
+
+        /// <summary>
+        /// This event handler only allows the user to insert Digits within the Max textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void partMaxTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
+        }
+
+        /// <summary>
+        /// This event handler only allows the user to insert Digits within the Min textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void partMinTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
+        }
+
+        /// <summary>
+        /// This event handler only allows the user to insert Digits within the Machine ID / Outsourced textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (partsInHouseRTBN.Checked)
+            {
+                e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            }
+            else
+            {
+                e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsLetter(e.KeyChar);
             }
         }
     }

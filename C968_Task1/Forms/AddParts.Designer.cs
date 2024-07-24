@@ -106,6 +106,7 @@
             this.partNameTB.Name = "partNameTB";
             this.partNameTB.Size = new System.Drawing.Size(184, 20);
             this.partNameTB.TabIndex = 9;
+            this.partNameTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.partNameTB_KeyPress);
             // 
             // label2
             // 
@@ -122,6 +123,7 @@
             this.partInvTB.Name = "partInvTB";
             this.partInvTB.Size = new System.Drawing.Size(184, 20);
             this.partInvTB.TabIndex = 11;
+            this.partInvTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.partInvTB_KeyPress);
             // 
             // label3
             // 
@@ -138,6 +140,7 @@
             this.partPriceTB.Name = "partPriceTB";
             this.partPriceTB.Size = new System.Drawing.Size(184, 20);
             this.partPriceTB.TabIndex = 13;
+            this.partPriceTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.partPriceTB_KeyPress);
             // 
             // label4
             // 
@@ -154,6 +157,7 @@
             this.partMaxTB.Name = "partMaxTB";
             this.partMaxTB.Size = new System.Drawing.Size(64, 20);
             this.partMaxTB.TabIndex = 15;
+            this.partMaxTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.partMaxTB_KeyPress);
             // 
             // label5
             // 
@@ -170,6 +174,7 @@
             this.partMinTB.Name = "partMinTB";
             this.partMinTB.Size = new System.Drawing.Size(64, 20);
             this.partMinTB.TabIndex = 17;
+            this.partMinTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.partMinTB_KeyPress);
             // 
             // label6
             // 
@@ -186,6 +191,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(184, 20);
             this.textBox7.TabIndex = 19;
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // addPartsMachineIDLabel
             // 
