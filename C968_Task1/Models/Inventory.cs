@@ -75,9 +75,9 @@ namespace C968_Task1.Models
         /// </summary>
         public static void GUIExampleItems()
         {
-            Part exampleInHouse = new Inhouse(1, "Darren", 1, 1.22m, 1, 1);
-            Part exampleInHouse2 = new Inhouse(2, "Cody", 1, 1.22m, 1, 1);
-            Part exampleInHouse3 = new Inhouse(3, "Zach", 1, 1.22m, 1, 1);
+            Part exampleInHouse = new Inhouse(1, "Darren", 1, 1.22m, 1, 1, 1);
+            Part exampleInHouse2 = new Inhouse(2, "Cody", 1, 1.22m, 1, 1, 1);
+            Part exampleInHouse3 = new Inhouse(3, "Zach", 1, 1.22m, 1, 1, 1);
             AllParts.Add(exampleInHouse);
             AllParts.Add(exampleInHouse2);
             AllParts.Add(exampleInHouse3);

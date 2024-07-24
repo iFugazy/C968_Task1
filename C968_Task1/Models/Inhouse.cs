@@ -10,7 +10,8 @@ namespace C968_Task1.Models
     {
         public int MachineID { get; set; }
         public Inhouse() { }
-        public Inhouse (int PartID, string Name, int Inventory, decimal Price, int Min, int Max) 
+
+        public Inhouse (int PartID, string Name, int Inventory, decimal Price, int Min, int Max, int MachineID)
         {
             this.PartID = PartID;
             this.Name = Name;
@@ -18,7 +19,7 @@ namespace C968_Task1.Models
             this.Price = Price;
             this.Min = Min;
             this.Max = Max;
-
+            this.MachineID = MachineID;
         }
 
     }

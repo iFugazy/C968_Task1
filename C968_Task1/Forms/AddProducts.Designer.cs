@@ -52,173 +52,155 @@
             // partsCancelButton
             // 
             this.partsCancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.partsCancelButton.Location = new System.Drawing.Point(724, 636);
-            this.partsCancelButton.Margin = new System.Windows.Forms.Padding(6);
+            this.partsCancelButton.Location = new System.Drawing.Point(356, 323);
             this.partsCancelButton.Name = "partsCancelButton";
-            this.partsCancelButton.Size = new System.Drawing.Size(150, 44);
+            this.partsCancelButton.Size = new System.Drawing.Size(75, 23);
             this.partsCancelButton.TabIndex = 40;
             this.partsCancelButton.Text = "Cancel";
             this.partsCancelButton.UseVisualStyleBackColor = true;
             // 
             // partsSaveButton
             // 
-            this.partsSaveButton.Location = new System.Drawing.Point(544, 636);
-            this.partsSaveButton.Margin = new System.Windows.Forms.Padding(6);
+            this.partsSaveButton.Location = new System.Drawing.Point(266, 323);
             this.partsSaveButton.Name = "partsSaveButton";
-            this.partsSaveButton.Size = new System.Drawing.Size(150, 44);
+            this.partsSaveButton.Size = new System.Drawing.Size(75, 23);
             this.partsSaveButton.TabIndex = 39;
             this.partsSaveButton.Text = "Save";
             this.partsSaveButton.UseVisualStyleBackColor = true;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(324, 546);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(6);
+            this.textBox7.Location = new System.Drawing.Point(156, 276);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(364, 31);
+            this.textBox7.Size = new System.Drawing.Size(184, 20);
             this.textBox7.TabIndex = 38;
             // 
             // addPartsMachineIDLabel
             // 
             this.addPartsMachineIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addPartsMachineIDLabel.Location = new System.Drawing.Point(190, 552);
-            this.addPartsMachineIDLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.addPartsMachineIDLabel.Location = new System.Drawing.Point(89, 279);
             this.addPartsMachineIDLabel.Name = "addPartsMachineIDLabel";
-            this.addPartsMachineIDLabel.Size = new System.Drawing.Size(124, 25);
+            this.addPartsMachineIDLabel.Size = new System.Drawing.Size(62, 13);
             this.addPartsMachineIDLabel.TabIndex = 37;
             this.addPartsMachineIDLabel.Text = "Machine ID";
             this.addPartsMachineIDLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // partMinTB
             // 
-            this.partMinTB.Location = new System.Drawing.Point(566, 459);
-            this.partMinTB.Margin = new System.Windows.Forms.Padding(6);
+            this.partMinTB.Location = new System.Drawing.Point(277, 231);
             this.partMinTB.Name = "partMinTB";
-            this.partMinTB.Size = new System.Drawing.Size(124, 31);
+            this.partMinTB.Size = new System.Drawing.Size(64, 20);
             this.partMinTB.TabIndex = 36;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(506, 467);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(247, 235);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 25);
+            this.label6.Size = new System.Drawing.Size(24, 13);
             this.label6.TabIndex = 35;
             this.label6.Text = "Min";
             // 
             // partMaxTB
             // 
-            this.partMaxTB.Location = new System.Drawing.Point(324, 459);
-            this.partMaxTB.Margin = new System.Windows.Forms.Padding(6);
+            this.partMaxTB.Location = new System.Drawing.Point(156, 231);
             this.partMaxTB.Name = "partMaxTB";
-            this.partMaxTB.Size = new System.Drawing.Size(124, 31);
+            this.partMaxTB.Size = new System.Drawing.Size(64, 20);
             this.partMaxTB.TabIndex = 34;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(258, 465);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(123, 234);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 25);
+            this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 33;
             this.label5.Text = "Max";
             // 
             // partPriceTB
             // 
-            this.partPriceTB.Location = new System.Drawing.Point(326, 371);
-            this.partPriceTB.Margin = new System.Windows.Forms.Padding(6);
+            this.partPriceTB.Location = new System.Drawing.Point(157, 185);
             this.partPriceTB.Name = "partPriceTB";
-            this.partPriceTB.Size = new System.Drawing.Size(364, 31);
+            this.partPriceTB.Size = new System.Drawing.Size(184, 20);
             this.partPriceTB.TabIndex = 32;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(188, 377);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(88, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 25);
+            this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 31;
             this.label4.Text = "Price / Cost";
             // 
             // partInvTB
             // 
-            this.partInvTB.Location = new System.Drawing.Point(326, 286);
-            this.partInvTB.Margin = new System.Windows.Forms.Padding(6);
+            this.partInvTB.Location = new System.Drawing.Point(157, 141);
             this.partInvTB.Name = "partInvTB";
-            this.partInvTB.Size = new System.Drawing.Size(364, 31);
+            this.partInvTB.Size = new System.Drawing.Size(184, 20);
             this.partInvTB.TabIndex = 30;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(212, 292);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(100, 144);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 25);
+            this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 29;
             this.label3.Text = "Inventory";
             // 
             // partNameTB
             // 
-            this.partNameTB.Location = new System.Drawing.Point(326, 203);
-            this.partNameTB.Margin = new System.Windows.Forms.Padding(6);
+            this.partNameTB.Location = new System.Drawing.Point(157, 98);
             this.partNameTB.Name = "partNameTB";
-            this.partNameTB.Size = new System.Drawing.Size(364, 31);
+            this.partNameTB.Size = new System.Drawing.Size(184, 20);
             this.partNameTB.TabIndex = 28;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(242, 209);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(115, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 25);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 27;
             this.label2.Text = "Name";
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(560, 38);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(6);
+            this.radioButton2.Location = new System.Drawing.Point(274, 12);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(165, 29);
+            this.radioButton2.Size = new System.Drawing.Size(80, 17);
             this.radioButton2.TabIndex = 26;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.Text = "Outsourced";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(326, 38);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(6);
+            this.radioButton1.Location = new System.Drawing.Point(157, 12);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(165, 29);
+            this.radioButton1.Size = new System.Drawing.Size(68, 17);
             this.radioButton1.TabIndex = 25;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.Text = "In-House";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // partIDTb
             // 
-            this.partIDTb.Location = new System.Drawing.Point(326, 123);
-            this.partIDTb.Margin = new System.Windows.Forms.Padding(6);
+            this.partIDTb.Location = new System.Drawing.Point(157, 56);
             this.partIDTb.Name = "partIDTb";
-            this.partIDTb.Size = new System.Drawing.Size(364, 31);
+            this.partIDTb.Size = new System.Drawing.Size(184, 20);
             this.partIDTb.TabIndex = 24;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(276, 128);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(132, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 25);
+            this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 23;
             this.label1.Text = "ID";
             // 
@@ -226,18 +208,17 @@
             // 
             this.headerParts.AutoSize = true;
             this.headerParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerParts.Location = new System.Drawing.Point(36, 32);
-            this.headerParts.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.headerParts.Location = new System.Drawing.Point(12, 9);
             this.headerParts.Name = "headerParts";
-            this.headerParts.Size = new System.Drawing.Size(270, 48);
+            this.headerParts.Size = new System.Drawing.Size(141, 25);
             this.headerParts.TabIndex = 22;
             this.headerParts.Text = "Add Products";
             // 
             // AddProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 712);
+            this.ClientSize = new System.Drawing.Size(455, 370);
             this.Controls.Add(this.partsCancelButton);
             this.Controls.Add(this.partsSaveButton);
             this.Controls.Add(this.textBox7);
@@ -257,6 +238,7 @@
             this.Controls.Add(this.partIDTb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.headerParts);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddProducts";
             this.Text = "AddProducts";
             this.ResumeLayout(false);

@@ -65,7 +65,19 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void partsModifyButton_Click(object sender, EventArgs e)
         {
-            try
+
+            if (partsDataGridView.CurrentRow.DataBoundItem.GetType() == typeof(C968_Task1.Models.Inhouse))
+            {
+                Inhouse inhouse = (Inhouse)partsDataGridView.CurrentRow.DataBoundItem;
+                new ModifyParts(inhouse).ShowDialog();
+            }
+            else
+            {
+                Outsourced outsourced = (Outsourced)partsDataGridView.CurrentRow.DataBoundItem;
+                new ModifyParts(outsourced).ShowDialog();
+            }
+
+            /*try
             {
                 int selectedIndex = partsDataGridView.SelectedRows[0].Index;
                 Inhouse inhouse = (Inhouse)partsDataGridView.CurrentRow.DataBoundItem;
@@ -86,8 +98,8 @@ namespace C968_Task1
             catch 
             {
                 MessageBox.Show("Please select row to modify", "No Row Selected");
-            }
-            
+            }*/
+
         }
 
         /// <summary>
@@ -122,14 +134,14 @@ namespace C968_Task1
             bool valueResult = false;
             foreach (DataGridViewRow row in partsDataGridView.Rows)
             {               
-                    if (row.Cells[0].Value != null && row.Cells[0].Value.ToString().Contains(searchValue))
+                    if (row.Cells[0].Value.ToString().ToLower() != null && row.Cells[0].Value.ToString().ToLower().Contains(searchValue.ToLower()))
                     {
                         int rowIndex = row.Index;
                         partsDataGridView.Rows[rowIndex].Selected = true;
                         valueResult = true;
                         break;
                     }
-                    else if (row.Cells[1].Value != null && row.Cells[1].Value.ToString().Contains(searchValue))
+                    else if (row.Cells[1].Value.ToString().ToLower() != null && row.Cells[1].Value.ToString().ToLower().Contains(searchValue.ToLower()))
                     {
                         int rowIndex = row.Index;
                         partsDataGridView.Rows[rowIndex].Selected = true;

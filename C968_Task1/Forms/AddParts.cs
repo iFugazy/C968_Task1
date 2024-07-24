@@ -23,6 +23,9 @@ namespace C968_Task1
         public decimal PartPrice { get; set; }
         public int PartMin { get; set; }
         public int PartMax { get; set; }
+        public int MachineID { get; set; }
+        public new string CompanyName { get; set; }
+
 
         /// <summary>
         /// This constructor takes the partID from the binding list and adds one to it so that the user doesn't
@@ -35,6 +38,7 @@ namespace C968_Task1
             InitializeComponent();
             this.MainForm = mainForm;
 
+            partsInHouseRTBN.Checked = true;
             int PartNum = Inventory.AllParts.Count + 1;
             partIDTb.Text = PartNum.ToString();
 
@@ -74,7 +78,6 @@ namespace C968_Task1
             this.Close();     
         }
 
-
         /// <summary>
         /// This event handler takes the information that has been placed within the form's textboxes and places them within 
         /// variables. These variables are then used within the "inhouse" variable which is a instantiaded variable of the Inhouse
@@ -86,15 +89,32 @@ namespace C968_Task1
         {            
             try
             {
-                int partCount = Inventory.AllParts.Count + 1;
+                PartID = Inventory.AllParts.Count + 1;
                 PartName = partNameTB.Text;
                 PartInv = int.Parse(partInvTB.Text);
                 PartPrice = decimal.Parse(partPriceTB.Text);
                 PartMin = int.Parse(partMinTB.Text);
-                PartMax = int.Parse(partMaxTB.Text);                
+                PartMax = int.Parse(partMaxTB.Text);
 
-                Inhouse inhouse = new Inhouse(partCount, PartName, PartInv, PartPrice, PartMin, PartMax);
-                Inventory.addPart(inhouse);
+                if (partsInHouseRTBN.Checked)
+                {
+                    MachineID = int.Parse(textBox7.Text);
+
+                    Inhouse inhouse = new Inhouse(PartID, PartName, PartInv, PartPrice, PartMin, PartMax, MachineID);
+                    Inventory.addPart(inhouse);
+                }
+                else if (partsOutsourcedRBTN.Checked)
+                {
+                    CompanyName = textBox7.Text;
+
+                    Outsourced outsourced = new Outsourced(PartID, PartName, PartInv, PartPrice, PartMin, PartMax, CompanyName);
+                    Inventory.addPart(outsourced);
+                }
+                else
+                {
+                    MessageBox.Show("Please check whether the part is Outsourced or Inhouse");
+                }
+                
 
                 DialogResult = DialogResult.OK;
             }
