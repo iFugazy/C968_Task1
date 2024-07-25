@@ -74,6 +74,7 @@
             this.prodSaveBTN.TabIndex = 39;
             this.prodSaveBTN.Text = "Save";
             this.prodSaveBTN.UseVisualStyleBackColor = true;
+            this.prodSaveBTN.Click += new System.EventHandler(this.prodSaveBTN_Click);
             // 
             // headerProd
             // 

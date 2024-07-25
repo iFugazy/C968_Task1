@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,13 +16,22 @@ namespace C968_Task1.Forms
     public partial class addProductsForm : Form
     {
         mainForm MainForm = new mainForm();
-        Product Product = new Product();
+        
         BindingList<Part> addedParts = new BindingList<Part>();
+        public int ProdID { get; set; }
+        public string ProdName { get; set; }
+        public int ProdInstock { get; set; }
+        public decimal ProdPrice { get; set; }
+        public int ProdMin { get; set; }
+        public int ProdMax { get; set; }
+
         public addProductsForm(mainForm mainForm)
         {
             InitializeComponent();
             MainForm = mainForm;
         }
+
+
 
         private void AddProducts_Load(object sender, EventArgs e)
         {          
@@ -99,6 +109,28 @@ namespace C968_Task1.Forms
                 {
                     MessageBox.Show($"{addProdTB.Text} is not a value in the list ", "Search Failed");
                 }
+            }
+        }
+
+        private void prodSaveBTN_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ProdID = Inventory.Products.Count + 1;
+                ProdName = textBox2.Text;
+                ProdInstock = int.Parse(textBox3.Text);
+                ProdPrice = decimal.Parse(textBox4.Text);
+                ProdMin = int.Parse(textBox5.Text);
+                ProdMax = int.Parse(textBox6.Text);               
+
+                Product product = new Product(ProdID, ProdName, ProdInstock, ProdPrice, ProdMax, ProdMin);
+                Inventory.addProduct(product);
+                                                  
+                DialogResult = DialogResult.OK;
+            }
+            catch
+            {
+                MessageBox.Show("Please enter valid values", "Incorrect Values Found");
             }
         }
     }

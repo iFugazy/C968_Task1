@@ -14,7 +14,10 @@ namespace C968_Task1.Models
         public static BindingList<Part> AllParts = new BindingList<Part>();
         public static BindingList<Product> Products = new BindingList<Product>();
         
-        public static void addProduct() { }
+        public static void addProduct(Product product) 
+        {
+            Products.Add(product);
+        }
         public static bool removeProduct() { return false; }
         public static Product lookUpProduct() {  return null; }
         public static void updateProduct(int number, Product product) { }
@@ -78,9 +81,11 @@ namespace C968_Task1.Models
             Part exampleInHouse = new Inhouse(1, "Darren", 1, 1.22m, 1, 1, 1);
             Part exampleInHouse2 = new Inhouse(2, "Cody", 1, 1.22m, 1, 1, 1);
             Part exampleInHouse3 = new Inhouse(3, "Zach", 1, 1.22m, 1, 1, 1);
+            Product ExampleProduct = new Product(1, "Darren", 1, 1, 1, 1);
             AllParts.Add(exampleInHouse);
             AllParts.Add(exampleInHouse2);
             AllParts.Add(exampleInHouse3);
+            Products.Add(ExampleProduct);
         }
     }
 

@@ -96,6 +96,10 @@ namespace C968_Task1
             var table = new BindingSource();
             table.DataSource = Inventory.AllParts;
             partsDataGridView.DataSource = table;
+
+            var table2 = new BindingSource();
+            table2.DataSource = Inventory.Products;
+            productsDataGridView.DataSource = table2;
         }
 
         /// <summary>
