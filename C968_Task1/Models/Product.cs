@@ -19,6 +19,7 @@ namespace C968_Task1.Models
         public int Min { get; set; }
         public int Max { get; set; }
 
+        public Product() { }
         public Product(int ProductID, string Name, int Instock, decimal Price, int Min, int Max)
         {
             this.ProductID = ProductID;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,9 +19,30 @@ namespace C968_Task1.Models
         {
             Products.Add(product);
         }
-        public static bool removeProduct() { return false; }
-        public static Product lookUpProduct() {  return null; }
-        public static void updateProduct(int number, Product product) { }
+        public static bool removeProduct(Product product) 
+        {
+            Products.Remove(product);
+            return true; 
+        }
+        public static Product lookUpProduct(int number) 
+        {
+            foreach (Product product in Products)
+            {
+                if (product.ProductID == number)
+                {
+                    return product;
+                }
+            }
+            Product nullProduct = new Product();
+            return nullProduct;
+        }
+        public static void updateProduct(int number, Product product) 
+        {
+            Part productID = lookupPart(number);
+
+            deletePart(productID);
+            Products.Add(product);
+        }
 
         /// <summary>
         /// Uses the all parts list and adds the part that is placed within the methods parameter.
@@ -56,8 +78,8 @@ namespace C968_Task1.Models
                     return part;
                 }
             }
-            Part emptyPart = new Inhouse();
-            return emptyPart;
+            Part nullPart = new Inhouse();
+            return nullPart;
         }
 
         /// <summary>
@@ -65,9 +87,9 @@ namespace C968_Task1.Models
         /// </summary>
         /// <param name="PartID"></param>
         /// <param name="part"></param>
-        public static void updatePart(int PartID, Part part) 
+        public static void updatePart(int number, Part part) 
         {    
-            Part partID = lookupPart(PartID);
+            Part partID = lookupPart(number);
             
             deletePart(partID);
             AllParts.Add(part);

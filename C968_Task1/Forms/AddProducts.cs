@@ -31,8 +31,6 @@ namespace C968_Task1.Forms
             MainForm = mainForm;
         }
 
-
-
         private void AddProducts_Load(object sender, EventArgs e)
         {          
             var table = new BindingSource();
@@ -51,13 +49,9 @@ namespace C968_Task1.Forms
                 Part addParts = (Part)topDataGridView.SelectedRows[0].DataBoundItem;
                 addedParts.Add(addParts);
             }
-            else if (topDataGridView.SelectedRows.Count > 1)
+            else if (topDataGridView.SelectedRows.Count != 1)
             {
-                foreach (DataGridViewRow row in topDataGridView.SelectedRows)
-                {
-                    Part addParts = (Part)topDataGridView.SelectedRows[row.Index].DataBoundItem;
-                    addedParts.Add(addParts);
-                }
+                MessageBox.Show("Please select one part to add at a time", "Selection Error");
             }
         }
 
