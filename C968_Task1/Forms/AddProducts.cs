@@ -17,7 +17,7 @@ namespace C968_Task1.Forms
     {
         mainForm MainForm = new mainForm();
         
-        BindingList<Part> addedParts = new BindingList<Part>();
+        BindingList<Part> partsAdded = new BindingList<Part>();
         public int ProdID { get; set; }
         public string ProdName { get; set; }
         public int ProdInstock { get; set; }
@@ -38,21 +38,15 @@ namespace C968_Task1.Forms
             topDataGridView.DataSource = table;
 
             var table2 = new BindingSource();
-            table2.DataSource = addedParts;
+            table2.DataSource = partsAdded;
             bottomDataGridView.DataSource = table2;
         }
 
         private void prodAddBTN_Click(object sender, EventArgs e)
         {
-            if (topDataGridView.SelectedRows.Count == 1)
-            {
-                Part addParts = (Part)topDataGridView.SelectedRows[0].DataBoundItem;
-                addedParts.Add(addParts);
-            }
-            else if (topDataGridView.SelectedRows.Count != 1)
-            {
-                MessageBox.Show("Please select one part to add at a time", "Selection Error");
-            }
+            Part partToAdd = (Part)topDataGridView.CurrentRow.DataBoundItem;
+            partsAdded.Add(partToAdd);
+
         }
 
         private void prodCancelBTN_Click(object sender, EventArgs e)
@@ -108,7 +102,40 @@ namespace C968_Task1.Forms
 
         private void prodSaveBTN_Click(object sender, EventArgs e)
         {
+            int inventory;
+            int min;
+            int max;
+            decimal price;
+
             try
+            {
+                min = int.Parse(textBox5.Text);
+                max = int.Parse(textBox6.Text);
+                inventory = int.Parse(textBox3.Text);
+                price = decimal.Parse(textBox4.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Error: Inventory, Price, Max and Min text fields must be numeric values.");
+                return;
+            }
+
+            string name = textBox2.Text;
+            inventory = int.Parse(textBox3.Text);
+            price = decimal.Parse(textBox4.Text);
+            min = int.Parse(textBox6.Text);
+            max = int.Parse(textBox5.Text);
+
+            //creates new Product and adds it to inventory
+            Product product = new Product((Inventory.Products.Count + 1), name, inventory, price, max, min);
+            Inventory.addProduct(product);
+
+            foreach (Part part in partsAdded)
+            {
+                product.addAssociatedPart(part);
+            }
+            Close();
+           /* try
             {
                 ProdID = Inventory.Products.Count + 1;
                 ProdName = textBox2.Text;
@@ -117,15 +144,22 @@ namespace C968_Task1.Forms
                 ProdMin = int.Parse(textBox5.Text);
                 ProdMax = int.Parse(textBox6.Text);               
 
-                Product product = new Product(ProdID, ProdName, ProdInstock, ProdPrice, ProdMax, ProdMin);
-                Inventory.addProduct(product);
-                                                  
-                DialogResult = DialogResult.OK;
+                
             }
             catch
             {
                 MessageBox.Show("Please enter valid values", "Incorrect Values Found");
             }
+
+            Product product = new Product(ProdID, ProdName, ProdInstock, ProdPrice, ProdMax, ProdMin);
+            Inventory.addProduct(product);
+
+            DialogResult = DialogResult.OK;
+
+            foreach (Part addParttoList in partsAdded)
+            {
+                product.addAssociatedPart(addParttoList);
+            }*/
         }
     }
 }

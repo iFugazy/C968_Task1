@@ -152,5 +152,11 @@ namespace C968_Task1
             addProductsForm addProducts = new addProductsForm(this);
             addProducts.ShowDialog();
         }
+
+        private void productsModifyButton_Click(object sender, EventArgs e)
+        {
+            Product product = (Product)productsDataGridView.CurrentRow.DataBoundItem;
+            new ModifyProducts(product).ShowDialog();
+        }
     }
 }

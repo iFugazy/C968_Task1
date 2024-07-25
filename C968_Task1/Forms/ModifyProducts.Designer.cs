@@ -57,42 +57,42 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(131, 301);
+            this.textBox6.Location = new System.Drawing.Point(119, 301);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(171, 20);
             this.textBox6.TabIndex = 83;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(131, 256);
+            this.textBox5.Location = new System.Drawing.Point(119, 256);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(171, 20);
             this.textBox5.TabIndex = 82;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(131, 215);
+            this.textBox4.Location = new System.Drawing.Point(119, 215);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(171, 20);
             this.textBox4.TabIndex = 81;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(131, 173);
+            this.textBox3.Location = new System.Drawing.Point(119, 173);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(171, 20);
             this.textBox3.TabIndex = 80;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(131, 129);
+            this.textBox2.Location = new System.Drawing.Point(119, 129);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(171, 20);
             this.textBox2.TabIndex = 79;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 85);
+            this.textBox1.Location = new System.Drawing.Point(119, 85);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(171, 20);
             this.textBox1.TabIndex = 78;
@@ -100,7 +100,7 @@
             // prodMinLabel
             // 
             this.prodMinLabel.AutoSize = true;
-            this.prodMinLabel.Location = new System.Drawing.Point(98, 304);
+            this.prodMinLabel.Location = new System.Drawing.Point(86, 304);
             this.prodMinLabel.Name = "prodMinLabel";
             this.prodMinLabel.Size = new System.Drawing.Size(24, 13);
             this.prodMinLabel.TabIndex = 77;
@@ -109,7 +109,7 @@
             // prodMaxLabel
             // 
             this.prodMaxLabel.AutoSize = true;
-            this.prodMaxLabel.Location = new System.Drawing.Point(98, 259);
+            this.prodMaxLabel.Location = new System.Drawing.Point(86, 259);
             this.prodMaxLabel.Name = "prodMaxLabel";
             this.prodMaxLabel.Size = new System.Drawing.Size(27, 13);
             this.prodMaxLabel.TabIndex = 76;
@@ -118,7 +118,7 @@
             // prodPriceLabel
             // 
             this.prodPriceLabel.AutoSize = true;
-            this.prodPriceLabel.Location = new System.Drawing.Point(94, 218);
+            this.prodPriceLabel.Location = new System.Drawing.Point(82, 218);
             this.prodPriceLabel.Name = "prodPriceLabel";
             this.prodPriceLabel.Size = new System.Drawing.Size(31, 13);
             this.prodPriceLabel.TabIndex = 75;
@@ -127,7 +127,7 @@
             // prodInvLabel
             // 
             this.prodInvLabel.AutoSize = true;
-            this.prodInvLabel.Location = new System.Drawing.Point(74, 176);
+            this.prodInvLabel.Location = new System.Drawing.Point(62, 176);
             this.prodInvLabel.Name = "prodInvLabel";
             this.prodInvLabel.Size = new System.Drawing.Size(51, 13);
             this.prodInvLabel.TabIndex = 74;
@@ -136,7 +136,7 @@
             // prodNameLabel
             // 
             this.prodNameLabel.AutoSize = true;
-            this.prodNameLabel.Location = new System.Drawing.Point(87, 132);
+            this.prodNameLabel.Location = new System.Drawing.Point(75, 132);
             this.prodNameLabel.Name = "prodNameLabel";
             this.prodNameLabel.Size = new System.Drawing.Size(35, 13);
             this.prodNameLabel.TabIndex = 73;
@@ -145,7 +145,7 @@
             // prodIDLabel
             // 
             this.prodIDLabel.AutoSize = true;
-            this.prodIDLabel.Location = new System.Drawing.Point(104, 88);
+            this.prodIDLabel.Location = new System.Drawing.Point(92, 88);
             this.prodIDLabel.Name = "prodIDLabel";
             this.prodIDLabel.Size = new System.Drawing.Size(18, 13);
             this.prodIDLabel.TabIndex = 72;
@@ -153,7 +153,7 @@
             // 
             // prodDeleteBTN
             // 
-            this.prodDeleteBTN.Location = new System.Drawing.Point(814, 557);
+            this.prodDeleteBTN.Location = new System.Drawing.Point(802, 557);
             this.prodDeleteBTN.Name = "prodDeleteBTN";
             this.prodDeleteBTN.Size = new System.Drawing.Size(75, 23);
             this.prodDeleteBTN.TabIndex = 71;
@@ -163,7 +163,7 @@
             // prodBottomLabel
             // 
             this.prodBottomLabel.AutoSize = true;
-            this.prodBottomLabel.Location = new System.Drawing.Point(453, 323);
+            this.prodBottomLabel.Location = new System.Drawing.Point(441, 323);
             this.prodBottomLabel.Name = "prodBottomLabel";
             this.prodBottomLabel.Size = new System.Drawing.Size(167, 13);
             this.prodBottomLabel.TabIndex = 70;
@@ -174,7 +174,7 @@
             this.bottomDataGridView.AllowUserToAddRows = false;
             this.bottomDataGridView.AllowUserToDeleteRows = false;
             this.bottomDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bottomDataGridView.Location = new System.Drawing.Point(456, 348);
+            this.bottomDataGridView.Location = new System.Drawing.Point(444, 348);
             this.bottomDataGridView.Name = "bottomDataGridView";
             this.bottomDataGridView.ReadOnly = true;
             this.bottomDataGridView.RowHeadersVisible = false;
@@ -184,7 +184,7 @@
             // 
             // prodAddBTN
             // 
-            this.prodAddBTN.Location = new System.Drawing.Point(814, 295);
+            this.prodAddBTN.Location = new System.Drawing.Point(802, 295);
             this.prodAddBTN.Name = "prodAddBTN";
             this.prodAddBTN.Size = new System.Drawing.Size(75, 23);
             this.prodAddBTN.TabIndex = 68;
@@ -194,7 +194,7 @@
             // prodTopLabel
             // 
             this.prodTopLabel.AutoSize = true;
-            this.prodTopLabel.Location = new System.Drawing.Point(453, 60);
+            this.prodTopLabel.Location = new System.Drawing.Point(441, 60);
             this.prodTopLabel.Name = "prodTopLabel";
             this.prodTopLabel.Size = new System.Drawing.Size(96, 13);
             this.prodTopLabel.TabIndex = 67;
@@ -205,7 +205,7 @@
             this.topDataGridView.AllowUserToAddRows = false;
             this.topDataGridView.AllowUserToDeleteRows = false;
             this.topDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.topDataGridView.Location = new System.Drawing.Point(456, 85);
+            this.topDataGridView.Location = new System.Drawing.Point(444, 85);
             this.topDataGridView.Name = "topDataGridView";
             this.topDataGridView.ReadOnly = true;
             this.topDataGridView.RowHeadersVisible = false;
@@ -215,7 +215,7 @@
             // 
             // prodSearchBTN
             // 
-            this.prodSearchBTN.Location = new System.Drawing.Point(623, 33);
+            this.prodSearchBTN.Location = new System.Drawing.Point(611, 33);
             this.prodSearchBTN.Name = "prodSearchBTN";
             this.prodSearchBTN.Size = new System.Drawing.Size(75, 23);
             this.prodSearchBTN.TabIndex = 65;
@@ -224,7 +224,7 @@
             // 
             // addProdTB
             // 
-            this.addProdTB.Location = new System.Drawing.Point(704, 35);
+            this.addProdTB.Location = new System.Drawing.Point(692, 35);
             this.addProdTB.Name = "addProdTB";
             this.addProdTB.Size = new System.Drawing.Size(185, 20);
             this.addProdTB.TabIndex = 84;
@@ -232,7 +232,7 @@
             // prodCancelBTN
             // 
             this.prodCancelBTN.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.prodCancelBTN.Location = new System.Drawing.Point(814, 602);
+            this.prodCancelBTN.Location = new System.Drawing.Point(802, 602);
             this.prodCancelBTN.Name = "prodCancelBTN";
             this.prodCancelBTN.Size = new System.Drawing.Size(75, 23);
             this.prodCancelBTN.TabIndex = 64;
@@ -241,7 +241,7 @@
             // 
             // prodSaveBTN
             // 
-            this.prodSaveBTN.Location = new System.Drawing.Point(724, 602);
+            this.prodSaveBTN.Location = new System.Drawing.Point(712, 602);
             this.prodSaveBTN.Name = "prodSaveBTN";
             this.prodSaveBTN.Size = new System.Drawing.Size(75, 23);
             this.prodSaveBTN.TabIndex = 63;
@@ -288,6 +288,7 @@
             this.Controls.Add(this.prodSaveBTN);
             this.Name = "ModifyProducts";
             this.Text = "ModifyProducts";
+            this.Load += new System.EventHandler(this.ModifyProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bottomDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topDataGridView)).EndInit();
             this.ResumeLayout(false);

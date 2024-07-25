@@ -78,8 +78,7 @@ namespace C968_Task1.Models
                     return part;
                 }
             }
-            Part nullPart = new Inhouse();
-            return nullPart;
+            return null;
         }
 
         /// <summary>

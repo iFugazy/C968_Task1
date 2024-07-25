@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics.Eventing.Reader;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace C968_Task1.Models
 {
     public class Product
     {
-        public BindingList<Part> AssociatedParts { get; set; }
+        public BindingList<Part> AssociatedParts = new BindingList<Part>();
         public int ProductID { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }       
@@ -30,19 +31,33 @@ namespace C968_Task1.Models
             this.Max = Max;
         }
 
-        public void addAssociatedPart(Part associatedPart)
+        public void addAssociatedPart(Part part)
         {
-            AssociatedParts.Add(associatedPart);
+            AssociatedParts.Add(part);
         }
 
         public bool removeAssociatedPart(int ProductID)
         {
+            foreach (Part assocpart in AssociatedParts)
+            {
+                if (assocpart.PartID == ProductID)
+                {
+                    AssociatedParts.Remove(assocpart);
+                }                        
+            }
             return true;
         }
 
         public Part lookupAssociatedPart(int ProductID)
-        { 
-            return AssociatedParts[ProductID]; 
+        {
+            foreach (Part part in AssociatedParts)
+            {
+                if (part.PartID == ProductID)
+                {
+                    return part;
+                }
+            }
+            return null;
         }
 
 
