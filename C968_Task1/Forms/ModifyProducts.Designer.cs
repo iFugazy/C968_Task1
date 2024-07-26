@@ -58,7 +58,7 @@
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(238, 579);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(6);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(338, 31);
             this.textBox6.TabIndex = 83;
@@ -66,7 +66,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(238, 492);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(6);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(338, 31);
             this.textBox5.TabIndex = 82;
@@ -74,7 +74,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(238, 413);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(6);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(338, 31);
             this.textBox4.TabIndex = 81;
@@ -82,7 +82,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(238, 333);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(6);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(338, 31);
             this.textBox3.TabIndex = 80;
@@ -90,19 +90,18 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(238, 248);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(6);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(338, 31);
             this.textBox2.TabIndex = 79;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 163);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox1.Location = new System.Drawing.Point(238, 169);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(338, 31);
-            this.textBox1.TabIndex = 78;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.TabIndex = 86;
             // 
             // prodMinLabel
             // 
@@ -167,7 +166,7 @@
             // prodDeleteBTN
             // 
             this.prodDeleteBTN.Location = new System.Drawing.Point(1604, 1071);
-            this.prodDeleteBTN.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.prodDeleteBTN.Margin = new System.Windows.Forms.Padding(6);
             this.prodDeleteBTN.Name = "prodDeleteBTN";
             this.prodDeleteBTN.Size = new System.Drawing.Size(150, 44);
             this.prodDeleteBTN.TabIndex = 71;
@@ -191,7 +190,7 @@
             this.bottomDataGridView.AllowUserToDeleteRows = false;
             this.bottomDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bottomDataGridView.Location = new System.Drawing.Point(888, 669);
-            this.bottomDataGridView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bottomDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.bottomDataGridView.Name = "bottomDataGridView";
             this.bottomDataGridView.ReadOnly = true;
             this.bottomDataGridView.RowHeadersVisible = false;
@@ -203,7 +202,7 @@
             // prodAddBTN
             // 
             this.prodAddBTN.Location = new System.Drawing.Point(1604, 567);
-            this.prodAddBTN.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.prodAddBTN.Margin = new System.Windows.Forms.Padding(6);
             this.prodAddBTN.Name = "prodAddBTN";
             this.prodAddBTN.Size = new System.Drawing.Size(150, 44);
             this.prodAddBTN.TabIndex = 68;
@@ -227,7 +226,7 @@
             this.topDataGridView.AllowUserToDeleteRows = false;
             this.topDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.topDataGridView.Location = new System.Drawing.Point(888, 163);
-            this.topDataGridView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.topDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.topDataGridView.Name = "topDataGridView";
             this.topDataGridView.ReadOnly = true;
             this.topDataGridView.RowHeadersVisible = false;
@@ -239,7 +238,7 @@
             // prodSearchBTN
             // 
             this.prodSearchBTN.Location = new System.Drawing.Point(1222, 63);
-            this.prodSearchBTN.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.prodSearchBTN.Margin = new System.Windows.Forms.Padding(6);
             this.prodSearchBTN.Name = "prodSearchBTN";
             this.prodSearchBTN.Size = new System.Drawing.Size(150, 44);
             this.prodSearchBTN.TabIndex = 65;
@@ -250,7 +249,7 @@
             // addProdTB
             // 
             this.addProdTB.Location = new System.Drawing.Point(1384, 67);
-            this.addProdTB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.addProdTB.Margin = new System.Windows.Forms.Padding(6);
             this.addProdTB.Name = "addProdTB";
             this.addProdTB.Size = new System.Drawing.Size(366, 31);
             this.addProdTB.TabIndex = 84;
@@ -259,7 +258,7 @@
             // 
             this.prodCancelBTN.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.prodCancelBTN.Location = new System.Drawing.Point(1604, 1158);
-            this.prodCancelBTN.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.prodCancelBTN.Margin = new System.Windows.Forms.Padding(6);
             this.prodCancelBTN.Name = "prodCancelBTN";
             this.prodCancelBTN.Size = new System.Drawing.Size(150, 44);
             this.prodCancelBTN.TabIndex = 64;
@@ -269,7 +268,7 @@
             // prodSaveBTN
             // 
             this.prodSaveBTN.Location = new System.Drawing.Point(1424, 1158);
-            this.prodSaveBTN.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.prodSaveBTN.Margin = new System.Windows.Forms.Padding(6);
             this.prodSaveBTN.Name = "prodSaveBTN";
             this.prodSaveBTN.Size = new System.Drawing.Size(150, 44);
             this.prodSaveBTN.TabIndex = 63;
@@ -281,7 +280,7 @@
             // 
             this.headerProd.AutoSize = true;
             this.headerProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerProd.Location = new System.Drawing.Point(24, 17);
+            this.headerProd.Location = new System.Drawing.Point(15, 9);
             this.headerProd.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.headerProd.Name = "headerProd";
             this.headerProd.Size = new System.Drawing.Size(270, 48);
@@ -316,7 +315,7 @@
             this.Controls.Add(this.addProdTB);
             this.Controls.Add(this.prodCancelBTN);
             this.Controls.Add(this.prodSaveBTN);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ModifyProducts";
             this.Text = "ModifyProducts";
             this.Load += new System.EventHandler(this.ModifyProducts_Load);

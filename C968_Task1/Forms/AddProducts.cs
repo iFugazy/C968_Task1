@@ -31,7 +31,6 @@ namespace C968_Task1.Forms
             MainForm = mainForm;
             int ProductNum = Inventory.Products.Count + 1;
             textBox1.Text = ProductNum.ToString();
-            
         }
 
         private void AddProducts_Load(object sender, EventArgs e)

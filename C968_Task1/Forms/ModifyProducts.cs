@@ -54,7 +54,13 @@ namespace C968_Task1.Forms
         }
         private void ModifyProducts_Load(object sender, EventArgs e)
         {
-            
+            textBox2.BackColor = Color.Red;
+            textBox3.BackColor = Color.Red;
+            textBox4.BackColor = Color.Red;
+            textBox5.BackColor = Color.Red;
+            textBox6.BackColor = Color.Red;
+
+
         }
 
         private void prodAddBTN_Click(object sender, EventArgs e)
@@ -143,11 +149,6 @@ namespace C968_Task1.Forms
             {
                 product.addAssociatedPart(part);
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
     

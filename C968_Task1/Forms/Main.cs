@@ -196,5 +196,18 @@ namespace C968_Task1
                 }
             }
         }
+
+        private void productsDeleteButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Delete Row", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                foreach (DataGridViewRow datarow in productsDataGridView.SelectedRows)
+                {
+                    productsDataGridView.Rows.RemoveAt(datarow.Index);
+                }
+            }
+            else { }
+        }
     }
 }
