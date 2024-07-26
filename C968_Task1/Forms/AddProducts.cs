@@ -29,6 +29,9 @@ namespace C968_Task1.Forms
         {
             InitializeComponent();
             MainForm = mainForm;
+            int ProductNum = Inventory.Products.Count + 1;
+            textBox1.Text = ProductNum.ToString();
+            
         }
 
         private void AddProducts_Load(object sender, EventArgs e)
@@ -134,32 +137,6 @@ namespace C968_Task1.Forms
             {
                 product.addAssociatedPart(part);
             }
-            Close();
-           /* try
-            {
-                ProdID = Inventory.Products.Count + 1;
-                ProdName = textBox2.Text;
-                ProdInstock = int.Parse(textBox3.Text);
-                ProdPrice = decimal.Parse(textBox4.Text);
-                ProdMin = int.Parse(textBox5.Text);
-                ProdMax = int.Parse(textBox6.Text);               
-
-                
-            }
-            catch
-            {
-                MessageBox.Show("Please enter valid values", "Incorrect Values Found");
-            }
-
-            Product product = new Product(ProdID, ProdName, ProdInstock, ProdPrice, ProdMax, ProdMin);
-            Inventory.addProduct(product);
-
-            DialogResult = DialogResult.OK;
-
-            foreach (Part addParttoList in partsAdded)
-            {
-                product.addAssociatedPart(addParttoList);
-            }*/
         }
     }
 }

@@ -136,7 +136,7 @@ namespace C968_Task1
             }
             if (!valueResult)
             {
-                if (partsTextBox.Text == "")
+                if (partsTextBox.Text == null)
                 {
                     MessageBox.Show("TextBox is blank", "Search Failed");
                 }
@@ -157,6 +157,44 @@ namespace C968_Task1
         {
             Product product = (Product)productsDataGridView.CurrentRow.DataBoundItem;
             new ModifyProducts(product).ShowDialog();
+        }
+
+        private void productsSearchButton_Click(object sender, EventArgs e)
+        {
+            productsDataGridView.ClearSelection();
+            string searchValue = productsTextBox.Text;
+            productsDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+
+            bool valueResult = false;
+            foreach (DataGridViewRow row in productsDataGridView.Rows)
+            {
+                if (row.Cells[0].Value.ToString().ToLower() != null && row.Cells[0].Value.ToString().ToLower().Contains(searchValue.ToLower()))
+                {
+                    int rowIndex = row.Index;
+                    productsDataGridView.Rows[rowIndex].Selected = true;
+                    valueResult = true;
+                    break;
+                }
+                else if (row.Cells[1].Value.ToString().ToLower() != null && row.Cells[1].Value.ToString().ToLower().Contains(searchValue.ToLower()))
+                {
+                    int rowIndex = row.Index;
+                    productsDataGridView.Rows[rowIndex].Selected = true;
+                    valueResult = true;
+                    break;
+                }
+            }
+            if (!valueResult)
+            {
+                if (productsTextBox.Text == null)
+                {
+                    MessageBox.Show("TextBox is blank", "Search Failed");
+                }
+                else
+                {
+                    MessageBox.Show($"{productsTextBox.Text} is not a value in the list ", "Search Failed");
+                }
+            }
         }
     }
 }

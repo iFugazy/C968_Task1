@@ -38,9 +38,9 @@ namespace C968_Task1.Models
         }
         public static void updateProduct(int number, Product product) 
         {
-            Part productID = lookupPart(number);
+            Product productID = lookUpProduct(number);
 
-            deletePart(productID);
+            removeProduct(productID);
             Products.Add(product);
         }
 
