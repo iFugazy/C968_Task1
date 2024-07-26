@@ -33,7 +33,7 @@ namespace C968_Task1.Forms
             BindingSource topTable = new BindingSource();
             topTable.DataSource = Inventory.AllParts;
             topDataGridView.DataSource = topTable;
-
+             
             foreach (Part part in product.AssociatedParts)
             {
                 partsAdded.Add(part);
