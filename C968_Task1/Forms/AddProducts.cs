@@ -128,7 +128,21 @@ namespace C968_Task1.Forms
             min = int.Parse(textBox6.Text);
             max = int.Parse(textBox5.Text);
 
-            //creates new Product and adds it to inventory
+            if (min > max)
+            {
+                MessageBox.Show("Minimum amount of products is greater than the maximum amount", "Min is greater than Max");
+            }
+
+            if (inventory > max)
+            {
+                MessageBox.Show("Inventory amount is greater than the maxium", "Inventory Error");
+            }
+
+            if (inventory < min)
+            {
+                MessageBox.Show("Inventory amount is less than the minimum", "Inventory Error");
+            }
+
             Product product = new Product((Inventory.Products.Count + 1), name, inventory, price, max, min);
             Inventory.addProduct(product);
 

@@ -99,14 +99,24 @@ namespace C968_Task1.Models
         /// </summary>
         public static void GUIExampleItems()
         {
-            Part exampleInHouse = new Inhouse(1, "Darren", 1, 1.22m, 1, 1, 1);
-            Part exampleInHouse2 = new Inhouse(2, "Cody", 1, 1.22m, 1, 1, 1);
-            Part exampleInHouse3 = new Inhouse(3, "Zach", 1, 1.22m, 1, 1, 1);
-            Product ExampleProduct = new Product(1, "Darren", 1, 1, 1, 1);
-            AllParts.Add(exampleInHouse);
+            Part exampleInHouse1 = new Inhouse(1, "Wheel", 15, 12.11m, 5, 25, 1001);
+            Part exampleInHouse2 = new Inhouse(2, "Pedal", 11, 8.22m, 5, 25, 1002);
+            Part exampleInHouse3 = new Inhouse(3, "Chain", 12, 8.33m, 5, 25, 1003);
+            Part exampleOutsourced1 = new Outsourced(4, "Seat", 8, 4.55m, 2, 15, "Icon Biking");
+
+
+            Product ExampleProduct1 = new Product(1, "Red Bicycle", 15, 11.44m, 1, 25);
+            Product ExampleProduct2 = new Product(2, "Yellow Bicycle", 19, 9.66m, 1, 20);
+            Product ExampleProduct3 = new Product(3, "Blue Bicycle", 5, 12.77m, 1, 25);
+
+            AllParts.Add(exampleInHouse1);
             AllParts.Add(exampleInHouse2);
             AllParts.Add(exampleInHouse3);
-            Products.Add(ExampleProduct);
+            AllParts.Add(exampleOutsourced1);
+
+            Products.Add(ExampleProduct1);
+            Products.Add(ExampleProduct2);
+            Products.Add(ExampleProduct3);
         }
     }
 

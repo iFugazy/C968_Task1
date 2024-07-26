@@ -41,7 +41,7 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void partsDeleteButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Delete Row", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this part?", "Delete Part", MessageBoxButtons.YesNo);
             if(result == DialogResult.Yes)
             {
                 foreach (DataGridViewRow datarow in partsDataGridView.SelectedRows)
@@ -199,7 +199,7 @@ namespace C968_Task1
 
         private void productsDeleteButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Delete Row", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this product?", "Delete Product", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 foreach (DataGridViewRow datarow in productsDataGridView.SelectedRows)
