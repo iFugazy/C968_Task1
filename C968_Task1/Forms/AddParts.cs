@@ -1,13 +1,7 @@
-﻿
-using C968_Task1.Models;
+﻿using C968_Task1.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace C968_Task1
@@ -72,7 +66,7 @@ namespace C968_Task1
         {
             textBox7.Text = null;
             addPartsMachineIDLabel.Text = "Company Name";
-        }     
+        }
 
         /// <summary>
         /// This event handler closes this form and reverts the information back to the information available before clicking
@@ -82,7 +76,7 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();     
+            this.Close();
         }
 
         /// <summary>
@@ -93,7 +87,7 @@ namespace C968_Task1
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void partsSaveButton_Click(object sender, EventArgs e)
-        {            
+        {
             try
             {
                 PartID = Inventory.AllParts.Count + 1;
@@ -139,7 +133,7 @@ namespace C968_Task1
                 {
                     MessageBox.Show("Please check whether the part is Outsourced or Inhouse");
                 }
-                
+
                 DialogResult = DialogResult.OK;
             }
             catch

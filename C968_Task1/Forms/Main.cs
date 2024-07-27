@@ -1,25 +1,16 @@
 ﻿using C968_Task1.Forms;
 using C968_Task1.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace C968_Task1
 {
     public partial class mainForm : Form
-    {      
+    {
         public mainForm()
         {
             InitializeComponent();
-            
         }
 
         /// <summary>
@@ -42,15 +33,15 @@ namespace C968_Task1
         private void partsDeleteButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to delete this part?", "Delete Part", MessageBoxButtons.YesNo);
-            if(result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
-               
+
                 foreach (DataGridViewRow datarow in partsDataGridView.SelectedRows)
                 {
                     partsDataGridView.Rows.RemoveAt(datarow.Index);
                 }
             }
-            else { }            
+            else { }
         }
 
         /// <summary>
@@ -116,24 +107,24 @@ namespace C968_Task1
             string searchValue = partsTextBox.Text;
             partsDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-            
+
             bool valueResult = false;
             foreach (DataGridViewRow row in partsDataGridView.Rows)
-            {               
-                    if (row.Cells[0].Value.ToString().ToLower() != null && row.Cells[0].Value.ToString().ToLower().Contains(searchValue.ToLower()))
-                    {
-                        int rowIndex = row.Index;
-                        partsDataGridView.Rows[rowIndex].Selected = true;
-                        valueResult = true;
-                        break;
-                    }
-                    else if (row.Cells[1].Value.ToString().ToLower() != null && row.Cells[1].Value.ToString().ToLower().Contains(searchValue.ToLower()))
-                    {
-                        int rowIndex = row.Index;
-                        partsDataGridView.Rows[rowIndex].Selected = true;
-                        valueResult = true;
-                        break;
-                    }                   
+            {
+                if (row.Cells[0].Value.ToString().ToLower() != null && row.Cells[0].Value.ToString().ToLower().Contains(searchValue.ToLower()))
+                {
+                    int rowIndex = row.Index;
+                    partsDataGridView.Rows[rowIndex].Selected = true;
+                    valueResult = true;
+                    break;
+                }
+                else if (row.Cells[1].Value.ToString().ToLower() != null && row.Cells[1].Value.ToString().ToLower().Contains(searchValue.ToLower()))
+                {
+                    int rowIndex = row.Index;
+                    partsDataGridView.Rows[rowIndex].Selected = true;
+                    valueResult = true;
+                    break;
+                }
             }
             if (!valueResult)
             {
@@ -144,8 +135,8 @@ namespace C968_Task1
                 else
                 {
                     MessageBox.Show($"{partsTextBox.Text} is not a value in the list ", "Search Failed");
-                }                
-            }           
+                }
+            }
         }
 
         /// <summary>

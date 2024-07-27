@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using C968_Task1.Models;
+using System;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO.Ports;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using C968_Task1.Models;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace C968_Task1.Forms
@@ -23,12 +16,9 @@ namespace C968_Task1.Forms
         public int ProductMax { get; internal set; }
         public int ProductInv { get; internal set; }
         public new string CompanyName { get; set; }
-        BindingList<Part> partsAdded = new BindingList<Part> ();
-       
-        public ModifyProducts()
-        {
-            InitializeComponent();
-        }
+
+        BindingList<Part> partsAdded = new BindingList<Part>();
+
         public ModifyProducts(Product product)
         {
             InitializeComponent();
@@ -42,23 +32,35 @@ namespace C968_Task1.Forms
             BindingSource topTable = new BindingSource();
             topTable.DataSource = Inventory.AllParts;
             topDataGridView.DataSource = topTable;
-             
+
             foreach (Part part in product.AssociatedParts)
             {
                 partsAdded.Add(part);
             }
+
             var botTable = new BindingSource();
             botTable.DataSource = partsAdded;
             bottomDataGridView.DataSource = botTable;
 
         }
 
+        /// <summary>
+        /// This method takes the data from the selected row and adds it the the bottom datagridview allowing the user
+        /// to associate the parts to the product.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void prodAddBTN_Click(object sender, EventArgs e)
         {
             Part partToAdd = (Part)topDataGridView.CurrentRow.DataBoundItem;
             partsAdded.Add(partToAdd);
         }
 
+        /// <summary>
+        /// This method is used to delete the selected row from the parts added data grid view.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void prodDeleteBTN_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow datarow in bottomDataGridView.SelectedRows)
@@ -67,6 +69,12 @@ namespace C968_Task1.Forms
             }
         }
 
+        /// <summary>
+        /// This method is used to search the datagridview by characters that are contained within the first
+        /// two columns.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void prodSearchBTN_Click(object sender, EventArgs e)
         {
             topDataGridView.ClearSelection();
@@ -105,6 +113,12 @@ namespace C968_Task1.Forms
             }
         }
 
+        /// <summary>
+        /// This method checks to see a few conditions and then parsing the the information which is then 
+        /// used to add the data to the list which in return adds the data to the table.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void prodSaveBTN_Click(object sender, EventArgs e)
         {
 
@@ -140,9 +154,64 @@ namespace C968_Task1.Forms
             {
                 product.addAssociatedPart(part);
             }
-            
+
             this.Close();
         }
+
+        /// <summary>
+        /// This event is used to make sure the user only used letters.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            textBox2.BackColor = Color.White;
+        }
+
+        /// <summary>
+        /// This event is used to make sure the user only used digits.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            textBox3.BackColor = Color.White;
+        }
+
+        /// <summary>
+        /// This event is used to make sure the user only used digits and punctuation.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            textBox4.BackColor = Color.White;
+        }
+
+        /// <summary>
+        /// This event is used to make sure the user only used letters.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            textBox5.BackColor = Color.White;
+        }
+
+        /// <summary>
+        /// This event is used to make sure the user only used letters.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            textBox6.BackColor = Color.White;
+        }
     }
-    
+
 }

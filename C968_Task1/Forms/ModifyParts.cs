@@ -1,16 +1,6 @@
 ﻿using C968_Task1.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace C968_Task1
@@ -31,9 +21,7 @@ namespace C968_Task1
         public ModifyParts(mainForm mainForm)
         {
             InitializeComponent();
-
             this.mainForm = mainForm;
-
         }
 
         /// <summary>
@@ -60,7 +48,7 @@ namespace C968_Task1
         /// </summary>
         /// <param name="part"></param>
         public ModifyParts(Inhouse part)
-        {           
+        {
             InitializeComponent();
             partsInHouseRBTN.Checked = true;
             textBox1.Text = part.PartID.ToString();
@@ -145,7 +133,7 @@ namespace C968_Task1
                 }
 
                 if (partsInHouseRBTN.Checked)
-                { 
+                {
                     MachineID = int.Parse(textBox7.Text);
 
                     Inhouse inhouse = new Inhouse(PartID, PartName, PartInv, PartPrice, PartMin, PartMax, MachineID);
@@ -156,21 +144,21 @@ namespace C968_Task1
 
                 else if (outsourcedRBTN.Checked)
                 {
-                    
+
                     CompanyName = textBox7.Text;
 
                     Outsourced outsourced = new Outsourced(PartID, PartName, PartInv, PartPrice, PartMin, PartMax, CompanyName);
                     Inventory.updatePart(PartID, outsourced);
 
                     DialogResult = DialogResult.OK;
-                    
+
                 }
-                
+
             }
             catch
             {
                 MessageBox.Show("Please enter valid values", "Incorrect Values Found");
-            }                       
+            }
         }
 
         /// <summary>

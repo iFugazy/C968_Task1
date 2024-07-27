@@ -57,107 +57,124 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(119, 307);
+            this.textBox6.Location = new System.Drawing.Point(238, 590);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(6);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(171, 20);
+            this.textBox6.Size = new System.Drawing.Size(338, 31);
             this.textBox6.TabIndex = 83;
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(119, 259);
+            this.textBox5.Location = new System.Drawing.Point(238, 498);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(6);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(171, 20);
+            this.textBox5.Size = new System.Drawing.Size(338, 31);
             this.textBox5.TabIndex = 82;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(119, 215);
+            this.textBox4.Location = new System.Drawing.Point(238, 413);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(6);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(171, 20);
+            this.textBox4.Size = new System.Drawing.Size(338, 31);
             this.textBox4.TabIndex = 81;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(119, 173);
+            this.textBox3.Location = new System.Drawing.Point(238, 333);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(6);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 20);
+            this.textBox3.Size = new System.Drawing.Size(338, 31);
             this.textBox3.TabIndex = 80;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 129);
+            this.textBox2.Location = new System.Drawing.Point(238, 248);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(6);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 20);
+            this.textBox2.Size = new System.Drawing.Size(338, 31);
             this.textBox2.TabIndex = 79;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 88);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(238, 169);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(171, 20);
+            this.textBox1.Size = new System.Drawing.Size(338, 31);
             this.textBox1.TabIndex = 86;
             // 
             // prodMinLabel
             // 
             this.prodMinLabel.AutoSize = true;
-            this.prodMinLabel.Location = new System.Drawing.Point(86, 262);
+            this.prodMinLabel.Location = new System.Drawing.Point(172, 504);
+            this.prodMinLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.prodMinLabel.Name = "prodMinLabel";
-            this.prodMinLabel.Size = new System.Drawing.Size(24, 13);
+            this.prodMinLabel.Size = new System.Drawing.Size(47, 25);
             this.prodMinLabel.TabIndex = 77;
             this.prodMinLabel.Text = "Min";
             // 
             // prodMaxLabel
             // 
             this.prodMaxLabel.AutoSize = true;
-            this.prodMaxLabel.Location = new System.Drawing.Point(86, 310);
+            this.prodMaxLabel.Location = new System.Drawing.Point(172, 596);
+            this.prodMaxLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.prodMaxLabel.Name = "prodMaxLabel";
-            this.prodMaxLabel.Size = new System.Drawing.Size(27, 13);
+            this.prodMaxLabel.Size = new System.Drawing.Size(53, 25);
             this.prodMaxLabel.TabIndex = 76;
             this.prodMaxLabel.Text = "Max";
             // 
             // prodPriceLabel
             // 
             this.prodPriceLabel.AutoSize = true;
-            this.prodPriceLabel.Location = new System.Drawing.Point(82, 218);
+            this.prodPriceLabel.Location = new System.Drawing.Point(164, 419);
+            this.prodPriceLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.prodPriceLabel.Name = "prodPriceLabel";
-            this.prodPriceLabel.Size = new System.Drawing.Size(31, 13);
+            this.prodPriceLabel.Size = new System.Drawing.Size(61, 25);
             this.prodPriceLabel.TabIndex = 75;
             this.prodPriceLabel.Text = "Price";
             // 
             // prodInvLabel
             // 
             this.prodInvLabel.AutoSize = true;
-            this.prodInvLabel.Location = new System.Drawing.Point(62, 176);
+            this.prodInvLabel.Location = new System.Drawing.Point(124, 338);
+            this.prodInvLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.prodInvLabel.Name = "prodInvLabel";
-            this.prodInvLabel.Size = new System.Drawing.Size(51, 13);
+            this.prodInvLabel.Size = new System.Drawing.Size(100, 25);
             this.prodInvLabel.TabIndex = 74;
             this.prodInvLabel.Text = "Inventory";
             // 
             // prodNameLabel
             // 
             this.prodNameLabel.AutoSize = true;
-            this.prodNameLabel.Location = new System.Drawing.Point(75, 132);
+            this.prodNameLabel.Location = new System.Drawing.Point(150, 254);
+            this.prodNameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.prodNameLabel.Name = "prodNameLabel";
-            this.prodNameLabel.Size = new System.Drawing.Size(35, 13);
+            this.prodNameLabel.Size = new System.Drawing.Size(68, 25);
             this.prodNameLabel.TabIndex = 73;
             this.prodNameLabel.Text = "Name";
             // 
             // prodIDLabel
             // 
             this.prodIDLabel.AutoSize = true;
-            this.prodIDLabel.Location = new System.Drawing.Point(92, 88);
+            this.prodIDLabel.Location = new System.Drawing.Point(184, 169);
+            this.prodIDLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.prodIDLabel.Name = "prodIDLabel";
-            this.prodIDLabel.Size = new System.Drawing.Size(18, 13);
+            this.prodIDLabel.Size = new System.Drawing.Size(32, 25);
             this.prodIDLabel.TabIndex = 72;
             this.prodIDLabel.Text = "ID";
             // 
             // prodDeleteBTN
             // 
-            this.prodDeleteBTN.Location = new System.Drawing.Point(802, 557);
+            this.prodDeleteBTN.Location = new System.Drawing.Point(1604, 1071);
+            this.prodDeleteBTN.Margin = new System.Windows.Forms.Padding(6);
             this.prodDeleteBTN.Name = "prodDeleteBTN";
-            this.prodDeleteBTN.Size = new System.Drawing.Size(75, 23);
+            this.prodDeleteBTN.Size = new System.Drawing.Size(150, 44);
             this.prodDeleteBTN.TabIndex = 71;
             this.prodDeleteBTN.Text = "Delete";
             this.prodDeleteBTN.UseVisualStyleBackColor = true;
@@ -166,9 +183,10 @@
             // prodBottomLabel
             // 
             this.prodBottomLabel.AutoSize = true;
-            this.prodBottomLabel.Location = new System.Drawing.Point(441, 323);
+            this.prodBottomLabel.Location = new System.Drawing.Point(882, 621);
+            this.prodBottomLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.prodBottomLabel.Name = "prodBottomLabel";
-            this.prodBottomLabel.Size = new System.Drawing.Size(167, 13);
+            this.prodBottomLabel.Size = new System.Drawing.Size(338, 25);
             this.prodBottomLabel.TabIndex = 70;
             this.prodBottomLabel.Text = "Parts Associated with this Product";
             // 
@@ -177,20 +195,22 @@
             this.bottomDataGridView.AllowUserToAddRows = false;
             this.bottomDataGridView.AllowUserToDeleteRows = false;
             this.bottomDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bottomDataGridView.Location = new System.Drawing.Point(444, 348);
+            this.bottomDataGridView.Location = new System.Drawing.Point(888, 669);
+            this.bottomDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.bottomDataGridView.Name = "bottomDataGridView";
             this.bottomDataGridView.ReadOnly = true;
             this.bottomDataGridView.RowHeadersVisible = false;
             this.bottomDataGridView.RowHeadersWidth = 82;
             this.bottomDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bottomDataGridView.Size = new System.Drawing.Size(433, 194);
+            this.bottomDataGridView.Size = new System.Drawing.Size(866, 373);
             this.bottomDataGridView.TabIndex = 69;
             // 
             // prodAddBTN
             // 
-            this.prodAddBTN.Location = new System.Drawing.Point(802, 295);
+            this.prodAddBTN.Location = new System.Drawing.Point(1604, 567);
+            this.prodAddBTN.Margin = new System.Windows.Forms.Padding(6);
             this.prodAddBTN.Name = "prodAddBTN";
-            this.prodAddBTN.Size = new System.Drawing.Size(75, 23);
+            this.prodAddBTN.Size = new System.Drawing.Size(150, 44);
             this.prodAddBTN.TabIndex = 68;
             this.prodAddBTN.Text = "Add";
             this.prodAddBTN.UseVisualStyleBackColor = true;
@@ -199,9 +219,10 @@
             // prodTopLabel
             // 
             this.prodTopLabel.AutoSize = true;
-            this.prodTopLabel.Location = new System.Drawing.Point(441, 60);
+            this.prodTopLabel.Location = new System.Drawing.Point(882, 115);
+            this.prodTopLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.prodTopLabel.Name = "prodTopLabel";
-            this.prodTopLabel.Size = new System.Drawing.Size(96, 13);
+            this.prodTopLabel.Size = new System.Drawing.Size(196, 25);
             this.prodTopLabel.TabIndex = 67;
             this.prodTopLabel.Text = "All Candidate Parts";
             // 
@@ -210,20 +231,22 @@
             this.topDataGridView.AllowUserToAddRows = false;
             this.topDataGridView.AllowUserToDeleteRows = false;
             this.topDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.topDataGridView.Location = new System.Drawing.Point(444, 85);
+            this.topDataGridView.Location = new System.Drawing.Point(888, 163);
+            this.topDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.topDataGridView.Name = "topDataGridView";
             this.topDataGridView.ReadOnly = true;
             this.topDataGridView.RowHeadersVisible = false;
             this.topDataGridView.RowHeadersWidth = 82;
             this.topDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.topDataGridView.Size = new System.Drawing.Size(433, 194);
+            this.topDataGridView.Size = new System.Drawing.Size(866, 373);
             this.topDataGridView.TabIndex = 66;
             // 
             // prodSearchBTN
             // 
-            this.prodSearchBTN.Location = new System.Drawing.Point(611, 33);
+            this.prodSearchBTN.Location = new System.Drawing.Point(1222, 63);
+            this.prodSearchBTN.Margin = new System.Windows.Forms.Padding(6);
             this.prodSearchBTN.Name = "prodSearchBTN";
-            this.prodSearchBTN.Size = new System.Drawing.Size(75, 23);
+            this.prodSearchBTN.Size = new System.Drawing.Size(150, 44);
             this.prodSearchBTN.TabIndex = 65;
             this.prodSearchBTN.Text = "Search";
             this.prodSearchBTN.UseVisualStyleBackColor = true;
@@ -231,26 +254,29 @@
             // 
             // addProdTB
             // 
-            this.addProdTB.Location = new System.Drawing.Point(692, 35);
+            this.addProdTB.Location = new System.Drawing.Point(1384, 67);
+            this.addProdTB.Margin = new System.Windows.Forms.Padding(6);
             this.addProdTB.Name = "addProdTB";
-            this.addProdTB.Size = new System.Drawing.Size(185, 20);
+            this.addProdTB.Size = new System.Drawing.Size(366, 31);
             this.addProdTB.TabIndex = 84;
             // 
             // prodCancelBTN
             // 
             this.prodCancelBTN.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.prodCancelBTN.Location = new System.Drawing.Point(802, 602);
+            this.prodCancelBTN.Location = new System.Drawing.Point(1604, 1158);
+            this.prodCancelBTN.Margin = new System.Windows.Forms.Padding(6);
             this.prodCancelBTN.Name = "prodCancelBTN";
-            this.prodCancelBTN.Size = new System.Drawing.Size(75, 23);
+            this.prodCancelBTN.Size = new System.Drawing.Size(150, 44);
             this.prodCancelBTN.TabIndex = 64;
             this.prodCancelBTN.Text = "Cancel";
             this.prodCancelBTN.UseVisualStyleBackColor = true;
             // 
             // prodSaveBTN
             // 
-            this.prodSaveBTN.Location = new System.Drawing.Point(712, 602);
+            this.prodSaveBTN.Location = new System.Drawing.Point(1424, 1158);
+            this.prodSaveBTN.Margin = new System.Windows.Forms.Padding(6);
             this.prodSaveBTN.Name = "prodSaveBTN";
-            this.prodSaveBTN.Size = new System.Drawing.Size(75, 23);
+            this.prodSaveBTN.Size = new System.Drawing.Size(150, 44);
             this.prodSaveBTN.TabIndex = 63;
             this.prodSaveBTN.Text = "Save";
             this.prodSaveBTN.UseVisualStyleBackColor = true;
@@ -260,17 +286,18 @@
             // 
             this.headerProd.AutoSize = true;
             this.headerProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerProd.Location = new System.Drawing.Point(8, 5);
+            this.headerProd.Location = new System.Drawing.Point(16, 10);
+            this.headerProd.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.headerProd.Name = "headerProd";
-            this.headerProd.Size = new System.Drawing.Size(167, 25);
+            this.headerProd.Size = new System.Drawing.Size(320, 48);
             this.headerProd.TabIndex = 85;
             this.headerProd.Text = "Modify Products";
             // 
             // ModifyProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 638);
+            this.ClientSize = new System.Drawing.Size(1822, 1227);
             this.Controls.Add(this.headerProd);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -294,6 +321,7 @@
             this.Controls.Add(this.addProdTB);
             this.Controls.Add(this.prodCancelBTN);
             this.Controls.Add(this.prodSaveBTN);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ModifyProducts";
             this.Text = "ModifyProducts";
             ((System.ComponentModel.ISupportInitialize)(this.bottomDataGridView)).EndInit();
