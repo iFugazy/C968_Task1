@@ -44,6 +44,7 @@ namespace C968_Task1
             DialogResult result = MessageBox.Show("Are you sure you want to delete this part?", "Delete Part", MessageBoxButtons.YesNo);
             if(result == DialogResult.Yes)
             {
+               
                 foreach (DataGridViewRow datarow in partsDataGridView.SelectedRows)
                 {
                     partsDataGridView.Rows.RemoveAt(datarow.Index);
@@ -103,7 +104,7 @@ namespace C968_Task1
         }
 
         /// <summary>
-        /// This event handler is used for the search function. It works by taking the search text box that is correlating with the parts datagridview 
+        /// This event handler is used for the search function. It works by taking the search text box that is correlating with the products datagridview 
         /// and comparing it to the value in the first cell of of all the rows and the 2nd sell of all the rows. It then checks to see
         /// if the value is null or if it is equal to the textbox and then highlghts the row in the datagridview.
         /// </summary>
@@ -147,18 +148,37 @@ namespace C968_Task1
             }           
         }
 
+        /// <summary>
+        /// This event handler listens for the add button to be clicked and then opens the addProducts form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void productsAddButton_Click(object sender, EventArgs e)
         {
             addProductsForm addProducts = new addProductsForm(this);
             addProducts.ShowDialog();
         }
 
+        /// <summary>
+        /// This event handler listens for the the modify button to be clicked and then pulls up the modifyProducts form. After the form's save button
+        /// is clicked, the productID text box is compared to the datagridview row that is selected. The selected row is then removed and replaced with 
+        /// the data that was added within the form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void productsModifyButton_Click(object sender, EventArgs e)
         {
             Product product = (Product)productsDataGridView.CurrentRow.DataBoundItem;
             new ModifyProducts(product).ShowDialog();
         }
 
+        /// <summary>
+        /// This event handler is used for the search function. It works by taking the search text box that is correlating with the products datagridview 
+        /// and comparing it to the value in the first cell of of all the rows and the 2nd sell of all the rows. It then checks to see
+        /// if the value is null or if it is equal to the textbox and then highlghts the row in the datagridview.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void productsSearchButton_Click(object sender, EventArgs e)
         {
             productsDataGridView.ClearSelection();
@@ -197,6 +217,12 @@ namespace C968_Task1
             }
         }
 
+        /// <summary>
+        /// This event handler listens for the delete button to be clicked and then takes the selected row of data and removes it based off its 
+        /// index within the datagridview.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void productsDeleteButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to delete this product?", "Delete Product", MessageBoxButtons.YesNo);
