@@ -37,6 +37,12 @@ namespace C968_Task1
         {
             InitializeComponent();
             this.MainForm = mainForm;
+            partNameTB.BackColor = Color.IndianRed;
+            partInvTB.BackColor = Color.IndianRed;
+            partPriceTB.BackColor = Color.IndianRed;
+            partMaxTB.BackColor = Color.IndianRed;
+            partMinTB.BackColor = Color.IndianRed;
+            textBox7.BackColor = Color.IndianRed;
 
             partsInHouseRTBN.Checked = true;
             int PartNum = Inventory.AllParts.Count + 1;
@@ -97,6 +103,24 @@ namespace C968_Task1
                 PartMin = int.Parse(partMinTB.Text);
                 PartMax = int.Parse(partMaxTB.Text);
 
+                if (PartMin > PartMax)
+                {
+                    MessageBox.Show("Minimum amount of parts is greater than the maximum amount", "Min is greater than Max");
+                    return;
+                }
+
+                if (PartInv > PartMax)
+                {
+                    MessageBox.Show("Inventory amount is greater than the maxium", "Inventory Error");
+                    return;
+                }
+
+                if (PartInv < PartMin)
+                {
+                    MessageBox.Show("Inventory amount is less than the minimum", "Inventory Error");
+                    return;
+                }
+
                 if (partsInHouseRTBN.Checked)
                 {
                     MachineID = int.Parse(textBox7.Text);
@@ -116,7 +140,6 @@ namespace C968_Task1
                     MessageBox.Show("Please check whether the part is Outsourced or Inhouse");
                 }
                 
-
                 DialogResult = DialogResult.OK;
             }
             catch
@@ -132,7 +155,8 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void partNameTB_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsLetter(e.KeyChar);
+            e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            partNameTB.BackColor = Color.White;
         }
 
         /// <summary>
@@ -142,7 +166,8 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void partInvTB_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            partInvTB.BackColor = Color.White;
         }
 
         /// <summary>
@@ -152,7 +177,8 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void partPriceTB_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsPunctuation(e.KeyChar);
+            partPriceTB.BackColor = Color.White;
         }
 
         /// <summary>
@@ -163,6 +189,7 @@ namespace C968_Task1
         private void partMaxTB_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            partMaxTB.BackColor = Color.White;
         }
 
         /// <summary>
@@ -173,6 +200,7 @@ namespace C968_Task1
         private void partMinTB_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            partMinTB.BackColor = Color.White;
         }
 
         /// <summary>
@@ -190,6 +218,7 @@ namespace C968_Task1
             {
                 e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsLetter(e.KeyChar);
             }
+            textBox7.BackColor = Color.White;
         }
     }
 }

@@ -81,7 +81,7 @@ namespace C968_Task1
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             textBox7.Text = null;
-            addPartsMachineIDLabel.Text = "Machine ID";
+            label7.Text = "Machine ID";
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace C968_Task1
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             textBox7.Text = null;
-            addPartsMachineIDLabel.Text = "Company Name";
+            label7.Text = "Company Name";
         }
 
         /// <summary>
@@ -126,6 +126,24 @@ namespace C968_Task1
                 PartMin = int.Parse(textBox5.Text);
                 PartMax = int.Parse(textBox6.Text);
 
+                if (PartMin > PartMax)
+                {
+                    MessageBox.Show("Minimum amount of parts is greater than the maximum amount", "Min is greater than Max");
+                    return;
+                }
+
+                if (PartInv > PartMax)
+                {
+                    MessageBox.Show("Inventory amount is greater than the maxium", "Inventory Error");
+                    return;
+                }
+
+                if (PartInv < PartMin)
+                {
+                    MessageBox.Show("Inventory amount is less than the minimum", "Inventory Error");
+                    return;
+                }
+
                 if (partsInHouseRBTN.Checked)
                 { 
                     MachineID = int.Parse(textBox7.Text);
@@ -138,15 +156,14 @@ namespace C968_Task1
 
                 else if (outsourcedRBTN.Checked)
                 {
-                    if (textBox7.Text.Length > 0)
-                    {
-                        CompanyName = textBox7.Text;
+                    
+                    CompanyName = textBox7.Text;
 
-                        Outsourced outsourced = new Outsourced(PartID, PartName, PartInv, PartPrice, PartMin, PartMax, CompanyName);
-                        Inventory.updatePart(PartID, outsourced);
+                    Outsourced outsourced = new Outsourced(PartID, PartName, PartInv, PartPrice, PartMin, PartMax, CompanyName);
+                    Inventory.updatePart(PartID, outsourced);
 
-                        DialogResult = DialogResult.OK;
-                    }
+                    DialogResult = DialogResult.OK;
+                    
                 }
                 
             }
@@ -163,7 +180,7 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsLetter(e.KeyChar);
+            e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar);
         }
 
         /// <summary>
@@ -184,7 +201,6 @@ namespace C968_Task1
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
-
         }
 
         /// <summary>
@@ -195,7 +211,6 @@ namespace C968_Task1
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
-
         }
 
         /// <summary>
@@ -206,7 +221,6 @@ namespace C968_Task1
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
-
         }
 
         /// <summary>

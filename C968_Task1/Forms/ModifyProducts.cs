@@ -34,10 +34,10 @@ namespace C968_Task1.Forms
             InitializeComponent();
             textBox1.Text = product.ProductID.ToString();
             textBox2.Text = product.Name;
-            textBox3.Text = product.Price.ToString();
-            textBox4.Text = product.Instock.ToString();
-            textBox5.Text = product.Max.ToString();
-            textBox6.Text = product.Min.ToString();
+            textBox4.Text = product.Price.ToString();
+            textBox3.Text = product.InStock.ToString();
+            textBox5.Text = product.Min.ToString();
+            textBox6.Text = product.Max.ToString();
 
             BindingSource topTable = new BindingSource();
             topTable.DataSource = Inventory.AllParts;
@@ -50,16 +50,6 @@ namespace C968_Task1.Forms
             var botTable = new BindingSource();
             botTable.DataSource = partsAdded;
             bottomDataGridView.DataSource = botTable;
-
-        }
-        private void ModifyProducts_Load(object sender, EventArgs e)
-        {
-            textBox2.BackColor = Color.Red;
-            textBox3.BackColor = Color.Red;
-            textBox4.BackColor = Color.Red;
-            textBox5.BackColor = Color.Red;
-            textBox6.BackColor = Color.Red;
-
 
         }
 
@@ -117,38 +107,41 @@ namespace C968_Task1.Forms
 
         private void prodSaveBTN_Click(object sender, EventArgs e)
         {
-            int inventory;
-            int min;
-            int max;
-            decimal price;
 
-            try
+            string name = textBox2.Text;
+            int inventory = int.Parse(textBox3.Text);
+            decimal price = decimal.Parse(textBox4.Text);
+            int min = int.Parse(textBox5.Text);
+            int max = int.Parse(textBox6.Text);
+            int productID = int.Parse(textBox1.Text);
+
+            if (min > max)
             {
-                min = int.Parse(textBox5.Text);
-                max = int.Parse(textBox6.Text);
-                inventory = int.Parse(textBox3.Text);
-                price = decimal.Parse(textBox4.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Error: Inventory, Price, Max and Min text fields must be numeric values.");
+                MessageBox.Show("Minimum amount of products is greater than the maximum amount", "Min is greater than Max");
                 return;
             }
 
-            string name = textBox2.Text;
-            inventory = int.Parse(textBox3.Text);
-            price = decimal.Parse(textBox4.Text);
-            min = int.Parse(textBox6.Text);
-            max = int.Parse(textBox5.Text);
+            if (inventory > max)
+            {
+                MessageBox.Show("Inventory amount is greater than the maxium", "Inventory Error");
+                return;
+            }
 
-            //creates new Product and adds it to inventory
-            Product product = new Product((Inventory.Products.Count + 1), name, inventory, price, max, min);
-            Inventory.updateProduct(Inventory.Products.Count, product);
+            if (inventory < min)
+            {
+                MessageBox.Show("Inventory amount is less than the minimum", "Inventory Error");
+                return;
+            }
+
+            Product product = new Product(productID, name, inventory, price, min, max);
+            Inventory.updateProduct(productID, product);
 
             foreach (Part part in partsAdded)
             {
                 product.addAssociatedPart(part);
             }
+            
+            this.Close();
         }
     }
     

@@ -46,11 +46,11 @@
             this.prodMaxLabel = new System.Windows.Forms.Label();
             this.prodMinLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.prodNameTB = new System.Windows.Forms.TextBox();
+            this.prodInvTB = new System.Windows.Forms.TextBox();
+            this.prodPriceTB = new System.Windows.Forms.TextBox();
+            this.prodMaxTB = new System.Windows.Forms.TextBox();
+            this.prodMinTB = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.topDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -231,51 +231,56 @@
             this.textBox1.Size = new System.Drawing.Size(171, 20);
             this.textBox1.TabIndex = 55;
             // 
-            // textBox2
+            // prodNameTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 130);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 20);
-            this.textBox2.TabIndex = 56;
+            this.prodNameTB.Location = new System.Drawing.Point(122, 130);
+            this.prodNameTB.Name = "prodNameTB";
+            this.prodNameTB.Size = new System.Drawing.Size(171, 20);
+            this.prodNameTB.TabIndex = 56;
+            this.prodNameTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
-            // textBox3
+            // prodInvTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(122, 174);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 20);
-            this.textBox3.TabIndex = 57;
+            this.prodInvTB.Location = new System.Drawing.Point(122, 174);
+            this.prodInvTB.Name = "prodInvTB";
+            this.prodInvTB.Size = new System.Drawing.Size(171, 20);
+            this.prodInvTB.TabIndex = 57;
+            this.prodInvTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
-            // textBox4
+            // prodPriceTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(122, 216);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(171, 20);
-            this.textBox4.TabIndex = 58;
+            this.prodPriceTB.Location = new System.Drawing.Point(122, 216);
+            this.prodPriceTB.Name = "prodPriceTB";
+            this.prodPriceTB.Size = new System.Drawing.Size(171, 20);
+            this.prodPriceTB.TabIndex = 58;
+            this.prodPriceTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
-            // textBox5
+            // prodMaxTB
             // 
-            this.textBox5.Location = new System.Drawing.Point(122, 299);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(171, 20);
-            this.textBox5.TabIndex = 59;
+            this.prodMaxTB.Location = new System.Drawing.Point(122, 260);
+            this.prodMaxTB.Name = "prodMaxTB";
+            this.prodMaxTB.Size = new System.Drawing.Size(171, 20);
+            this.prodMaxTB.TabIndex = 59;
+            this.prodMaxTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
-            // textBox6
+            // prodMinTB
             // 
-            this.textBox6.Location = new System.Drawing.Point(122, 260);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(171, 20);
-            this.textBox6.TabIndex = 60;
+            this.prodMinTB.Location = new System.Drawing.Point(122, 299);
+            this.prodMinTB.Name = "prodMinTB";
+            this.prodMinTB.Size = new System.Drawing.Size(171, 20);
+            this.prodMinTB.TabIndex = 60;
+            this.prodMinTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // addProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 638);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.prodMinTB);
+            this.Controls.Add(this.prodMaxTB);
+            this.Controls.Add(this.prodPriceTB);
+            this.Controls.Add(this.prodInvTB);
+            this.Controls.Add(this.prodNameTB);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.prodMinLabel);
             this.Controls.Add(this.prodMaxLabel);
@@ -325,10 +330,10 @@
         private System.Windows.Forms.Label prodMaxLabel;
         private System.Windows.Forms.Label prodMinLabel;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox prodNameTB;
+        private System.Windows.Forms.TextBox prodInvTB;
+        private System.Windows.Forms.TextBox prodPriceTB;
+        private System.Windows.Forms.TextBox prodMaxTB;
+        private System.Windows.Forms.TextBox prodMinTB;
     }
 }

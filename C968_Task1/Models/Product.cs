@@ -15,8 +15,9 @@ namespace C968_Task1.Models
         public BindingList<Part> AssociatedParts = new BindingList<Part>();
         public int ProductID { get; set; }
         public string Name { get; set; }
-        public decimal Price { get; set; }       
-        public int Instock { get; set; }
+        public int InStock { get; set; }
+
+        public decimal Price { get; set; }   
         public int Min { get; set; }
         public int Max { get; set; }
 
@@ -25,7 +26,7 @@ namespace C968_Task1.Models
         {
             this.ProductID = ProductID;
             this.Name = Name;
-            this.Instock = Instock;
+            this.InStock = Instock;
             this.Price = Price;
             this.Min = Min;
             this.Max = Max;

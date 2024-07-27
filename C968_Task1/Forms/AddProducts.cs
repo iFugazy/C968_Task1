@@ -22,8 +22,8 @@ namespace C968_Task1.Forms
         public string ProdName { get; set; }
         public int ProdInstock { get; set; }
         public decimal ProdPrice { get; set; }
-        public int ProdMin { get; set; }
         public int ProdMax { get; set; }
+        public int ProdMin { get; set; }
 
         public addProductsForm(mainForm mainForm)
         {
@@ -31,6 +31,12 @@ namespace C968_Task1.Forms
             MainForm = mainForm;
             int ProductNum = Inventory.Products.Count + 1;
             textBox1.Text = ProductNum.ToString();
+
+            prodNameTB.BackColor = Color.IndianRed;
+            prodInvTB.BackColor = Color.IndianRed;
+            prodPriceTB.BackColor = Color.IndianRed;
+            prodMaxTB.BackColor = Color.IndianRed;
+            prodMinTB.BackColor = Color.IndianRed;
         }
 
         private void AddProducts_Load(object sender, EventArgs e)
@@ -104,52 +110,68 @@ namespace C968_Task1.Forms
 
         private void prodSaveBTN_Click(object sender, EventArgs e)
         {
-            int inventory;
-            int min;
-            int max;
-            decimal price;
 
-            try
-            {
-                min = int.Parse(textBox5.Text);
-                max = int.Parse(textBox6.Text);
-                inventory = int.Parse(textBox3.Text);
-                price = decimal.Parse(textBox4.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Error: Inventory, Price, Max and Min text fields must be numeric values.");
-                return;
-            }
-
-            string name = textBox2.Text;
-            inventory = int.Parse(textBox3.Text);
-            price = decimal.Parse(textBox4.Text);
-            min = int.Parse(textBox6.Text);
-            max = int.Parse(textBox5.Text);
+            string name = prodNameTB.Text;
+            int inventory = int.Parse(prodInvTB.Text);
+            decimal price = decimal.Parse(prodPriceTB.Text);
+            int max = int.Parse(prodMinTB.Text);
+            int min = int.Parse(prodMaxTB.Text);
 
             if (min > max)
             {
                 MessageBox.Show("Minimum amount of products is greater than the maximum amount", "Min is greater than Max");
+                return;
             }
 
             if (inventory > max)
             {
                 MessageBox.Show("Inventory amount is greater than the maxium", "Inventory Error");
+                return;
             }
 
             if (inventory < min)
             {
                 MessageBox.Show("Inventory amount is less than the minimum", "Inventory Error");
+                return;
             }
 
-            Product product = new Product((Inventory.Products.Count + 1), name, inventory, price, max, min);
+            Product product = new Product((Inventory.Products.Count + 1), name, inventory, price, min, max);
             Inventory.addProduct(product);
 
             foreach (Part part in partsAdded)
             {
                 product.addAssociatedPart(part);
             }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            prodNameTB.BackColor = Color.White;
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            prodInvTB.BackColor = Color.White;
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            prodPriceTB.BackColor = Color.White;
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            prodMinTB.BackColor = Color.White;
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            prodMaxTB.BackColor = Color.White;
         }
     }
 }

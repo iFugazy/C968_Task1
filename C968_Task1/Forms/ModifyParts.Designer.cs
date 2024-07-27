@@ -231,9 +231,9 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.Location = new System.Drawing.Point(85, 279);
+            this.label7.Location = new System.Drawing.Point(57, 279);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 13);
+            this.label7.Size = new System.Drawing.Size(91, 13);
             this.label7.TabIndex = 41;
             this.label7.Text = "Machine ID";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;

@@ -153,7 +153,7 @@
             // 
             // partMaxTB
             // 
-            this.partMaxTB.Location = new System.Drawing.Point(156, 231);
+            this.partMaxTB.Location = new System.Drawing.Point(274, 233);
             this.partMaxTB.Name = "partMaxTB";
             this.partMaxTB.Size = new System.Drawing.Size(64, 20);
             this.partMaxTB.TabIndex = 15;
@@ -162,7 +162,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(123, 234);
+            this.label5.Location = new System.Drawing.Point(241, 236);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 14;
@@ -170,7 +170,7 @@
             // 
             // partMinTB
             // 
-            this.partMinTB.Location = new System.Drawing.Point(277, 231);
+            this.partMinTB.Location = new System.Drawing.Point(161, 232);
             this.partMinTB.Name = "partMinTB";
             this.partMinTB.Size = new System.Drawing.Size(64, 20);
             this.partMinTB.TabIndex = 17;
@@ -179,7 +179,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(247, 235);
+            this.label6.Location = new System.Drawing.Point(131, 236);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(24, 13);
             this.label6.TabIndex = 16;
@@ -197,9 +197,9 @@
             // 
             this.addPartsMachineIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addPartsMachineIDLabel.Location = new System.Drawing.Point(89, 279);
+            this.addPartsMachineIDLabel.Location = new System.Drawing.Point(50, 279);
             this.addPartsMachineIDLabel.Name = "addPartsMachineIDLabel";
-            this.addPartsMachineIDLabel.Size = new System.Drawing.Size(62, 13);
+            this.addPartsMachineIDLabel.Size = new System.Drawing.Size(101, 13);
             this.addPartsMachineIDLabel.TabIndex = 18;
             this.addPartsMachineIDLabel.Text = "Machine ID";
             this.addPartsMachineIDLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
