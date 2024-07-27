@@ -9,8 +9,18 @@ namespace C968_Task1.Models
     public class Inhouse : Part
     {
         public int MachineID { get; set; }
-        public Inhouse() { }
 
+        /// <summary>
+        /// This constructor is used to take in information from other classes and add them to the Part class for use. This
+        /// is used for the inhouse parts.
+        /// </summary>
+        /// <param name="PartID"></param>
+        /// <param name="Name"></param>
+        /// <param name="Inventory"></param>
+        /// <param name="Price"></param>
+        /// <param name="Min"></param>
+        /// <param name="Max"></param>
+        /// <param name="MachineID"></param>
         public Inhouse (int PartID, string Name, int Inventory, decimal Price, int Min, int Max, int MachineID)
         {
             this.PartID = PartID;

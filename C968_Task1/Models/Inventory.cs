@@ -14,16 +14,32 @@ namespace C968_Task1.Models
     {
         public static BindingList<Part> AllParts = new BindingList<Part>();
         public static BindingList<Product> Products = new BindingList<Product>();
-        
+
+        /// <summary>
+        /// Uses the products list and adds the pproducts that is placed within the methods parameter.
+        /// </summary>
+        /// <param name="part"></param>
         public static void addProduct(Product product) 
         {
             Products.Add(product);
         }
+
+        /// <summary>
+        /// Uses the Remove method to remove the product that is passed through the method's parameter.
+        /// </summary>
+        /// <param name="part"></param>
+        /// <returns></returns>
         public static bool removeProduct(Product product) 
         {
             Products.Remove(product);
             return true; 
         }
+
+        /// <summary>
+        /// looks up the product that is based off the productID parameter in the parent class and returns the product.
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
         public static Product lookUpProduct(int number) 
         {
             foreach (Product product in Products)
@@ -32,10 +48,16 @@ namespace C968_Task1.Models
                 {
                     return product;
                 }
-            }
-            Product nullProduct = new Product();
-            return nullProduct;
+            }           
+            return null;
         }
+
+        /// <summary>
+        /// Takes the product ID from the method and places it into the lookup product method which will then removed that product
+        /// and add the new product.
+        /// </summary>
+        /// <param name="PartID"></param>
+        /// <param name="part"></param>
         public static void updateProduct(int number, Product product) 
         {
             Product productID = lookUpProduct(number);

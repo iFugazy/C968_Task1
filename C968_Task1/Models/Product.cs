@@ -21,7 +21,16 @@ namespace C968_Task1.Models
         public int Min { get; set; }
         public int Max { get; set; }
 
-        public Product() { }
+        /// <summary>
+        /// This constructor is used to take in information from another class and use the information
+        /// within this class.
+        /// </summary>
+        /// <param name="ProductID"></param>
+        /// <param name="Name"></param>
+        /// <param name="Instock"></param>
+        /// <param name="Price"></param>
+        /// <param name="Min"></param>
+        /// <param name="Max"></param>
         public Product(int ProductID, string Name, int Instock, decimal Price, int Min, int Max)
         {
             this.ProductID = ProductID;
@@ -32,11 +41,20 @@ namespace C968_Task1.Models
             this.Max = Max;
         }
 
+        /// <summary>
+        /// This method adds the associated part from the parts list to this associated parts lits within this class.
+        /// </summary>
+        /// <param name="part"></param>
         public void addAssociatedPart(Part part)
         {
             AssociatedParts.Add(part);
         }
 
+        /// <summary>
+        /// This method removes the associated from the list using the product ID.
+        /// </summary>
+        /// <param name="ProductID"></param>
+        /// <returns></returns>
         public bool removeAssociatedPart(int ProductID)
         {
             foreach (Part assocpart in AssociatedParts)
@@ -49,6 +67,12 @@ namespace C968_Task1.Models
             return true;
         }
 
+        /// <summary>
+        /// This method is used to lookup the associated part within the list and return it back
+        /// to you as a part.
+        /// </summary>
+        /// <param name="ProductID"></param>
+        /// <returns></returns>
         public Part lookupAssociatedPart(int ProductID)
         {
             foreach (Part part in AssociatedParts)
