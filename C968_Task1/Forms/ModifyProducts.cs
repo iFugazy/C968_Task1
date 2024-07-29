@@ -165,7 +165,7 @@ namespace C968_Task1.Forms
         /// <param name="e"></param>
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsLetter(e.KeyChar);
             textBox2.BackColor = Color.White;
         }
 
@@ -176,7 +176,7 @@ namespace C968_Task1.Forms
         /// <param name="e"></param>
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
             textBox3.BackColor = Color.White;
         }
 
@@ -187,7 +187,7 @@ namespace C968_Task1.Forms
         /// <param name="e"></param>
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsPunctuation(e.KeyChar);
             textBox4.BackColor = Color.White;
         }
 
@@ -198,7 +198,7 @@ namespace C968_Task1.Forms
         /// <param name="e"></param>
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
             textBox5.BackColor = Color.White;
         }
 
@@ -209,7 +209,7 @@ namespace C968_Task1.Forms
         /// <param name="e"></param>
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsControl(e.KeyChar);
+            e.Handled = !Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);
             textBox6.BackColor = Color.White;
         }
     }

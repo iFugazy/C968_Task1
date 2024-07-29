@@ -175,6 +175,7 @@ namespace C968_Task1.Forms
             {
                 product.addAssociatedPart(part);
             }
+            this.Close();
         }
 
         /// <summary>
