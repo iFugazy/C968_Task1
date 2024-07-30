@@ -63,10 +63,16 @@ namespace C968_Task1.Forms
         /// <param name="e"></param>
         private void prodDeleteBTN_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow datarow in bottomDataGridView.SelectedRows)
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this associated part?", "Delete Part", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                bottomDataGridView.Rows.RemoveAt(datarow.Index);
+
+                foreach (DataGridViewRow datarow in bottomDataGridView.SelectedRows)
+                {
+                    bottomDataGridView.Rows.RemoveAt(datarow.Index);
+                }
             }
+            else { }           
         }
 
         /// <summary>
