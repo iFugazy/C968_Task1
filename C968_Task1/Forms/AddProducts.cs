@@ -18,6 +18,8 @@ namespace C968_Task1.Forms
         public int ProdMax { get; set; }
         public int ProdMin { get; set; }
 
+        public addProductsForm() { }
+
         /// <summary>
         /// This constructor takes in the mainform to receive information from that class. It makes the 
         /// backcolor of all the textboxes red initially to indicate that the user needs to enter

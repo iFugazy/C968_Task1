@@ -30,6 +30,8 @@ namespace C968_Task1.Models
         /// <param name="Price"></param>
         /// <param name="Min"></param>
         /// <param name="Max"></param>
+
+        public Product() { }
         public Product(int ProductID, string Name, int Instock, decimal Price, int Min, int Max)
         {
             this.ProductID = ProductID;

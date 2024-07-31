@@ -23,7 +23,7 @@ namespace C968_Task1.Models
         {
             Products.Add(product);
         }
-
+        
         /// <summary>
         /// Uses the Remove method to remove the product that is passed through the method's parameter.
         /// </summary>

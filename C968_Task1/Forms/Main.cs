@@ -1,6 +1,7 @@
 ﻿using C968_Task1.Forms;
 using C968_Task1.Models;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 
@@ -32,16 +33,53 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void partsDeleteButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this part?", "Delete Part", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
+            Inhouse inhosue = new Inhouse();
+            Outsourced outsourced = new Outsourced();
+            ModifyProducts modify = new ModifyProducts();
+            
+        
+            
 
-                foreach (DataGridViewRow datarow in partsDataGridView.SelectedRows)
+            foreach (DataGridViewRow dataGridViewRow in productsDataGridView.Rows)
+            {
+                Product product = (Product)dataGridViewRow.DataBoundItem;
+                Part part = (Part)partsDataGridView.CurrentRow.DataBoundItem;
+                ModifyProducts modifyProducts = new ModifyProducts();
+              
+                foreach (Part part2 in product.AssociatedParts)
                 {
-                    partsDataGridView.Rows.RemoveAt(datarow.Index);
+                   if (part2.PartID == part.PartID)
+                   {
+                        DialogResult result = MessageBox.Show("This part is associated to a product. Are you sure you want to delete this part?", "Delete Part", MessageBoxButtons.YesNo);
+                        if (result == DialogResult.Yes)
+                        {
+                            foreach (DataGridViewRow datarow in partsDataGridView.SelectedRows)
+                            {
+                                partsDataGridView.Rows.RemoveAt(datarow.Index);
+                                product.AssociatedParts.Remove(part2);
+
+                                return;
+                            }          
+                            
+                            
+                        }
+                      
+                   }
+                   /*else
+                   {
+                       
+                        foreach (DataGridViewRow datarow in partsDataGridView.SelectedRows)
+                        {
+                            partsDataGridView.Rows.RemoveAt(datarow.Index);
+                        }
+
+                        return;
+                       
+                   }*/
+                    
                 }
+
             }
-            else { }
         }
 
         /// <summary>
@@ -216,7 +254,8 @@ namespace C968_Task1
         /// <param name="e"></param>
         private void productsDeleteButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this product?", "Delete Product", MessageBoxButtons.YesNo);
+            
+            /*DialogResult result = MessageBox.Show("Are you sure you want to delete this product?", "Delete Product", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 foreach (DataGridViewRow datarow in productsDataGridView.SelectedRows)
@@ -224,7 +263,7 @@ namespace C968_Task1
                     productsDataGridView.Rows.RemoveAt(datarow.Index);
                 }
             }
-            else { }
+            else { }*/
         }
     }
 }

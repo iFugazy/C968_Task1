@@ -21,6 +21,8 @@ namespace C968_Task1.Models
         /// <param name="Min"></param>
         /// <param name="Max"></param>
         /// <param name="MachineID"></param>
+
+        public Inhouse() { }
         public Inhouse (int PartID, string Name, int Inventory, decimal Price, int Min, int Max, int MachineID)
         {
             this.PartID = PartID;

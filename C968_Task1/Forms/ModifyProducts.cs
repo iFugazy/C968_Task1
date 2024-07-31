@@ -17,8 +17,8 @@ namespace C968_Task1.Forms
         public int ProductInv { get; internal set; }
         public new string CompanyName { get; set; }
 
-        BindingList<Part> partsAdded = new BindingList<Part>();
-
+        public BindingList<Part> partsAdded = new BindingList<Part>();
+        public ModifyProducts() { }
         public ModifyProducts(Product product)
         {
             InitializeComponent();

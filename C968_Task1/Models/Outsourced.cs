@@ -21,6 +21,8 @@ namespace C968_Task1.Models
         /// <param name="Min"></param>
         /// <param name="Max"></param>
         /// <param name="CompanyName"></param>
+        
+        public Outsourced() { }
         public Outsourced(int PartID, string Name, int Inventory, decimal Price, int Min, int Max, string CompanyName)
         {
             this.PartID = PartID;
