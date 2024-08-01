@@ -52,6 +52,24 @@ namespace C968_Task1.Models
         }
 
         /// <summary>
+        /// This method checks to see if the part name that needs to be deleted is in the associated parts and deletes all 
+        /// instances of that input within the associated parts list.
+        /// </summary>
+        /// <param name="part1"></param>
+        public void removeAllAssociatedParts(Part part1)
+        { 
+           
+            foreach (Part part in AssociatedParts.ToList())
+            {
+                if (part.Name == part1.Name )
+                {
+                   AssociatedParts.Remove(part);
+                    continue;
+                }
+            }; 
+        }
+
+        /// <summary>
         /// This method removes the associated from the list using the product ID.
         /// </summary>
         /// <param name="ProductID"></param>
