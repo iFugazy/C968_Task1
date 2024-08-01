@@ -27,7 +27,7 @@ namespace C968_Task1
 
         /// <summary>
         /// This event handler listens for the delete button to be clicked and then takes the selected row of data and removes it based off its 
-        /// index within the datagridview.
+        /// index within the datagridview. It also removes data from the product's associated parts
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -52,21 +52,27 @@ namespace C968_Task1
                         {
                             foreach (DataGridViewRow datarow in partsDataGridView.SelectedRows)
                             {
-                                partsDataGridView.Rows.RemoveAt(datarow.Index);
-                                
+                                partsDataGridView.Rows.RemoveAt(datarow.Index);                                
 
                                 product.removeAllAssociatedParts(part);
                                 return;
-
-                            }
-                            
+                            }                           
                         }
-                        else { return; }
-                    }
-                    else
-                    {
-                        
-                    }
+                        else 
+                        { 
+                            return; 
+                        }
+                    }                 
+                }               
+            }
+
+            DialogResult result1 = MessageBox.Show("Are you sure you want to delete this part?", "Delete Part", MessageBoxButtons.YesNo);
+            if (result1 == DialogResult.Yes)
+            {
+                foreach (DataGridViewRow datarow in partsDataGridView.SelectedRows)
+                {
+                    partsDataGridView.Rows.RemoveAt(datarow.Index);
+                    return;
                 }
             }
         }
